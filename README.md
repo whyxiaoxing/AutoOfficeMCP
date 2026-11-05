@@ -2,7 +2,7 @@
 ---
 ## 基于 .NET Framework COM 以及  VSTO (Visual Studio Tools for Office) 两个功能(如果归类起来就是 Framework COM)
 
-要使用本项目 可以去 [Releases](https://github.com/whyxiaoxing/autoxuegongyun/releases/latest) 下载二进制文件(不保证最新)或者下载本项目的源码进行编译<br>
+要使用本项目 可以去 [Releases](https://github.com/whyxiaoxing/AutoOfficeMCP/releases/latest) 下载二进制文件(不保证最新)或者下载本项目的源码进行编译<br>
 
 目前共有 200+ 工具<br>
 下面是突出特点<br>
