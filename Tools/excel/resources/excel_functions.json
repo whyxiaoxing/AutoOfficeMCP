@@ -1,0 +1,1284 @@
+{
+  "version": "Excel 2016+ / Microsoft 365",
+  "note": "Excel COM 无法枚举内置函数；本目录为静态维护资源，未列出的函数仍可通过 excel_apply_formula 或 excel_evaluate 调用。",
+  "functions": [
+    {
+      "name": "SUM",
+      "chineseName": "求和",
+      "category": "数学",
+      "signature": "SUM(number1, [number2], ...)",
+      "description": "计算一组数值的总和。",
+      "example": "=SUM(A1:A10)",
+      "keywords": ["合计", "总计", "相加"]
+    },
+    {
+      "name": "SUMIF",
+      "chineseName": "条件求和",
+      "category": "数学",
+      "signature": "SUMIF(range, criteria, [sum_range])",
+      "description": "对满足单个条件的单元格求和。",
+      "example": "=SUMIF(A1:A10,\"华东\",B1:B10)",
+      "keywords": ["按条件求和", "单条件"]
+    },
+    {
+      "name": "SUMIFS",
+      "chineseName": "多条件求和",
+      "category": "数学",
+      "signature": "SUMIFS(sum_range, criteria_range1, criteria1, [criteria_range2, criteria2], ...)",
+      "description": "对满足多个条件的单元格求和。",
+      "example": "=SUMIFS(C1:C100,A1:A100,\"华东\",B1:B100,\">100\")",
+      "keywords": ["多条件", "汇总"]
+    },
+    {
+      "name": "SUMPRODUCT",
+      "chineseName": "乘积求和",
+      "category": "数学",
+      "signature": "SUMPRODUCT(array1, [array2], ...)",
+      "description": "返回对应数组元素乘积之和，也常用于多条件计数/求和。",
+      "example": "=SUMPRODUCT((A1:A10=\"华东\")*(B1:B10))",
+      "keywords": ["数组乘积", "加权求和"]
+    },
+    {
+      "name": "SUBTOTAL",
+      "chineseName": "分类汇总",
+      "category": "数学",
+      "signature": "SUBTOTAL(function_num, ref1, [ref2], ...)",
+      "description": "返回列表或数据库的分类汇总，可忽略隐藏行。",
+      "example": "=SUBTOTAL(109,A1:A10)",
+      "keywords": ["可见行", "筛选后求和"]
+    },
+    {
+      "name": "ROUND",
+      "chineseName": "四舍五入",
+      "category": "数学",
+      "signature": "ROUND(number, num_digits)",
+      "description": "按指定位数对数值四舍五入。",
+      "example": "=ROUND(3.14159,2)",
+      "keywords": ["保留小数", "舍入"]
+    },
+    {
+      "name": "ROUNDUP",
+      "chineseName": "向上舍入",
+      "category": "数学",
+      "signature": "ROUNDUP(number, num_digits)",
+      "description": "远离零方向按指定位数舍入。",
+      "example": "=ROUNDUP(3.14159,2)",
+      "keywords": ["向上取整", "进位"]
+    },
+    {
+      "name": "ROUNDDOWN",
+      "chineseName": "向下舍入",
+      "category": "数学",
+      "signature": "ROUNDDOWN(number, num_digits)",
+      "description": "向零方向按指定位数舍入。",
+      "example": "=ROUNDDOWN(3.14159,2)",
+      "keywords": ["向下取整", "截断"]
+    },
+    {
+      "name": "INT",
+      "chineseName": "取整",
+      "category": "数学",
+      "signature": "INT(number)",
+      "description": "将数值向下舍入到最接近的整数。",
+      "example": "=INT(3.9)",
+      "keywords": ["整数", "向下取整"]
+    },
+    {
+      "name": "MOD",
+      "chineseName": "取余",
+      "category": "数学",
+      "signature": "MOD(number, divisor)",
+      "description": "返回两数相除的余数。",
+      "example": "=MOD(10,3)",
+      "keywords": ["余数", "模"]
+    },
+    {
+      "name": "ABS",
+      "chineseName": "绝对值",
+      "category": "数学",
+      "signature": "ABS(number)",
+      "description": "返回数值的绝对值。",
+      "example": "=ABS(-5)",
+      "keywords": ["绝对值"]
+    },
+    {
+      "name": "POWER",
+      "chineseName": "乘幂",
+      "category": "数学",
+      "signature": "POWER(number, power)",
+      "description": "返回数值的指定次幂。",
+      "example": "=POWER(2,10)",
+      "keywords": ["幂", "指数"]
+    },
+    {
+      "name": "SQRT",
+      "chineseName": "平方根",
+      "category": "数学",
+      "signature": "SQRT(number)",
+      "description": "返回非负数的平方根。",
+      "example": "=SQRT(16)",
+      "keywords": ["开方"]
+    },
+    {
+      "name": "CEILING",
+      "chineseName": "向上舍入到基数",
+      "category": "数学",
+      "signature": "CEILING(number, significance)",
+      "description": "将数值向上舍入到最接近的指定基数。",
+      "example": "=CEILING(7.3,2)",
+      "keywords": ["基数舍入", "向上"]
+    },
+    {
+      "name": "FLOOR",
+      "chineseName": "向下舍入到基数",
+      "category": "数学",
+      "signature": "FLOOR(number, significance)",
+      "description": "将数值向下舍入到最接近的指定基数。",
+      "example": "=FLOOR(7.8,2)",
+      "keywords": ["基数舍入", "向下"]
+    },
+    {
+      "name": "AGGREGATE",
+      "chineseName": "聚合函数",
+      "category": "数学",
+      "signature": "AGGREGATE(function_num, options, ref1, [ref2], ...)",
+      "description": "支持忽略错误值/隐藏行的高级聚合。",
+      "example": "=AGGREGATE(9,6,A1:A100)",
+      "keywords": ["忽略错误", "聚合"]
+    },
+    {
+      "name": "AVERAGE",
+      "chineseName": "平均值",
+      "category": "统计",
+      "signature": "AVERAGE(number1, [number2], ...)",
+      "description": "返回数值的算术平均值。",
+      "example": "=AVERAGE(B2:B100)",
+      "keywords": ["平均", "均值"]
+    },
+    {
+      "name": "AVERAGEIF",
+      "chineseName": "条件平均值",
+      "category": "统计",
+      "signature": "AVERAGEIF(range, criteria, [average_range])",
+      "description": "返回满足单个条件的数值平均值。",
+      "example": "=AVERAGEIF(A1:A100,\"华东\",B1:B100)",
+      "keywords": ["条件平均"]
+    },
+    {
+      "name": "AVERAGEIFS",
+      "chineseName": "多条件平均值",
+      "category": "统计",
+      "signature": "AVERAGEIFS(average_range, criteria_range1, criteria1, ...)",
+      "description": "返回满足多个条件的数值平均值。",
+      "example": "=AVERAGEIFS(C1:C100,A1:A100,\"华东\",B1:B100,\">100\")",
+      "keywords": ["多条件平均"]
+    },
+    {
+      "name": "COUNT",
+      "chineseName": "计数",
+      "category": "统计",
+      "signature": "COUNT(value1, [value2], ...)",
+      "description": "统计区域中数值单元格的个数。",
+      "example": "=COUNT(A1:A100)",
+      "keywords": ["数值个数"]
+    },
+    {
+      "name": "COUNTA",
+      "chineseName": "非空计数",
+      "category": "统计",
+      "signature": "COUNTA(value1, [value2], ...)",
+      "description": "统计区域中非空单元格的个数。",
+      "example": "=COUNTA(A1:A100)",
+      "keywords": ["非空", "有值"]
+    },
+    {
+      "name": "COUNTBLANK",
+      "chineseName": "空单元格计数",
+      "category": "统计",
+      "signature": "COUNTBLANK(range)",
+      "description": "统计区域中空单元格的个数。",
+      "example": "=COUNTBLANK(A1:A100)",
+      "keywords": ["空白", "缺失"]
+    },
+    {
+      "name": "COUNTIF",
+      "chineseName": "条件计数",
+      "category": "统计",
+      "signature": "COUNTIF(range, criteria)",
+      "description": "统计满足单个条件的单元格个数。",
+      "example": "=COUNTIF(A1:A100,\"华东\")",
+      "keywords": ["按条件计数"]
+    },
+    {
+      "name": "COUNTIFS",
+      "chineseName": "多条件计数",
+      "category": "统计",
+      "signature": "COUNTIFS(criteria_range1, criteria1, [criteria_range2, criteria2], ...)",
+      "description": "统计同时满足多个条件的行数。",
+      "example": "=COUNTIFS(A1:A100,\"华东\",B1:B100,\">100\")",
+      "keywords": ["多条件计数"]
+    },
+    {
+      "name": "MAX",
+      "chineseName": "最大值",
+      "category": "统计",
+      "signature": "MAX(number1, [number2], ...)",
+      "description": "返回数值中的最大值。",
+      "example": "=MAX(B2:B100)",
+      "keywords": ["最大"]
+    },
+    {
+      "name": "MIN",
+      "chineseName": "最小值",
+      "category": "统计",
+      "signature": "MIN(number1, [number2], ...)",
+      "description": "返回数值中的最小值。",
+      "example": "=MIN(B2:B100)",
+      "keywords": ["最小"]
+    },
+    {
+      "name": "MAXIFS",
+      "chineseName": "条件最大值",
+      "category": "统计",
+      "signature": "MAXIFS(max_range, criteria_range1, criteria1, ...)",
+      "description": "返回满足多个条件的最大值（Microsoft 365/2019+）。",
+      "example": "=MAXIFS(B1:B100,A1:A100,\"华东\")",
+      "keywords": ["条件最大"]
+    },
+    {
+      "name": "MINIFS",
+      "chineseName": "条件最小值",
+      "category": "统计",
+      "signature": "MINIFS(min_range, criteria_range1, criteria1, ...)",
+      "description": "返回满足多个条件的最小值（Microsoft 365/2019+）。",
+      "example": "=MINIFS(B1:B100,A1:A100,\"华东\")",
+      "keywords": ["条件最小"]
+    },
+    {
+      "name": "MEDIAN",
+      "chineseName": "中位数",
+      "category": "统计",
+      "signature": "MEDIAN(number1, [number2], ...)",
+      "description": "返回一组数值的中位数。",
+      "example": "=MEDIAN(B2:B100)",
+      "keywords": ["中位"]
+    },
+    {
+      "name": "STDEV.P",
+      "chineseName": "总体标准差",
+      "category": "统计",
+      "signature": "STDEV.P(number1, [number2], ...)",
+      "description": "计算整个总体的标准差。",
+      "example": "=STDEV.P(B2:B100)",
+      "keywords": ["标准差", "总体"]
+    },
+    {
+      "name": "VAR.P",
+      "chineseName": "总体方差",
+      "category": "统计",
+      "signature": "VAR.P(number1, [number2], ...)",
+      "description": "计算整个总体的方差。",
+      "example": "=VAR.P(B2:B100)",
+      "keywords": ["方差", "总体"]
+    },
+    {
+      "name": "RANK.EQ",
+      "chineseName": "排名",
+      "category": "统计",
+      "signature": "RANK.EQ(number, ref, [order])",
+      "description": "返回数值在一组数值中的排名。",
+      "example": "=RANK.EQ(B2,B$2:B$100,0)",
+      "keywords": ["排行", "名次"]
+    },
+    {
+      "name": "LARGE",
+      "chineseName": "第 N 大值",
+      "category": "统计",
+      "signature": "LARGE(array, k)",
+      "description": "返回数组中第 k 个最大值。",
+      "example": "=LARGE(B2:B100,3)",
+      "keywords": ["前N", "第几大"]
+    },
+    {
+      "name": "SMALL",
+      "chineseName": "第 N 小值",
+      "category": "统计",
+      "signature": "SMALL(array, k)",
+      "description": "返回数组中第 k 个最小值。",
+      "example": "=SMALL(B2:B100,3)",
+      "keywords": ["后N", "第几小"]
+    },
+    {
+      "name": "PERCENTILE.INC",
+      "chineseName": "百分位数",
+      "category": "统计",
+      "signature": "PERCENTILE.INC(array, k)",
+      "description": "返回区域中第 k 个百分位数（含端点）。",
+      "example": "=PERCENTILE.INC(B2:B100,0.9)",
+      "keywords": ["分位数", "90分位"]
+    },
+    {
+      "name": "QUARTILE.INC",
+      "chineseName": "四分位数",
+      "category": "统计",
+      "signature": "QUARTILE.INC(array, quart)",
+      "description": "返回区域的四分位数（含端点）。",
+      "example": "=QUARTILE.INC(B2:B100,1)",
+      "keywords": ["四分位"]
+    },
+    {
+      "name": "FREQUENCY",
+      "chineseName": "频率分布",
+      "category": "统计",
+      "signature": "FREQUENCY(data_array, bins_array)",
+      "description": "返回数值落在各区间内的频率数组。",
+      "example": "=FREQUENCY(A1:A100,C1:C5)",
+      "keywords": ["分布", "区间计数"]
+    },
+    {
+      "name": "IF",
+      "chineseName": "条件判断",
+      "category": "逻辑",
+      "signature": "IF(logical_test, value_if_true, [value_if_false])",
+      "description": "根据条件返回不同结果。",
+      "example": "=IF(A1>=60,\"及格\",\"不及格\")",
+      "keywords": ["如果", "条件"]
+    },
+    {
+      "name": "IFS",
+      "chineseName": "多条件判断",
+      "category": "逻辑",
+      "signature": "IFS(logical_test1, value1, [logical_test2, value2], ...)",
+      "description": "按顺序判断多个条件并返回首个成立结果。",
+      "example": "=IFS(A1>=90,\"A\",A1>=80,\"B\",TRUE,\"C\")",
+      "keywords": ["多条件分支"]
+    },
+    {
+      "name": "AND",
+      "chineseName": "并且",
+      "category": "逻辑",
+      "signature": "AND(logical1, [logical2], ...)",
+      "description": "所有条件都为真时返回 TRUE。",
+      "example": "=AND(A1>0,B1>0)",
+      "keywords": ["与", "同时满足"]
+    },
+    {
+      "name": "OR",
+      "chineseName": "或者",
+      "category": "逻辑",
+      "signature": "OR(logical1, [logical2], ...)",
+      "description": "任一条件为真时返回 TRUE。",
+      "example": "=OR(A1>0,B1>0)",
+      "keywords": ["或", "任一满足"]
+    },
+    {
+      "name": "NOT",
+      "chineseName": "取反",
+      "category": "逻辑",
+      "signature": "NOT(logical)",
+      "description": "对逻辑值取反。",
+      "example": "=NOT(A1>0)",
+      "keywords": ["非", "反转"]
+    },
+    {
+      "name": "IFERROR",
+      "chineseName": "错误时返回",
+      "category": "逻辑",
+      "signature": "IFERROR(value, value_if_error)",
+      "description": "公式出错时返回替代值。",
+      "example": "=IFERROR(A1/B1,0)",
+      "keywords": ["容错", "错误处理"]
+    },
+    {
+      "name": "IFNA",
+      "chineseName": "N/A 时返回",
+      "category": "逻辑",
+      "signature": "IFNA(value, value_if_na)",
+      "description": "仅当结果为 #N/A 时返回替代值。",
+      "example": "=IFNA(VLOOKUP(A1,B:C,2,0),\"未找到\")",
+      "keywords": ["未找到", "N/A"]
+    },
+    {
+      "name": "SWITCH",
+      "chineseName": "多值匹配",
+      "category": "逻辑",
+      "signature": "SWITCH(expression, value1, result1, [value2, result2], ..., [default])",
+      "description": "将表达式与多个值逐一匹配并返回对应结果。",
+      "example": "=SWITCH(A1,1,\"一\",2,\"二\",\"其他\")",
+      "keywords": ["分支", "映射"]
+    },
+    {
+      "name": "VLOOKUP",
+      "chineseName": "纵向查找",
+      "category": "查找",
+      "signature": "VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])",
+      "description": "在表格首列查找并返回指定列的值。",
+      "example": "=VLOOKUP(A2,$D$1:$F$100,3,FALSE)",
+      "keywords": ["查找", "匹配", "精确查找"]
+    },
+    {
+      "name": "HLOOKUP",
+      "chineseName": "横向查找",
+      "category": "查找",
+      "signature": "HLOOKUP(lookup_value, table_array, row_index_num, [range_lookup])",
+      "description": "在表格首行查找并返回指定行的值。",
+      "example": "=HLOOKUP(A2,$D$1:$F$10,3,FALSE)",
+      "keywords": ["横向匹配"]
+    },
+    {
+      "name": "XLOOKUP",
+      "chineseName": "现代查找",
+      "category": "查找",
+      "signature": "XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found], [match_mode], [search_mode])",
+      "description": "支持正向/反向查找、找不到时回退值（Microsoft 365/2021+）。",
+      "example": "=XLOOKUP(A2,D:D,F:F,\"未找到\")",
+      "keywords": ["查找", "精确匹配", "反向查找"]
+    },
+    {
+      "name": "INDEX",
+      "chineseName": "索引取值",
+      "category": "查找",
+      "signature": "INDEX(array, row_num, [column_num])",
+      "description": "返回区域中指定行/列位置的值。",
+      "example": "=INDEX(B2:B100,5)",
+      "keywords": ["定位", "取值"]
+    },
+    {
+      "name": "MATCH",
+      "chineseName": "匹配位置",
+      "category": "查找",
+      "signature": "MATCH(lookup_value, lookup_array, [match_type])",
+      "description": "返回查找值在区域中的相对位置。",
+      "example": "=MATCH(A2,B2:B100,0)",
+      "keywords": ["位置", "定位"]
+    },
+    {
+      "name": "XMATCH",
+      "chineseName": "现代匹配位置",
+      "category": "查找",
+      "signature": "XMATCH(lookup_value, lookup_array, [match_mode], [search_mode])",
+      "description": "返回查找值的位置，支持通配符、反向搜索（Microsoft 365/2021+）。",
+      "example": "=XMATCH(A2,B2:B100)",
+      "keywords": ["位置", "反向"]
+    },
+    {
+      "name": "CHOOSE",
+      "chineseName": "按序号选择",
+      "category": "查找",
+      "signature": "CHOOSE(index_num, value1, [value2], ...)",
+      "description": "根据序号从参数列表中选择值。",
+      "example": "=CHOOSE(2,\"一季度\",\"二季度\",\"三季度\")",
+      "keywords": ["选择"]
+    },
+    {
+      "name": "OFFSET",
+      "chineseName": "偏移引用",
+      "category": "查找",
+      "signature": "OFFSET(reference, rows, cols, [height], [width])",
+      "description": "以基准单元格偏移返回区域引用。",
+      "example": "=SUM(OFFSET(A1,0,0,10,1))",
+      "keywords": ["动态区域", "偏移"]
+    },
+    {
+      "name": "INDIRECT",
+      "chineseName": "文本转引用",
+      "category": "查找",
+      "signature": "INDIRECT(ref_text, [a1])",
+      "description": "将文本地址转换为引用。",
+      "example": "=SUM(INDIRECT(\"A1:A10\"))",
+      "keywords": ["动态引用", "地址文本"]
+    },
+    {
+      "name": "LEFT",
+      "chineseName": "左取文本",
+      "category": "文本",
+      "signature": "LEFT(text, [num_chars])",
+      "description": "从文本左侧截取指定长度。",
+      "example": "=LEFT(A1,3)",
+      "keywords": ["截取", "左侧"]
+    },
+    {
+      "name": "RIGHT",
+      "chineseName": "右取文本",
+      "category": "文本",
+      "signature": "RIGHT(text, [num_chars])",
+      "description": "从文本右侧截取指定长度。",
+      "example": "=RIGHT(A1,4)",
+      "keywords": ["截取", "右侧"]
+    },
+    {
+      "name": "MID",
+      "chineseName": "中间截取",
+      "category": "文本",
+      "signature": "MID(text, start_num, num_chars)",
+      "description": "从文本指定位置截取指定长度。",
+      "example": "=MID(A1,3,5)",
+      "keywords": ["截取", "子串"]
+    },
+    {
+      "name": "LEN",
+      "chineseName": "文本长度",
+      "category": "文本",
+      "signature": "LEN(text)",
+      "description": "返回文本字符数。",
+      "example": "=LEN(A1)",
+      "keywords": ["长度"]
+    },
+    {
+      "name": "TRIM",
+      "chineseName": "去除多余空格",
+      "category": "文本",
+      "signature": "TRIM(text)",
+      "description": "删除文本首尾空格并把连续空格压缩为一个。",
+      "example": "=TRIM(A1)",
+      "keywords": ["空格", "清洗"]
+    },
+    {
+      "name": "CLEAN",
+      "chineseName": "清除控制字符",
+      "category": "文本",
+      "signature": "CLEAN(text)",
+      "description": "删除文本中的不可打印字符。",
+      "example": "=CLEAN(A1)",
+      "keywords": ["控制字符", "清洗"]
+    },
+    {
+      "name": "LOWER",
+      "chineseName": "转小写",
+      "category": "文本",
+      "signature": "LOWER(text)",
+      "description": "把文本转换为小写。",
+      "example": "=LOWER(A1)",
+      "keywords": ["小写"]
+    },
+    {
+      "name": "UPPER",
+      "chineseName": "转大写",
+      "category": "文本",
+      "signature": "UPPER(text)",
+      "description": "把文本转换为大写。",
+      "example": "=UPPER(A1)",
+      "keywords": ["大写"]
+    },
+    {
+      "name": "PROPER",
+      "chineseName": "首字母大写",
+      "category": "文本",
+      "signature": "PROPER(text)",
+      "description": "把每个单词首字母转为大写。",
+      "example": "=PROPER(A1)",
+      "keywords": ["标题格式"]
+    },
+    {
+      "name": "CONCAT",
+      "chineseName": "连接文本",
+      "category": "文本",
+      "signature": "CONCAT(text1, [text2], ...)",
+      "description": "连接多个文本或区域中的文本。",
+      "example": "=CONCAT(A1,\" \",B1)",
+      "keywords": ["合并文本", "拼接"]
+    },
+    {
+      "name": "CONCATENATE",
+      "chineseName": "连接文本（旧版）",
+      "category": "文本",
+      "signature": "CONCATENATE(text1, [text2], ...)",
+      "description": "兼容旧版的文本连接函数。",
+      "example": "=CONCATENATE(A1,\"-\",B1)",
+      "keywords": ["合并文本", "拼接"]
+    },
+    {
+      "name": "TEXTJOIN",
+      "chineseName": "带分隔符连接",
+      "category": "文本",
+      "signature": "TEXTJOIN(delimiter, ignore_empty, text1, [text2], ...)",
+      "description": "用分隔符连接文本，可选择忽略空值。",
+      "example": "=TEXTJOIN(\",\",TRUE,A1:A10)",
+      "keywords": ["拼接", "分隔符"]
+    },
+    {
+      "name": "SUBSTITUTE",
+      "chineseName": "替换文本",
+      "category": "文本",
+      "signature": "SUBSTITUTE(text, old_text, new_text, [instance_num])",
+      "description": "替换文本中指定内容，可指定第几次出现。",
+      "example": "=SUBSTITUTE(A1,\" \",\"\")",
+      "keywords": ["替换", "删除字符"]
+    },
+    {
+      "name": "REPLACE",
+      "chineseName": "按位置替换",
+      "category": "文本",
+      "signature": "REPLACE(old_text, start_num, num_chars, new_text)",
+      "description": "按字符位置替换文本片段。",
+      "example": "=REPLACE(A1,1,2,\"**\")",
+      "keywords": ["按位置替换"]
+    },
+    {
+      "name": "FIND",
+      "chineseName": "区分大小写查找",
+      "category": "文本",
+      "signature": "FIND(find_text, within_text, [start_num])",
+      "description": "区分大小写返回子串位置。",
+      "example": "=FIND(\"-\",A1)",
+      "keywords": ["查找位置", "区分大小写"]
+    },
+    {
+      "name": "SEARCH",
+      "chineseName": "不区分大小写查找",
+      "category": "文本",
+      "signature": "SEARCH(find_text, within_text, [start_num])",
+      "description": "不区分大小写返回子串位置，支持通配符。",
+      "example": "=SEARCH(\"abc\",A1)",
+      "keywords": ["查找位置", "通配符"]
+    },
+    {
+      "name": "TEXT",
+      "chineseName": "格式化文本",
+      "category": "文本",
+      "signature": "TEXT(value, format_text)",
+      "description": "按指定数字格式把值转换为文本。",
+      "example": "=TEXT(A1,\"yyyy-mm-dd\")",
+      "keywords": ["格式", "转文本"]
+    },
+    {
+      "name": "VALUE",
+      "chineseName": "文本转数值",
+      "category": "文本",
+      "signature": "VALUE(text)",
+      "description": "把文本形式的数字转换为数值。",
+      "example": "=VALUE(A1)",
+      "keywords": ["转数字", "类型转换"]
+    },
+    {
+      "name": "NUMBERVALUE",
+      "chineseName": "本地化文本转数值",
+      "category": "文本",
+      "signature": "NUMBERVALUE(text, [decimal_separator], [group_separator])",
+      "description": "按指定分隔符把文本转换为数值。",
+      "example": "=NUMBERVALUE(\"1.234,56\",\",\",\".\")",
+      "keywords": ["区域格式", "转数字"]
+    },
+    {
+      "name": "TEXTSPLIT",
+      "chineseName": "文本拆分",
+      "category": "文本",
+      "signature": "TEXTSPLIT(text, col_delimiter, [row_delimiter], [ignore_empty], [match_mode], [pad_with])",
+      "description": "按分隔符把文本拆成动态数组（Microsoft 365+）。",
+      "example": "=TEXTSPLIT(A1,\",\")",
+      "keywords": ["分列", "拆分"]
+    },
+    {
+      "name": "TEXTBEFORE",
+      "chineseName": "取分隔符前文本",
+      "category": "文本",
+      "signature": "TEXTBEFORE(text, delimiter, [instance_num], [match_mode], [match_end], [if_not_found])",
+      "description": "返回指定分隔符之前的文本（Microsoft 365+）。",
+      "example": "=TEXTBEFORE(A1,\"-\")",
+      "keywords": ["前缀", "截取"]
+    },
+    {
+      "name": "TEXTAFTER",
+      "chineseName": "取分隔符后文本",
+      "category": "文本",
+      "signature": "TEXTAFTER(text, delimiter, [instance_num], [match_mode], [match_end], [if_not_found])",
+      "description": "返回指定分隔符之后的文本（Microsoft 365+）。",
+      "example": "=TEXTAFTER(A1,\"-\")",
+      "keywords": ["后缀", "截取"]
+    },
+    {
+      "name": "REGEXTEST",
+      "chineseName": "正则测试",
+      "category": "文本",
+      "signature": "REGEXTEST(text, pattern, [case_sensitivity])",
+      "description": "判断文本是否匹配正则表达式（Microsoft 365+）。",
+      "example": "=REGEXTEST(A1,\"^1[3-9]\\d{9}$\")",
+      "keywords": ["正则", "验证"]
+    },
+    {
+      "name": "REGEXEXTRACT",
+      "chineseName": "正则提取",
+      "category": "文本",
+      "signature": "REGEXEXTRACT(text, pattern, [return_mode], [case_sensitivity])",
+      "description": "用正则表达式提取匹配文本（Microsoft 365+）。",
+      "example": "=REGEXEXTRACT(A1,\"\\d+\")",
+      "keywords": ["正则", "提取"]
+    },
+    {
+      "name": "REGEXREPLACE",
+      "chineseName": "正则替换",
+      "category": "文本",
+      "signature": "REGEXREPLACE(text, pattern, replacement, [occurrence], [case_sensitivity])",
+      "description": "用正则表达式替换文本（Microsoft 365+）。",
+      "example": "=REGEXREPLACE(A1,\"\\s+\",\" \")",
+      "keywords": ["正则", "替换"]
+    },
+    {
+      "name": "DATE",
+      "chineseName": "构造日期",
+      "category": "日期",
+      "signature": "DATE(year, month, day)",
+      "description": "由年、月、日构造日期序列值。",
+      "example": "=DATE(2026,11,2)",
+      "keywords": ["日期", "构造"]
+    },
+    {
+      "name": "TODAY",
+      "chineseName": "今天",
+      "category": "日期",
+      "signature": "TODAY()",
+      "description": "返回当前日期（不含时间）。",
+      "example": "=TODAY()",
+      "keywords": ["当前日期"]
+    },
+    {
+      "name": "NOW",
+      "chineseName": "当前时间",
+      "category": "日期",
+      "signature": "NOW()",
+      "description": "返回当前日期和时间。",
+      "example": "=NOW()",
+      "keywords": ["当前时间", "时间戳"]
+    },
+    {
+      "name": "YEAR",
+      "chineseName": "年份",
+      "category": "日期",
+      "signature": "YEAR(serial_number)",
+      "description": "返回日期的年份。",
+      "example": "=YEAR(A1)",
+      "keywords": ["年"]
+    },
+    {
+      "name": "MONTH",
+      "chineseName": "月份",
+      "category": "日期",
+      "signature": "MONTH(serial_number)",
+      "description": "返回日期的月份。",
+      "example": "=MONTH(A1)",
+      "keywords": ["月"]
+    },
+    {
+      "name": "DAY",
+      "chineseName": "日",
+      "category": "日期",
+      "signature": "DAY(serial_number)",
+      "description": "返回日期的日。",
+      "example": "=DAY(A1)",
+      "keywords": ["日", "天"]
+    },
+    {
+      "name": "HOUR",
+      "chineseName": "小时",
+      "category": "日期",
+      "signature": "HOUR(serial_number)",
+      "description": "返回时间的小时数。",
+      "example": "=HOUR(A1)",
+      "keywords": ["小时", "时间"]
+    },
+    {
+      "name": "MINUTE",
+      "chineseName": "分钟",
+      "category": "日期",
+      "signature": "MINUTE(serial_number)",
+      "description": "返回时间的分钟数。",
+      "example": "=MINUTE(A1)",
+      "keywords": ["分钟", "时间"]
+    },
+    {
+      "name": "SECOND",
+      "chineseName": "秒",
+      "category": "日期",
+      "signature": "SECOND(serial_number)",
+      "description": "返回时间的秒数。",
+      "example": "=SECOND(A1)",
+      "keywords": ["秒", "时间"]
+    },
+    {
+      "name": "EOMONTH",
+      "chineseName": "月末日期",
+      "category": "日期",
+      "signature": "EOMONTH(start_date, months)",
+      "description": "返回指定月份偏移后的最后一天。",
+      "example": "=EOMONTH(TODAY(),0)",
+      "keywords": ["月末", "月底"]
+    },
+    {
+      "name": "EDATE",
+      "chineseName": "月份偏移日期",
+      "category": "日期",
+      "signature": "EDATE(start_date, months)",
+      "description": "返回指定月份偏移后的同一天。",
+      "example": "=EDATE(A1,3)",
+      "keywords": ["加月", "减月"]
+    },
+    {
+      "name": "DATEDIF",
+      "chineseName": "日期间隔",
+      "category": "日期",
+      "signature": "DATEDIF(start_date, end_date, unit)",
+      "description": "计算两个日期之间的年/月/日间隔。",
+      "example": "=DATEDIF(A1,B1,\"Y\")",
+      "keywords": ["年龄", "工龄", "间隔"]
+    },
+    {
+      "name": "NETWORKDAYS",
+      "chineseName": "工作日数",
+      "category": "日期",
+      "signature": "NETWORKDAYS(start_date, end_date, [holidays])",
+      "description": "计算两个日期之间的工作日天数。",
+      "example": "=NETWORKDAYS(A1,B1,C1:C10)",
+      "keywords": ["工作日", "节假日"]
+    },
+    {
+      "name": "WORKDAY",
+      "chineseName": "工作日偏移",
+      "category": "日期",
+      "signature": "WORKDAY(start_date, days, [holidays])",
+      "description": "返回指定工作日数之后的日期。",
+      "example": "=WORKDAY(TODAY(),10,C1:C10)",
+      "keywords": ["工作日", "截止日"]
+    },
+    {
+      "name": "WEEKDAY",
+      "chineseName": "星期几",
+      "category": "日期",
+      "signature": "WEEKDAY(serial_number, [return_type])",
+      "description": "返回日期对应的星期序号。",
+      "example": "=WEEKDAY(A1,2)",
+      "keywords": ["星期", "周几"]
+    },
+    {
+      "name": "WEEKNUM",
+      "chineseName": "周数",
+      "category": "日期",
+      "signature": "WEEKNUM(serial_number, [return_type])",
+      "description": "返回日期在一年中的周数。",
+      "example": "=WEEKNUM(A1,2)",
+      "keywords": ["第几周"]
+    },
+    {
+      "name": "DATEVALUE",
+      "chineseName": "文本转日期",
+      "category": "日期",
+      "signature": "DATEVALUE(date_text)",
+      "description": "把日期文本转换为日期序列值。",
+      "example": "=DATEVALUE(\"2026-11-02\")",
+      "keywords": ["转日期"]
+    },
+    {
+      "name": "TIMEVALUE",
+      "chineseName": "文本转时间",
+      "category": "日期",
+      "signature": "TIMEVALUE(time_text)",
+      "description": "把时间文本转换为时间序列值。",
+      "example": "=TIMEVALUE(\"13:30\")",
+      "keywords": ["转时间"]
+    },
+    {
+      "name": "PMT",
+      "chineseName": "等额还款",
+      "category": "财务",
+      "signature": "PMT(rate, nper, pv, [fv], [type])",
+      "description": "计算等额分期付款的每期付款额。",
+      "example": "=PMT(0.05/12,360,-1000000)",
+      "keywords": ["贷款", "月供", "还款"]
+    },
+    {
+      "name": "FV",
+      "chineseName": "终值",
+      "category": "财务",
+      "signature": "FV(rate, nper, pmt, [pv], [type])",
+      "description": "计算投资或贷款的终值。",
+      "example": "=FV(0.06/12,120,-1000)",
+      "keywords": ["未来值", "复利"]
+    },
+    {
+      "name": "PV",
+      "chineseName": "现值",
+      "category": "财务",
+      "signature": "PV(rate, nper, pmt, [fv], [type])",
+      "description": "计算投资或贷款的现值。",
+      "example": "=PV(0.06/12,120,-1000)",
+      "keywords": ["折现", "现值"]
+    },
+    {
+      "name": "RATE",
+      "chineseName": "利率",
+      "category": "财务",
+      "signature": "RATE(nper, pmt, pv, [fv], [type], [guess])",
+      "description": "计算每期利率。",
+      "example": "=RATE(360,-5000,1000000)",
+      "keywords": ["利率", "收益率"]
+    },
+    {
+      "name": "NPER",
+      "chineseName": "期数",
+      "category": "财务",
+      "signature": "NPER(rate, pmt, pv, [fv], [type])",
+      "description": "计算投资或贷款的期数。",
+      "example": "=NPER(0.05/12,-5000,1000000)",
+      "keywords": ["还款期数", "多久"]
+    },
+    {
+      "name": "NPV",
+      "chineseName": "净现值",
+      "category": "财务",
+      "signature": "NPV(rate, value1, [value2], ...)",
+      "description": "按折现率计算未来现金流的净现值。",
+      "example": "=NPV(0.1,B2:B10)+B1",
+      "keywords": ["净现值", "折现"]
+    },
+    {
+      "name": "IRR",
+      "chineseName": "内部收益率",
+      "category": "财务",
+      "signature": "IRR(values, [guess])",
+      "description": "计算一组现金流的内部收益率。",
+      "example": "=IRR(B1:B10)",
+      "keywords": ["收益率", "IRR"]
+    },
+    {
+      "name": "XIRR",
+      "chineseName": "不定期内部收益率",
+      "category": "财务",
+      "signature": "XIRR(values, dates, [guess])",
+      "description": "计算日期不规则的现金流内部收益率。",
+      "example": "=XIRR(B2:B10,A2:A10)",
+      "keywords": ["收益率", "不定期"]
+    },
+    {
+      "name": "XNPV",
+      "chineseName": "不定期净现值",
+      "category": "财务",
+      "signature": "XNPV(rate, values, dates)",
+      "description": "计算日期不规则的现金流净现值。",
+      "example": "=XNPV(0.1,B2:B10,A2:A10)",
+      "keywords": ["净现值", "不定期"]
+    },
+    {
+      "name": "FILTER",
+      "chineseName": "动态筛选",
+      "category": "动态数组",
+      "signature": "FILTER(array, include, [if_empty])",
+      "description": "按条件返回动态筛选结果（Microsoft 365/2021+）。",
+      "example": "=FILTER(A2:C100,C2:C100>1000,\"无结果\")",
+      "keywords": ["筛选", "动态数组"]
+    },
+    {
+      "name": "UNIQUE",
+      "chineseName": "唯一值",
+      "category": "动态数组",
+      "signature": "UNIQUE(array, [by_col], [exactly_once])",
+      "description": "返回数组中的唯一值（Microsoft 365/2021+）。",
+      "example": "=UNIQUE(A2:A100)",
+      "keywords": ["去重", "唯一"]
+    },
+    {
+      "name": "SORT",
+      "chineseName": "动态排序",
+      "category": "动态数组",
+      "signature": "SORT(array, [sort_index], [sort_order], [by_col])",
+      "description": "返回排序后的动态数组（Microsoft 365/2021+）。",
+      "example": "=SORT(A2:C100,2,-1)",
+      "keywords": ["排序", "动态数组"]
+    },
+    {
+      "name": "SORTBY",
+      "chineseName": "按列排序",
+      "category": "动态数组",
+      "signature": "SORTBY(array, by_array1, [sort_order1], ...)",
+      "description": "按一个或多个辅助数组排序（Microsoft 365/2021+）。",
+      "example": "=SORTBY(A2:A100,C2:C100,-1)",
+      "keywords": ["排序", "多关键字"]
+    },
+    {
+      "name": "SEQUENCE",
+      "chineseName": "序列",
+      "category": "动态数组",
+      "signature": "SEQUENCE(rows, [columns], [start], [step])",
+      "description": "生成连续数字动态数组（Microsoft 365/2021+）。",
+      "example": "=SEQUENCE(10,1,1,1)",
+      "keywords": ["序号", "数字序列"]
+    },
+    {
+      "name": "TRANSPOSE",
+      "chineseName": "转置",
+      "category": "动态数组",
+      "signature": "TRANSPOSE(array)",
+      "description": "返回行列互换后的数组。",
+      "example": "=TRANSPOSE(A1:C10)",
+      "keywords": ["行列互换", "转置"]
+    },
+    {
+      "name": "TAKE",
+      "chineseName": "取前若干行列",
+      "category": "动态数组",
+      "signature": "TAKE(array, rows, [columns])",
+      "description": "从数组开头/末尾取指定行列（Microsoft 365+）。",
+      "example": "=TAKE(A2:C100,10)",
+      "keywords": ["前N行", "截取"]
+    },
+    {
+      "name": "DROP",
+      "chineseName": "删除前若干行列",
+      "category": "动态数组",
+      "signature": "DROP(array, rows, [columns])",
+      "description": "从数组开头/末尾删除指定行列（Microsoft 365+）。",
+      "example": "=DROP(A2:C100,1)",
+      "keywords": ["跳过", "去表头"]
+    },
+    {
+      "name": "CHOOSECOLS",
+      "chineseName": "选择列",
+      "category": "动态数组",
+      "signature": "CHOOSECOLS(array, col_num1, [col_num2], ...)",
+      "description": "按列号返回数组的指定列（Microsoft 365+）。",
+      "example": "=CHOOSECOLS(A2:C100,1,3)",
+      "keywords": ["选列", "重排列"]
+    },
+    {
+      "name": "CHOOSEROWS",
+      "chineseName": "选择行",
+      "category": "动态数组",
+      "signature": "CHOOSEROWS(array, row_num1, [row_num2], ...)",
+      "description": "按行号返回数组的指定行（Microsoft 365+）。",
+      "example": "=CHOOSEROWS(A2:C100,1,3,5)",
+      "keywords": ["选行", "重排列"]
+    },
+    {
+      "name": "HSTACK",
+      "chineseName": "横向堆叠",
+      "category": "动态数组",
+      "signature": "HSTACK(array1, [array2], ...)",
+      "description": "按列方向拼接多个数组（Microsoft 365+）。",
+      "example": "=HSTACK(A2:B10,D2:E10)",
+      "keywords": ["横向合并", "拼接"]
+    },
+    {
+      "name": "VSTACK",
+      "chineseName": "纵向堆叠",
+      "category": "动态数组",
+      "signature": "VSTACK(array1, [array2], ...)",
+      "description": "按行方向拼接多个数组（Microsoft 365+）。",
+      "example": "=VSTACK(A2:C10,A12:C20)",
+      "keywords": ["纵向合并", "追加"]
+    },
+    {
+      "name": "TOCOL",
+      "chineseName": "转为一列",
+      "category": "动态数组",
+      "signature": "TOCOL(array, [ignore], [scan_by_column])",
+      "description": "把二维数组拉平为一列（Microsoft 365+）。",
+      "example": "=TOCOL(A1:C10,1)",
+      "keywords": ["拉平", "一列"]
+    },
+    {
+      "name": "TOROW",
+      "chineseName": "转为一行",
+      "category": "动态数组",
+      "signature": "TOROW(array, [ignore], [scan_by_column])",
+      "description": "把二维数组拉平为一行（Microsoft 365+）。",
+      "example": "=TOROW(A1:C10,1)",
+      "keywords": ["拉平", "一行"]
+    },
+    {
+      "name": "WRAPROWS",
+      "chineseName": "按行折行",
+      "category": "动态数组",
+      "signature": "WRAPROWS(vector, wrap_count, [pad_with])",
+      "description": "把一维数组按固定列数折成二维（Microsoft 365+）。",
+      "example": "=WRAPROWS(A1:A12,3)",
+      "keywords": ["折行", "二维"]
+    },
+    {
+      "name": "WRAPCOLS",
+      "chineseName": "按列折列",
+      "category": "动态数组",
+      "signature": "WRAPCOLS(vector, wrap_count, [pad_with])",
+      "description": "把一维数组按固定行数折成二维（Microsoft 365+）。",
+      "example": "=WRAPCOLS(A1:A12,4)",
+      "keywords": ["折列", "二维"]
+    },
+    {
+      "name": "EXPAND",
+      "chineseName": "扩展数组",
+      "category": "动态数组",
+      "signature": "EXPAND(array, rows, [columns], [pad_with])",
+      "description": "把数组扩展到指定行列并用填充值补齐（Microsoft 365+）。",
+      "example": "=EXPAND(A1:B5,10,3,0)",
+      "keywords": ["补齐", "扩展"]
+    },
+    {
+      "name": "MAP",
+      "chineseName": "逐元素映射",
+      "category": "动态数组",
+      "signature": "MAP(array1, lambda_or_array, ...)",
+      "description": "对数组中每个元素应用 LAMBDA（Microsoft 365+）。",
+      "example": "=MAP(A1:A10,LAMBDA(x,x*2))",
+      "keywords": ["LAMBDA", "逐元素"]
+    },
+    {
+      "name": "REDUCE",
+      "chineseName": "归约",
+      "category": "动态数组",
+      "signature": "REDUCE([initial_value], array, lambda)",
+      "description": "用 LAMBDA 把数组归约为单个值（Microsoft 365+）。",
+      "example": "=REDUCE(0,A1:A10,LAMBDA(a,b,a+b))",
+      "keywords": ["LAMBDA", "累计"]
+    },
+    {
+      "name": "SCAN",
+      "chineseName": "累计扫描",
+      "category": "动态数组",
+      "signature": "SCAN([initial_value], array, lambda)",
+      "description": "用 LAMBDA 生成累计结果数组（Microsoft 365+）。",
+      "example": "=SCAN(0,A1:A10,LAMBDA(a,b,a+b))",
+      "keywords": ["LAMBDA", "累计"]
+    },
+    {
+      "name": "BYROW",
+      "chineseName": "按行聚合",
+      "category": "动态数组",
+      "signature": "BYROW(array, lambda)",
+      "description": "对每一行应用 LAMBDA 并返回一列结果（Microsoft 365+）。",
+      "example": "=BYROW(A1:C10,LAMBDA(r,SUM(r)))",
+      "keywords": ["LAMBDA", "按行"]
+    },
+    {
+      "name": "BYCOL",
+      "chineseName": "按列聚合",
+      "category": "动态数组",
+      "signature": "BYCOL(array, lambda)",
+      "description": "对每一列应用 LAMBDA 并返回一行结果（Microsoft 365+）。",
+      "example": "=BYCOL(A1:C10,LAMBDA(c,AVERAGE(c)))",
+      "keywords": ["LAMBDA", "按列"]
+    },
+    {
+      "name": "LET",
+      "chineseName": "公式变量",
+      "category": "动态数组",
+      "signature": "LET(name1, value1, [name2, value2], ..., calculation)",
+      "description": "在公式内定义变量并复用（Microsoft 365/2021+）。",
+      "example": "=LET(total,SUM(B2:B100),total*0.1)",
+      "keywords": ["变量", "中间结果"]
+    },
+    {
+      "name": "LAMBDA",
+      "chineseName": "自定义函数",
+      "category": "动态数组",
+      "signature": "LAMBDA([parameter1, parameter2, ...], calculation)",
+      "description": "创建可在公式中复用的匿名函数（Microsoft 365+）。",
+      "example": "=LAMBDA(x,x^2)(5)",
+      "keywords": ["自定义函数", "匿名函数"]
+    },
+    {
+      "name": "RANDARRAY",
+      "chineseName": "随机数组",
+      "category": "动态数组",
+      "signature": "RANDARRAY([rows], [columns], [min], [max], [whole_number])",
+      "description": "生成指定形状的随机数数组（Microsoft 365/2021+）。",
+      "example": "=RANDARRAY(5,3,1,100,TRUE)",
+      "keywords": ["随机数", "抽样"]
+    },
+    {
+      "name": "RAND",
+      "chineseName": "随机小数",
+      "category": "数学",
+      "signature": "RAND()",
+      "description": "返回 0 到 1 之间的随机小数。",
+      "example": "=RAND()",
+      "keywords": ["随机"]
+    },
+    {
+      "name": "RANDBETWEEN",
+      "chineseName": "区间随机整数",
+      "category": "数学",
+      "signature": "RANDBETWEEN(bottom, top)",
+      "description": "返回指定区间内的随机整数。",
+      "example": "=RANDBETWEEN(1,100)",
+      "keywords": ["随机整数", "抽样"]
+    },
+    {
+      "name": "ISBLANK",
+      "chineseName": "是否为空",
+      "category": "信息",
+      "signature": "ISBLANK(value)",
+      "description": "判断值是否为空单元格。",
+      "example": "=ISBLANK(A1)",
+      "keywords": ["空白", "判断"]
+    },
+    {
+      "name": "ISNUMBER",
+      "chineseName": "是否为数字",
+      "category": "信息",
+      "signature": "ISNUMBER(value)",
+      "description": "判断值是否为数字。",
+      "example": "=ISNUMBER(A1)",
+      "keywords": ["数字判断"]
+    },
+    {
+      "name": "ISTEXT",
+      "chineseName": "是否为文本",
+      "category": "信息",
+      "signature": "ISTEXT(value)",
+      "description": "判断值是否为文本。",
+      "example": "=ISTEXT(A1)",
+      "keywords": ["文本判断"]
+    },
+    {
+      "name": "ISERROR",
+      "chineseName": "是否为错误",
+      "category": "信息",
+      "signature": "ISERROR(value)",
+      "description": "判断值是否为任意错误值。",
+      "example": "=ISERROR(A1)",
+      "keywords": ["错误判断"]
+    },
+    {
+      "name": "ISERR",
+      "chineseName": "是否非 N/A 错误",
+      "category": "信息",
+      "signature": "ISERR(value)",
+      "description": "判断值是否为除 #N/A 以外的错误。",
+      "example": "=ISERR(A1)",
+      "keywords": ["错误判断"]
+    },
+    {
+      "name": "ISNA",
+      "chineseName": "是否为 N/A",
+      "category": "信息",
+      "signature": "ISNA(value)",
+      "description": "判断值是否为 #N/A。",
+      "example": "=ISNA(A1)",
+      "keywords": ["N/A", "未找到"]
+    },
+    {
+      "name": "ISEVEN",
+      "chineseName": "是否为偶数",
+      "category": "信息",
+      "signature": "ISEVEN(number)",
+      "description": "判断数值是否为偶数。",
+      "example": "=ISEVEN(A1)",
+      "keywords": ["偶数"]
+    },
+    {
+      "name": "ISODD",
+      "chineseName": "是否为奇数",
+      "category": "信息",
+      "signature": "ISODD(number)",
+      "description": "判断数值是否为奇数。",
+      "example": "=ISODD(A1)",
+      "keywords": ["奇数"]
+    },
+    {
+      "name": "GETPIVOTDATA",
+      "chineseName": "读取透视表数据",
+      "category": "查找",
+      "signature": "GETPIVOTDATA(data_field, pivot_table, [field1, item1], ...)",
+      "description": "从透视表中按字段条件提取汇总值。",
+      "example": "=GETPIVOTDATA(\"销售额\",$A$3,\"地区\",\"华东\")",
+      "keywords": ["透视表", "取数"]
+    }
+  ]
+}

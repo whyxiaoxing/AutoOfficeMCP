@@ -1,0 +1,40 @@
+{
+  "id": "word_table_formula",
+  "name": "word_table_formula",
+  "description": "在表格单元格写入计算域，如 =SUM(ABOVE)、=SUM(LEFT)、=AVERAGE(ABOVE)，可加 \\\\# 数字格式开关；返回域代码与计算结果。示例：word_table_formula {\"tableIndex\":1,\"row\":5,\"col\":2,\"formula\":\"=SUM(ABOVE)\",\"numberFormat\":\"0.00\"}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "tableIndex",
+      "type": "integer",
+      "required": true,
+      "description": "表格索引，1 基。"
+    },
+    {
+      "name": "row",
+      "type": "integer",
+      "required": true,
+      "description": "目标行，1 基。"
+    },
+    {
+      "name": "col",
+      "type": "integer",
+      "required": true,
+      "description": "目标列，1 基。"
+    },
+    {
+      "name": "formula",
+      "type": "string",
+      "required": true,
+      "description": "公式，如 =SUM(ABOVE)。"
+    },
+    {
+      "name": "numberFormat",
+      "type": "string",
+      "required": false,
+      "description": "数字格式，如 0.00；会追加 \\\\# 开关。"
+    }
+  ]
+}

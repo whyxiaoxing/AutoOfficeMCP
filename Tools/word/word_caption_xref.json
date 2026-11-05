@@ -1,0 +1,88 @@
+{
+  "id": "word_caption_xref",
+  "name": "word_caption_xref",
+  "description": "题注批量插入与交叉引用。action=add：为表格/图片批量添加“表 N / 图 N”题注段落并创建书签（编号为插入时快照计数，不是 SEQ 域）；action=xref：在光标处插入指向题注书签的 REF 交叉引用域。示例：word_caption_xref {\"action\":\"add\",\"target\":\"tables\",\"captionText\":\"数据表\"}；插入交叉引用：{\"action\":\"xref\",\"bookmarkName\":\"AO_Caption_表_1\",\"prefixText\":\"见 \"}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "action",
+      "type": "string",
+      "required": false,
+      "description": "add（默认，批量插入题注）/xref（插入交叉引用域）。"
+    },
+    {
+      "name": "target",
+      "type": "string",
+      "required": false,
+      "description": "action=add 时目标：tables（默认）/images/both。"
+    },
+    {
+      "name": "label",
+      "type": "string",
+      "required": false,
+      "description": "题注标签，默认表格用“表”、图片用“图”。"
+    },
+    {
+      "name": "captionText",
+      "type": "string",
+      "required": false,
+      "description": "附加在编号后的题注文字；图片未提供时使用图片 Alt 文本。"
+    },
+    {
+      "name": "captionStyle",
+      "type": "string",
+      "required": false,
+      "description": "题注段落样式名，默认“题注”；找不到时只写文本。"
+    },
+    {
+      "name": "bookmarkPrefix",
+      "type": "string",
+      "required": false,
+      "description": "题注书签前缀，默认 AO_Caption；完整书签形如 AO_Caption_表_1。"
+    },
+    {
+      "name": "addBookmark",
+      "type": "boolean",
+      "required": false,
+      "description": "是否为每个题注创建书签，默认 true（xref 依赖书签）。"
+    },
+    {
+      "name": "includeInline",
+      "type": "boolean",
+      "required": false,
+      "description": "target=images/both 时是否包含内嵌图片，默认 true。"
+    },
+    {
+      "name": "includeFloating",
+      "type": "boolean",
+      "required": false,
+      "description": "target=images/both 时是否包含浮动图片，默认 true。"
+    },
+    {
+      "name": "tableIndexes",
+      "type": "array",
+      "required": false,
+      "description": "仅处理指定 1 基表格索引，例如 [1,3]；省略则处理全部表格。"
+    },
+    {
+      "name": "maxItems",
+      "type": "integer",
+      "required": false,
+      "description": "最多处理的目标数，1-1000，默认 200。"
+    },
+    {
+      "name": "bookmarkName",
+      "type": "string",
+      "required": false,
+      "description": "action=xref 时必须提供：已存在的题注书签名。"
+    },
+    {
+      "name": "prefixText",
+      "type": "string",
+      "required": false,
+      "description": "action=xref 时插入在域前的文字，默认“见 ”。"
+    }
+  ]
+}

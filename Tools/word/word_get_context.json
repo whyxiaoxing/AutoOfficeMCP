@@ -1,0 +1,9 @@
+{
+  "id": "word_get_context",
+  "name": "word_get_context",
+  "description": "读取 Word 当前上下文：选区字符数/字体/字号/样式/100 字预览，文档总段数与最多 10 个标题样式段落，以及光标前后各 2 段（带真实段号）。示例：word_get_context {}",
+  "appType": "word",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": []
+}

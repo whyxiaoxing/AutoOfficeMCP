@@ -1,0 +1,11 @@
+{
+  "id": "office_save_all",
+  "name": "office_save_all",
+  "description": "保存当前运行实例中所有打开了磁盘文件的 Excel/Word/PowerPoint 文档。只读或尚未保存过的新文档会逐项跳过并在结果中说明；只要存在跳过/失败项，就不会宣称全部成功。只附着已运行实例，不自动启动 Office。示例：office_save_all {} 或 office_save_all {\"app\":\"excel\"}。",
+  "appType": "common",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "app", "type": "string", "required": false, "description": "excel、word、ppt、all 或省略，默认 all；只处理指定应用。" }
+  ]
+}

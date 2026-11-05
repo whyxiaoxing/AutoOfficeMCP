@@ -1,0 +1,14 @@
+{
+  "id": "excel_rmb_upper",
+  "name": "excel_rmb_upper",
+  "description": "人民币金额转中文大写列。输入支持数值或文本金额（可含 ￥/¥、千分位逗号、元/圆 后缀、全角数字），输出如「壹仟贰佰叁拾肆元伍角陆分」「零元整」，自动处理负数（负）、零元零角分、角/分省略与整。默认写回源区域右侧同尺寸列，并设为文本格式。示例：range=\"报销!C2:C50\", outputColumn=\"D\"；group 无。传 write=false 仅预览。",
+  "appType": "excel",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "range", "type": "string", "required": true, "description": "金额源区域，如 报销!C2:C50。" },
+    { "name": "outputColumn", "type": "string", "required": false, "description": "输出起始列（列字母/列号/源表头名）；默认源区域右侧一列。" },
+    { "name": "outputSheet", "type": "string", "required": false, "description": "输出工作表；默认与源区域同一工作表。" },
+    { "name": "write", "type": "boolean", "required": false, "description": "是否写入工作表，默认 true；false 时只返回转换预览与失败清单。" }
+  ]
+}

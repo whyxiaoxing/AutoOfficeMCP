@@ -1,0 +1,9 @@
+{
+  "id": "ppt_get_presentation_info",
+  "name": "ppt_get_presentation_info",
+  "description": "读取当前活动演示文稿的元信息：文件路径、总页数、当前页、页面尺寸、宽高比、只读与未保存状态。是所有 slideIndex=-1（当前页）语义与写后验证的前提。示例：ppt_get_presentation_info {}。",
+  "appType": "ppt",
+  "category": "读取",
+  "riskLevel": "low",
+  "parameters": []
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ppt_set_image_format",
+  "name": "ppt_set_image_format",
+  "description": "设置图片边框、阴影与圆角。borderColor 用 #RRGGBB；shadow 可传 {blur,transparency,offsetX,offsetY,color}。cornerRadius 会让图片转换为带图片填充的圆角矩形（生成新 shapeId，原动画/替代文字不保留）。示例：ppt_set_image_format {\"shapeId\":9,\"borderColor\":\"#FFFFFF\",\"borderWidth\":2,\"shadow\":{\"blur\":8,\"transparency\":0.4}}。",
+  "appType": "ppt",
+  "category": "图片",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "幻灯片索引：省略/-1=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "shapeId", "type": "integer", "required": true, "description": "图片形状 id。" },
+    { "name": "borderColor", "type": "string", "required": false, "description": "边框颜色，如 #FFFFFF。" },
+    { "name": "borderWidth", "type": "number", "required": false, "description": "边框宽度（磅），默认 1。" },
+    { "name": "shadow", "type": "object", "required": false, "description": "阴影对象：blur、transparency（0..1）、offsetX、offsetY、color。" },
+    { "name": "cornerRadius", "type": "number", "required": false, "description": "圆角半径（磅）；提供时转换为圆角图片形状。" }
+  ]
+}

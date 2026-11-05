@@ -1,0 +1,12 @@
+{
+  "id": "excel_autofit",
+  "name": "excel_autofit",
+  "description": "自动调整列宽或行高。type=columns（默认）/rows/both。示例：range=\"Data!A1:J100\", type=\"both\"。省略 range 时使用当前工作表 UsedRange。行高列宽不在区域快照中，不登记自动撤销。",
+  "appType": "excel",
+  "category": "format",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "range", "type": "string", "required": false, "description": "调整区域；省略使用 UsedRange。" },
+    { "name": "type", "type": "string", "required": false, "description": "columns / rows / both，默认 columns。" }
+  ]
+}

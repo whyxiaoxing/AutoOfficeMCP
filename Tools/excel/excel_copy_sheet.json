@@ -1,0 +1,12 @@
+{
+  "id": "excel_copy_sheet",
+  "name": "excel_copy_sheet",
+  "description": "复制工作表到源表之后并重命名。示例：sourceName=\"模板\", newName=\"订单_2026\"。目标名已存在或非法时失败；失败会清理已复制的新表。不登记自动撤销。",
+  "appType": "excel",
+  "category": "sheet",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "sourceName", "type": "string", "required": true, "description": "源工作表名称。" },
+    { "name": "newName", "type": "string", "required": true, "description": "复制后的工作表名称，必须唯一。" }
+  ]
+}

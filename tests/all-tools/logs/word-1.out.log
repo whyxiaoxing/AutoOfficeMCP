@@ -1,0 +1,39 @@
+[PASS] word word_apply_as_revision 
+[PASS] word word_beautify 
+[PASS] word word_cjk_spacing 
+[PASS] word word_comment_add 
+[PASS] word word_comment_resolve 
+[GATED] word word_compare_documents APP_NOT_RUNNING
+[PASS] word word_delete_text 
+[PASS] word word_doc_properties 
+[PASS] word word_equations_list 
+[PASS] word word_extract_images 
+[PASS] word word_fields_list 
+[PASS] word word_footnote_manage 
+[PASS] word word_generate_toc 
+[PASS] word word_get_paragraph_info 
+[PASS] word word_header_footer 
+[GATED] word word_image_layout CLIPBOARD_DISABLED
+[PASS] word word_images_list 
+[PASS] word word_insert_image 
+[PASS] word word_insert_text 
+[PASS] word word_list_paragraphs 
+[PASS] word word_md_import 
+[PASS] word word_page_map 
+[PASS] word word_read_selection 
+[PASS] word word_rebuild_numbering 
+[PASS] word word_replace_text 
+[PASS] word word_revision_reject 
+[PASS] word word_section_manage 
+[PASS] word word_set_paragraph_format 
+[PASS] word word_style_modify 
+[PASS] word word_table_add_row_col 
+[GATED] word word_table_delete_row_col CANCELLED
+[PASS] word word_table_formula 
+[PASS] word word_table_read 
+[PASS] word word_table_set_col 
+[PASS] word word_tables_list 
+[PASS] word word_vertical_text 
+
+SUMMARY word part 1/2: total=36 pass=33 gated=3 fail=0
+REPORT D:\Code\c#\AutoOfficeMCP\tests\all-tools\results\word-part1.json

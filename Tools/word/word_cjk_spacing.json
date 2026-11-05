@@ -1,0 +1,40 @@
+{
+  "id": "word_cjk_spacing",
+  "name": "word_cjk_spacing",
+  "description": "盘古之白：在汉字与拉丁字母/数字之间自动插入一个空格，逐段处理并报告新增位置和字符数。只插入空格，不删除既有空格；含图片/域/公式/表格的段落跳过。示例：word_cjk_spacing {\"range\":\"all\"}；只处理选中段：{\"range\":\"selection\"}；仅汉字与字母之间：{\"spaceBetweenCjkAndDigit\":false}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "range",
+      "type": "string",
+      "required": false,
+      "description": "处理范围：all（默认，全文）或 selection（当前选区相交段落）。"
+    },
+    {
+      "name": "paragraphIndexes",
+      "type": "array",
+      "required": false,
+      "description": "限定处理的 1 基段号数组。优先于 range。"
+    },
+    {
+      "name": "spaceBetweenCjkAndLetter",
+      "type": "boolean",
+      "required": false,
+      "description": "是否在汉字与拉丁字母之间加空格，默认 true。"
+    },
+    {
+      "name": "spaceBetweenCjkAndDigit",
+      "type": "boolean",
+      "required": false,
+      "description": "是否在汉字与阿拉伯数字之间加空格，默认 true。两个开关不能同时为 false。"
+    },
+    {
+      "name": "maxReport",
+      "type": "integer",
+      "required": false,
+      "description": "最多返回的逐段样例数，1-2000，默认 300。"
+    }
+  ]
+}

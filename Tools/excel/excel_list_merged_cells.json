@@ -1,0 +1,13 @@
+{
+  "id": "excel_list_merged_cells",
+  "name": "excel_list_merged_cells",
+  "description": "列出现有合并单元格区域及左上值（只读）。省略 range 时扫描活动工作表（或 sheetName 指定表）的 UsedRange；最多扫描 200000 单元格、默认返回 500 个合并区，超限时 truncated=true。示例：range=\"报表!A1:H200\"。",
+  "appType": "excel",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "range", "type": "string", "required": false, "description": "扫描区域；省略时使用 UsedRange。" },
+    { "name": "sheetName", "type": "string", "required": false, "description": "省略 range 时限定工作表。" },
+    { "name": "maxResults", "type": "integer", "required": false, "description": "返回合并区上限，默认 500。" }
+  ]
+}

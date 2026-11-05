@@ -1,0 +1,46 @@
+{
+  "id": "word_table_convert",
+  "name": "word_table_convert",
+  "description": "表格与文本互转。direction=tableToText：把第 tableIndex 个表格按分隔符转成文本（会移除表格结构，必须 confirm=true）；direction=textToTable：把当前选区/指定段落/全文按分隔符转成表格。示例：word_table_convert {\"direction\":\"tableToText\",\"tableIndex\":1,\"separator\":\"tab\",\"confirm\":true}；文本转表格：{\"direction\":\"textToTable\",\"range\":\"selection\",\"separator\":\"comma\"}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "direction",
+      "type": "string",
+      "required": false,
+      "description": "tableToText（默认）或 textToTable，也接受“表格转文本”“文本转表格”。"
+    },
+    {
+      "name": "tableIndex",
+      "type": "integer",
+      "required": false,
+      "description": "direction=tableToText 时的 1 基表格索引；越界消息返回当前表格数。"
+    },
+    {
+      "name": "separator",
+      "type": "string",
+      "required": false,
+      "description": "分隔符：tab（默认）/comma/paragraph/space，或任意自定义字符串。"
+    },
+    {
+      "name": "confirm",
+      "type": "boolean",
+      "required": false,
+      "description": "direction=tableToText 必须为 true 才执行（保留单元格文本但移除表格结构）。"
+    },
+    {
+      "name": "range",
+      "type": "string",
+      "required": false,
+      "description": "direction=textToTable 时的文本范围：selection（默认）/paragraph/all。"
+    },
+    {
+      "name": "paragraphIndex",
+      "type": "integer",
+      "required": false,
+      "description": "range=paragraph 时的 1 基段号；转换该段文本。"
+    }
+  ]
+}

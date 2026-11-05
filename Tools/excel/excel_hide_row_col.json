@@ -1,0 +1,15 @@
+{
+  "id": "excel_hide_row_col",
+  "name": "excel_hide_row_col",
+  "description": "隐藏或取消隐藏行/列。type=row/column；position 起始行号或列字母/列号；count 数量；unhide=true 显示。示例：{\"type\":\"column\",\"position\":\"D\",\"count\":2}。隐藏状态不在区域快照中，不登记自动撤销。",
+  "appType": "excel",
+  "category": "sheet",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "type", "type": "string", "required": true, "description": "row 或 column。" },
+    { "name": "position", "type": "string", "required": true, "description": "起始行号，或列字母/列号。" },
+    { "name": "count", "type": "integer", "required": false, "description": "行/列数量，默认 1。" },
+    { "name": "unhide", "type": "boolean", "required": false, "description": "true 取消隐藏；默认 false 隐藏。" },
+    { "name": "sheetName", "type": "string", "required": false, "description": "目标工作表；省略使用活动工作表。" }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "word_table_add_row_col",
+  "name": "word_table_add_row_col",
+  "description": "在表格末尾增加 rowCount 行、colCount 列；含合并单元格导致 Rows.Add/Columns.Add 失败时返回可修复参数错误。示例：word_table_add_row_col {\"tableIndex\":1,\"rowCount\":2,\"colCount\":1}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "tableIndex",
+      "type": "integer",
+      "required": true,
+      "description": "表格索引，1 基。"
+    },
+    {
+      "name": "rowCount",
+      "type": "integer",
+      "required": false,
+      "description": "新增行数 0-200，与 colCount 至少一个大于 0。"
+    },
+    {
+      "name": "colCount",
+      "type": "integer",
+      "required": false,
+      "description": "新增列数 0-63，与 rowCount 至少一个大于 0。"
+    }
+  ]
+}

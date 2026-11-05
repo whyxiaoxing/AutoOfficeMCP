@@ -1,0 +1,13 @@
+{
+  "id": "ppt_delete_shape",
+  "name": "ppt_delete_shape",
+  "description": "【高危】删除指定形状。必须显式传 confirm=true；可通过 office_undo_last 撤销（PowerPoint 原生撤销组）。",
+  "appType": "ppt",
+  "category": "内容编辑",
+  "riskLevel": "high",
+  "parameters": [
+    { "name": "shapeId", "type": "integer", "required": true, "description": "目标形状 ID（来自 ppt_list_shapes）。" },
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "幻灯片索引：省略/-1=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "confirm", "type": "boolean", "required": false, "description": "必须为 true 才会删除。" }
+  ]
+}

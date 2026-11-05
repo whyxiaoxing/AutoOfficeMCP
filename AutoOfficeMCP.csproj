@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{80FC9CA2-BC3F-4667-B19A-2C710BB93254}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AutoOfficeMCP</RootNamespace>
+    <AssemblyName>AutoOfficeMCP</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>F:\c#2\AutoOfficeMCP\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>F:\c#2\AutoOfficeMCP\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Microsoft.Office.Interop.Excel" Version="15.0.4795.1001">
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Office.Interop.Word" Version="15.0.4797.1003">
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Office.Interop.PowerPoint" Version="15.0.4420.1018">
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Office\Office.csproj">
+      <Project>{97E11FF2-4E91-457D-A568-67C92DC452AE}</Project>
+      <Name>Office</Name>
+    </ProjectReference>
+    <ProjectReference Include="Xlsx\Xlsx.csproj">
+      <Project>{55684400-3178-4D94-9B95-831737B014F4}</Project>
+      <Name>Xlsx</Name>
+    </ProjectReference>
+    <ProjectReference Include="PowerPointe\PowerPointe.csproj">
+      <Project>{EE444BF9-3D7E-4EE4-A5C0-F1DC85A55193}</Project>
+      <Name>PowerPointe</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Common\CommonArgumentReader.cs" />
+    <Compile Include="Common\CommonBatchService.cs" />
+    <Compile Include="Common\CommonDocumentLifecycleService.cs" />
+    <Compile Include="Common\CommonDocumentService.cs" />
+    <Compile Include="Common\CommonOfficeAccess.cs" />
+    <Compile Include="Common\CommonResults.cs" />
+    <Compile Include="Common\CommonToolExecutor.cs" />
+    <Compile Include="Common\CommonToolNames.cs" />
+    <Compile Include="Common\CommonWindowService.cs" />
+    <Compile Include="Protocol\JsonRpcRequest.cs" />
+    <Compile Include="Protocol\JsonRpcResponse.cs" />
+    <Compile Include="Protocol\McpProtocolHandler.cs" />
+    <Compile Include="Transport\HttpTransportHost.cs" />
+    <Compile Include="Worker\OfficeAddinGuard.cs" />
+    <Compile Include="Worker\OfficeProcessUtil.cs" />
+    <Compile Include="Worker\WorkerHost.cs" />
+    <Compile Include="Tools\ToolDescriptor.cs" />
+    <Compile Include="Tools\ToolRegistry.cs" />
+    <Compile Include="Tools\ToolRouteCatalog.cs" />
+    <Compile Include="Tools\ToolDocumentationService.cs" />
+    <Compile Include="Tools\StubToolExecutor.cs" />
+    <Compile Include="Tools\ExecutorDiscovery.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="config.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Config.json.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Tools\**\*.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\**\*.dotx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

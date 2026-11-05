@@ -1,0 +1,19 @@
+{
+  "id": "excel_table_manage",
+  "name": "excel_table_manage",
+  "description": "Excel 表（ListObject/超级表）管理。list 列出现有表的名称、工作表、地址、行列数、汇总行与样式；create 从 range 创建表并可命名/套用样式；convertToRange 转普通区域；totals 打开汇总行并设置某列汇总函数；resize 调整表范围；rename 重命名。表对象属于结构/元数据，区域快照不可完整撤销，结果会写 undoReason。示例：action=\"create\", range=\"Data!A1:E200\", tableName=\"销售表\", hasHeader=true, tableStyle=\"TableStyleMedium2\"；action=\"totals\", tableName=\"销售表\", totalsColumn=\"金额\", totalsFunction=\"sum\"。",
+  "appType": "excel",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "action", "type": "string", "required": false, "description": "list / create / convertToRange / totals / resize / rename，默认 list。" },
+    { "name": "sheetName", "type": "string", "required": false, "description": "工作表名；list 省略时列全部工作表。" },
+    { "name": "range", "type": "string", "required": false, "description": "create/resize 使用的区域。" },
+    { "name": "tableName", "type": "string", "required": false, "description": "表名；create 时可指定，其他操作用于定位。" },
+    { "name": "hasHeader", "type": "boolean", "required": false, "description": "create 时区域首行是否为表头，默认 true。" },
+    { "name": "tableStyle", "type": "string", "required": false, "description": "create 时的表样式名，如 TableStyleMedium2。" },
+    { "name": "totalsColumn", "type": "string", "required": false, "description": "totals 的列名或列号（从 1 开始）。" },
+    { "name": "totalsFunction", "type": "string", "required": false, "description": "sum / count / countNums / average / max / min / stdDev / var / none，默认 sum。" },
+    { "name": "newName", "type": "string", "required": false, "description": "rename 的新表名。" }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "ppt_ungroup_shapes",
+  "name": "ppt_ungroup_shapes",
+  "description": "解开指定组合形状，返回解组后的 memberIds 与 memberNames。目标必须是组合形状，否则返回 INVALID_PARAMS。示例：ppt_ungroup_shapes {\"shapeId\":12}。",
+  "appType": "ppt",
+  "category": "形状操作",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "幻灯片索引：省略/-1=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "shapeId", "type": "integer", "required": true, "description": "组合形状 id。" }
+  ]
+}

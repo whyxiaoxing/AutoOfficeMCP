@@ -1,0 +1,15 @@
+{
+  "id": "excel_find_replace",
+  "name": "excel_find_replace",
+  "description": "在区域或整个 UsedRange 中查找替换。range 省略或为 \"all\" 时使用当前 UsedRange；replace 为空字符串表示删除匹配内容；支持 matchCase 与 matchEntireCell。返回实际匹配/替换次数。示例：range=\"Data!A1:D100\", find=\"旧名称\", replace=\"新名称\", matchEntireCell=false。",
+  "appType": "excel",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "range", "type": "string", "required": false, "description": "搜索区域；省略或 \"all\" 表示当前 UsedRange。" },
+    { "name": "find", "type": "string", "required": true, "description": "要查找的文本。" },
+    { "name": "replace", "type": "string", "required": false, "description": "替换文本；空字符串表示删除。省略时按空串处理。" },
+    { "name": "matchCase", "type": "boolean", "required": false, "description": "是否区分大小写，默认 false。" },
+    { "name": "matchEntireCell", "type": "boolean", "required": false, "description": "是否仅匹配整个单元格内容，默认 false（部分匹配）。" }
+  ]
+}

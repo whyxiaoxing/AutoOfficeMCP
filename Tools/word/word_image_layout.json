@@ -1,0 +1,58 @@
+{
+  "id": "word_image_layout",
+  "name": "word_image_layout",
+  "description": "调整图片布局：wrap(inline/topbottom/square/tight/through/behind/front)、xPt/yPt、relativeTo(margin/page/paragraph)、anchorParagraphIndex、altText。inline↔floating/改锚定使用临时 EMF 删除重建，返回 conversionNote 说明限制。示例：word_image_layout {\"index\":1,\"collection\":\"inline\",\"wrap\":\"square\",\"xPt\":30,\"yPt\":20,\"relativeTo\":\"paragraph\"}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "index",
+      "type": "integer",
+      "required": true,
+      "description": "1 基图片/形状索引。"
+    },
+    {
+      "name": "collection",
+      "type": "string",
+      "required": false,
+      "description": "inline 或 floating，默认 inline。"
+    },
+    {
+      "name": "wrap",
+      "type": "string",
+      "required": false,
+      "description": "inline/topbottom/square/tight/through/behind/front。"
+    },
+    {
+      "name": "xPt",
+      "type": "number",
+      "required": false,
+      "description": "水平位置，磅。"
+    },
+    {
+      "name": "yPt",
+      "type": "number",
+      "required": false,
+      "description": "垂直位置，磅。"
+    },
+    {
+      "name": "relativeTo",
+      "type": "string",
+      "required": false,
+      "description": "margin/page/paragraph，默认 margin。"
+    },
+    {
+      "name": "anchorParagraphIndex",
+      "type": "integer",
+      "required": false,
+      "description": "新的锚定段落，1 基。"
+    },
+    {
+      "name": "altText",
+      "type": "string",
+      "required": false,
+      "description": "新的替代文本。"
+    }
+  ]
+}

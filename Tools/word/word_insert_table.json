@@ -1,0 +1,52 @@
+{
+  "id": "word_insert_table",
+  "name": "word_insert_table",
+  "description": "插入表格：rows/cols 必需，data 二维数组，style、columnWidths、caption（自动“表 N”题注域）、position=start/cursor/end。首行 HeadingFormat=true 并加粗；表格数回读校验。示例：word_insert_table {\"rows\":3,\"cols\":2,\"data\":[[\"姓名\",\"分数\"],[\"张三\",\"90\"]],\"position\":\"end\",\"caption\":true}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "rows",
+      "type": "integer",
+      "required": true,
+      "description": "行数，1-500。"
+    },
+    {
+      "name": "cols",
+      "type": "integer",
+      "required": true,
+      "description": "列数，1-63。"
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "二维数组，行优先；可少于 rows/cols。"
+    },
+    {
+      "name": "style",
+      "type": "string",
+      "required": false,
+      "description": "Word 表格样式名；不存在会拒绝插入。"
+    },
+    {
+      "name": "columnWidths",
+      "type": "array",
+      "required": false,
+      "description": "各列宽度磅值数组，最多 cols 项。"
+    },
+    {
+      "name": "caption",
+      "type": "boolean",
+      "required": false,
+      "description": "是否插入“表 N”题注域，默认 false。"
+    },
+    {
+      "name": "position",
+      "type": "string",
+      "required": false,
+      "description": "start/cursor/end，默认 cursor。"
+    }
+  ]
+}

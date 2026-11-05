@@ -1,0 +1,16 @@
+{
+  "id": "word_track_changes_toggle",
+  "name": "word_track_changes_toggle",
+  "description": "开启或关闭文档修订模式，并回读实际值。示例：word_track_changes_toggle {\"enabled\":true}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "enabled",
+      "type": "boolean",
+      "required": true,
+      "description": "true 开启修订，false 关闭修订。"
+    }
+  ]
+}

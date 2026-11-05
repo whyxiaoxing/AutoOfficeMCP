@@ -1,0 +1,20 @@
+{
+  "id": "excel_update_chart",
+  "name": "excel_update_chart",
+  "description": "更新现有图表：数据源 dataRange、标题 title/removeTitle、类型 type、位置 position 与宽高 width/height、plotBy。chartName 可用内嵌图表名或 Sheet!图表名；可选 sheetName 缩小白查找范围。部分属性应用后失败会返回 PARTIAL_APPLY，并说明已应用项。示例：chartName=\"Chart 1\", title=\"新标题\", type=\"line\", dataRange=\"Data!A1:B10\"。",
+  "appType": "excel",
+  "category": "format",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "chartName", "type": "string", "required": true, "description": "图表名，支持 Sheet!图表名。" },
+    { "name": "sheetName", "type": "string", "required": false, "description": "图表所在工作表。" },
+    { "name": "dataRange", "type": "string", "required": false, "description": "新的数据源区域。" },
+    { "name": "title", "type": "string", "required": false, "description": "新标题；传空字符串会清空标题文本。" },
+    { "name": "removeTitle", "type": "boolean", "required": false, "description": "true 时删除图表标题。" },
+    { "name": "type", "type": "string", "required": false, "description": "column/line/pie/bar/scatter/area。" },
+    { "name": "position", "type": "string", "required": false, "description": "新左上角单元格，如 E2 或 Sheet!E2。" },
+    { "name": "width", "type": "integer", "required": false, "description": "宽度像素，最小 100。" },
+    { "name": "height", "type": "integer", "required": false, "description": "高度像素，最小 100。" },
+    { "name": "plotBy", "type": "string", "required": false, "description": "column（默认）或 row。" }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "word_beautify",
+  "name": "word_beautify",
+  "description": "文档美化：theme.h1/h2/h3/body 设置 font/size/color/bold/italic/lineSpacing，margins 用厘米（marginsUnit=pt 可改磅）。正文字距/行距按段倒序应用，回读页边距与样式状态。示例：word_beautify {\"theme\":{\"h1\":{\"font\":\"微软雅黑\",\"size\":18},\"body\":{\"size\":12,\"lineSpacing\":1.5}},\"margins\":{\"top\":2.54,\"bottom\":2.54}}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "theme",
+      "type": "object",
+      "required": false,
+      "description": "对象：h1/h2/h3/body，每项支持 font/size/color/bold/italic/lineSpacing。"
+    },
+    {
+      "name": "margins",
+      "type": "object",
+      "required": false,
+      "description": "页边距对象：top/bottom/left/right（默认厘米）。"
+    },
+    {
+      "name": "marginsUnit",
+      "type": "string",
+      "required": false,
+      "description": "cm 或 pt，默认 cm。"
+    }
+  ]
+}

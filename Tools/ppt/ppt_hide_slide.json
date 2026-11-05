@@ -1,0 +1,12 @@
+{
+  "id": "ppt_hide_slide",
+  "name": "ppt_hide_slide",
+  "description": "隐藏或取消隐藏幻灯片（放映时不显示，与删除不同）。",
+  "appType": "ppt",
+  "category": "幻灯片操作",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "幻灯片索引：省略/-1=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "hidden", "type": "boolean", "required": false, "description": "true=隐藏，false=取消隐藏，默认 true。" }
+  ]
+}

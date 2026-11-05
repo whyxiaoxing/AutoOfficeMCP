@@ -1,0 +1,9 @@
+{
+  "id": "office_stub_probe",
+  "name": "office_stub_probe",
+  "description": "自测用：验证 MCP 协议层、工具注册表与执行器路由是否连通。",
+  "appType": "common",
+  "category": "diagnostic",
+  "riskLevel": "low",
+  "parameters": []
+}

@@ -1,0 +1,15 @@
+{
+  "id": "word_vertical_text",
+  "name": "word_vertical_text",
+  "description": "形状/文本框文字方向管理：action=get 读取 orientation；action=set 设置指定 shapeName 或 shapeIndex 的 TextFrame.Orientation。direction 支持 horizontal/upward/downward/vertical/verticalFarEast/horizontalRotatedFarEast。注意：Word COM（PIA 15 / Office 2024）不暴露 PageSetup.TextDirection，文档级竖排无法通过 COM 设置；target=document 会明确返回 INVALID_PARAMS。示例：action=set, shapeName=文本框1, direction=downward。",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "action", "type": "string", "required": false, "description": "get（默认）/ set。" },
+    { "name": "target", "type": "string", "required": false, "description": "shape（默认）/ document；document 当前不支持并返回 INVALID_PARAMS。" },
+    { "name": "shapeName", "type": "string", "required": false, "description": "形状名称；与 shapeIndex 二选一。" },
+    { "name": "shapeIndex", "type": "integer", "required": false, "description": "形状序号（1 基）；与 shapeName 二选一。" },
+    { "name": "direction", "type": "string", "required": false, "description": "horizontal / upward / downward / vertical / verticalFarEast / horizontalRotatedFarEast；默认 downward。" }
+  ]
+}

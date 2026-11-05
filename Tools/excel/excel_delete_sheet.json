@@ -1,0 +1,11 @@
+{
+  "id": "excel_delete_sheet",
+  "name": "excel_delete_sheet",
+  "description": "【高危】删除工作表。必须先通过 SecurityGate：config.json 的 security.allowDeleteSheet 必须为 true，默认拒绝。执行时关闭 DisplayAlerts 并在 finally 恢复；删除前采集 UsedRange 快照用于说明，但无法自动撤销已删除工作表。示例：name=\"临时表\"。",
+  "appType": "excel",
+  "category": "sheet",
+  "riskLevel": "high",
+  "parameters": [
+    { "name": "name", "type": "string", "required": true, "description": "要删除的工作表名称。" }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ppt_move_resize_shape",
+  "name": "ppt_move_resize_shape",
+  "description": "调整已有形状的位置与尺寸。x/y/width/height 至少提供一项；返回调整后的实际坐标与尺寸。",
+  "appType": "ppt",
+  "category": "格式",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "shapeId", "type": "integer", "required": true, "description": "目标形状 ID（来自 ppt_list_shapes）。" },
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "幻灯片索引：省略/-1=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "x", "type": "number", "required": false, "description": "新的左上角横坐标（磅）。" },
+    { "name": "y", "type": "number", "required": false, "description": "新的左上角纵坐标（磅）。" },
+    { "name": "width", "type": "number", "required": false, "description": "新的宽度（磅）。" },
+    { "name": "height", "type": "number", "required": false, "description": "新的高度（磅）。" }
+  ]
+}

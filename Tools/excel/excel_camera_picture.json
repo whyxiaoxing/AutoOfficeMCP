@@ -1,0 +1,14 @@
+{
+  "id": "excel_camera_picture",
+  "name": "excel_camera_picture",
+  "description": "照相机图片：复制 sourceRange 的屏幕外观，以图片形状粘贴到 targetCell/targetRange 左上角；link=true（默认）创建与源区域联动的链接图片。此工具依赖 Windows 剪贴板，security.allowClipboard=false 时返回 CLIPBOARD_DISABLED。示例：sourceRange=数据!A1:C10, targetCell=报表!A1, link=true。",
+  "appType": "excel",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "sourceRange", "type": "string", "required": true, "description": "要拍照的源区域，如 数据!A1:C10。" },
+    { "name": "targetCell", "type": "string", "required": true, "description": "图片左上角位置，如 报表!A1。" },
+    { "name": "link", "type": "boolean", "required": false, "description": "是否创建链接图片（照相机效果），默认 true。" },
+    { "name": "name", "type": "string", "required": false, "description": "可选图片形状名称。" }
+  ]
+}

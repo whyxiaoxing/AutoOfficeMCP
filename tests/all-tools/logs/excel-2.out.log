@@ -1,0 +1,40 @@
+[PASS] excel excel_apply_formula 
+[GATED] excel excel_batch_rename_sheets CANCELLED
+[PASS] excel excel_clean_data 
+[PASS] excel excel_comment_manage 
+[PASS] excel excel_copy_format 
+[PASS] excel excel_create_chart 
+[PASS] excel excel_create_sheet 
+[PASS] excel excel_cross_sheet_consolidate 
+[PASS] excel excel_delete_chart 
+[GATED] excel excel_delete_sheet CANCELLED
+[PASS] excel excel_error_scan 
+[GATED] excel excel_export CLIPBOARD_DISABLED
+[PASS] excel excel_find_replace 
+[PASS] excel excel_formula_audit 
+[PASS] excel excel_formula_to_value 
+[PASS] excel excel_function_catalog 
+[PASS] excel excel_get_context 
+[PASS] excel excel_get_selection 
+[PASS] excel excel_hidden_inventory 
+[PASS] excel excel_hyperlink_manage 
+[PASS] excel excel_insert_row_col 
+[PASS] excel excel_list_merged_cells 
+[PASS] excel excel_macro_list 
+[PASS] excel excel_named_range_manage 
+[PASS] excel excel_paste_special 
+[PASS] excel excel_precision_check 
+[PASS] excel excel_profile_files 
+[PASS] excel excel_protect_workbook 
+[PASS] excel excel_range_profile 
+[PASS] excel excel_recalculate 
+[PASS] excel excel_remove_duplicates 
+[PASS] excel excel_rmb_upper 
+[PASS] excel excel_save_as 
+[PASS] excel excel_sheet_toc 
+[PASS] excel excel_sparkline_manage 
+[GATED] excel excel_transform_data CLIPBOARD_DISABLED
+[PASS] excel excel_write_data 
+
+SUMMARY excel part 2/2: total=37 pass=33 gated=4 fail=0
+REPORT D:\Code\c#\AutoOfficeMCP\tests\all-tools\results\excel-part2.json

@@ -1,0 +1,12 @@
+{
+  "id": "office_undo",
+  "name": "office_undo",
+  "description": "按逆序回放当前 MCP 会话撤销栈中的 n 个节点（默认 1，最多 50）。复用 office_undo_last 的 Excel/Word 快照与 PowerPoint 原生撤销逻辑；逐步返回 nodeId、目标、restored、错误码与消息。全部成功返回 restoredCount；中途失败立即停止并保留失败节点，已成功步骤返回 PARTIAL_APPLY + rollbackNote，绝不假成功。示例：{\"steps\":3}。",
+  "appType": "common",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "steps", "type": "integer", "required": false, "description": "回放步数，默认 1，最大 50。" },
+    { "name": "confirm", "type": "boolean", "required": false, "description": "显式确认执行多步撤销。" }
+  ]
+}

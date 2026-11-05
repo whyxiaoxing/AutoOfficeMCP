@@ -1,0 +1,17 @@
+{
+  "id": "ppt_insert_text",
+  "name": "ppt_insert_text",
+  "description": "在指定幻灯片上添加文本框并写入文字。x/y 为文本框左上角坐标，width/height 默认 400×100，fontSize 默认 18。示例：ppt_insert_text {\"content\":\"结论：数据看板上线\",\"slideIndex\":-1,\"x\":80,\"y\":120}。",
+  "appType": "ppt",
+  "category": "内容操作",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "content", "type": "string", "required": true, "description": "要写入的文本，换行用 \\n。" },
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "目标页：-1/省略=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "x", "type": "number", "required": false, "description": "文本框左上角 X 坐标，默认 100。" },
+    { "name": "y", "type": "number", "required": false, "description": "文本框左上角 Y 坐标，默认 200。" },
+    { "name": "width", "type": "number", "required": false, "description": "文本框宽度，默认 400。" },
+    { "name": "height", "type": "number", "required": false, "description": "文本框高度，默认 100。" },
+    { "name": "fontSize", "type": "number", "required": false, "description": "字号，默认 18。" }
+  ]
+}

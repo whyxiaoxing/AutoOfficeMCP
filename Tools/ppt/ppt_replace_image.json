@@ -1,0 +1,13 @@
+{
+  "id": "ppt_replace_image",
+  "name": "ppt_replace_image",
+  "description": "用本地图片替换已有图片形状，保留原位置与尺寸。source 为纯文件名时从工作目录解析，也可传本机绝对路径。示例：ppt_replace_image {\"shapeId\":9,\"source\":\"new-logo.png\"}。",
+  "appType": "ppt",
+  "category": "图片",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "幻灯片索引：省略/-1=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "shapeId", "type": "integer", "required": true, "description": "要替换的图片形状 id。" },
+    { "name": "source", "type": "string", "required": true, "description": "新图片纯文件名或本机绝对路径。" }
+  ]
+}

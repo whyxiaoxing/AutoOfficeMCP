@@ -1,0 +1,12 @@
+{
+  "id": "excel_run_vba",
+  "name": "excel_run_vba",
+  "description": "【最高危】执行 VBA。必须同时满足：confirm=true 且 SecurityGate 的 security.allowVba=true（默认拒绝）。代码含 Sub/Function 时直接注入临时模块执行首个过程；否则包装为 Sub Auto_Run。执行后 finally 删除临时模块。返回 Application.Run 结果、可观测变更单元格数和工作表数变化。需在 Excel 信任中心启用“信任对 VBA 工程对象模型的访问”。示例：code=\"Sub Hello()\\nRange(\\\"A1\\\").Value = \\\"Hi\\\"\\nEnd Sub\", confirm=true。",
+  "appType": "excel",
+  "category": "analysis",
+  "riskLevel": "high",
+  "parameters": [
+    { "name": "code", "type": "string", "required": true, "description": "VBA 代码，可包含完整 Sub/Function 或仅过程体。" },
+    { "name": "confirm", "type": "boolean", "required": true, "description": "必须显式传 true，否则返回 CANCELLED 且不执行。" }
+  ]
+}

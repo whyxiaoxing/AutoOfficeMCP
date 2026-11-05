@@ -1,0 +1,70 @@
+{
+  "id": "word_footnote_manage",
+  "name": "word_footnote_manage",
+  "description": "脚注/尾注管理。action=list 只读清单；add 在指定段末或当前选区插入注释正文；delete 按 1 基索引倒序删除（必须 confirm=true，且必须显式提供 indexes）；format 设置全部或指定注释的字体名/字号/加粗/斜体。示例：word_footnote_manage {\"action\":\"list\"}；添加：{\"action\":\"add\",\"paragraphIndex\":2,\"text\":\"数据来源：统计局\"}；删除：{\"action\":\"delete\",\"indexes\":[2,1],\"confirm\":true}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "action",
+      "type": "string",
+      "required": false,
+      "description": "list（默认）/add/delete/format。"
+    },
+    {
+      "name": "noteType",
+      "type": "string",
+      "required": false,
+      "description": "footnote（默认，脚注）/endnote（尾注）。"
+    },
+    {
+      "name": "paragraphIndex",
+      "type": "integer",
+      "required": false,
+      "description": "action=add 时的 1 基段号；引用插入到该段末。省略时使用当前选区。"
+    },
+    {
+      "name": "text",
+      "type": "string",
+      "required": false,
+      "description": "action=add 时的注释正文。"
+    },
+    {
+      "name": "indexes",
+      "type": "array",
+      "required": false,
+      "description": "delete/format 的 1 基注释索引数组；delete 必填，format 省略表示全部。"
+    },
+    {
+      "name": "confirm",
+      "type": "boolean",
+      "required": false,
+      "description": "action=delete 必须为 true。"
+    },
+    {
+      "name": "fontName",
+      "type": "string",
+      "required": false,
+      "description": "action=format 的字体名。"
+    },
+    {
+      "name": "fontSize",
+      "type": "number",
+      "required": false,
+      "description": "action=format 的字号（磅），6-72。"
+    },
+    {
+      "name": "bold",
+      "type": "boolean",
+      "required": false,
+      "description": "action=format 是否加粗。"
+    },
+    {
+      "name": "italic",
+      "type": "boolean",
+      "required": false,
+      "description": "action=format 是否斜体。"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "excel_diff_sheets",
+  "name": "excel_diff_sheets",
+  "description": "逐格比较两个工作表（默认各自 UsedRange，可分别指定 range1/range2），按 value 或 formula 比较，返回差异清单（左右地址、左右值、差异处数）。可选 highlight=true 在两张表上用填充色高亮差异单元格（此时为写操作，changed 真实反映是否高亮；填充色不在区域快照中，不登记自动撤销）。示例：sheet1=\"预算V1\", sheet2=\"预算V2\", compareBy=\"value\", maxDiffs=200；highlight=true, highlightColor=\"#FFC7CE\"。",
+  "appType": "excel",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "sheet1", "type": "string", "required": true, "description": "比较左表名称。" },
+    { "name": "sheet2", "type": "string", "required": true, "description": "比较右表名称。" },
+    { "name": "range1", "type": "string", "required": false, "description": "左表比较区域本地地址（如 A1:F200）；默认 UsedRange。" },
+    { "name": "range2", "type": "string", "required": false, "description": "右表比较区域本地地址；默认 UsedRange。" },
+    { "name": "compareBy", "type": "string", "required": false, "description": "value 或 formula，默认 value。" },
+    { "name": "ignoreCase", "type": "boolean", "required": false, "description": "文本比较是否忽略大小写，默认 false。" },
+    { "name": "trimWhitespace", "type": "boolean", "required": false, "description": "比较前是否去除首尾空白，默认 false。" },
+    { "name": "includeEqual", "type": "boolean", "required": false, "description": "是否同时返回相等单元格，默认 false。" },
+    { "name": "maxDiffs", "type": "integer", "required": false, "description": "最大返回差异条数，默认 200，上限 5000。" },
+    { "name": "maxCells", "type": "integer", "required": false, "description": "允许比较的最大单元格数，默认 50000，上限 200000。" },
+    { "name": "highlight", "type": "boolean", "required": false, "description": "是否高亮差异，默认 false（只读）。" },
+    { "name": "highlightColor", "type": "string", "required": false, "description": "高亮填充色，#RRGGBB 或颜色名，默认 #FFC7CE。" }
+  ]
+}

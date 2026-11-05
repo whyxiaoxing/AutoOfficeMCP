@@ -1,0 +1,18 @@
+{
+  "id": "excel_import",
+  "name": "excel_import",
+  "description": "从 CSV/JSON 文件导入二维数据并写入工作表。CSV 支持引号、转义引号、字段内换行，自动识别 UTF-8/UTF-16/GBK 编码；JSON 支持 [{...}] 记录数组（第一行为属性名）、[[...]] 二维数组、[值...] 与 {values:[...]}。目标区域默认 A1，可指定 sheetName/createSheet；写入会采集目标区域快照并登记撤销。示例：format=\"csv\", path=\"D:\\\\in\\\\data.csv\", targetRange=\"A1\", inferTypes=true；format=\"json\", path=\"D:\\\\in\\\\rows.json\", sheetName=\"导入\", createSheet=true。",
+  "appType": "excel",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "format", "type": "string", "required": true, "description": "csv 或 json。" },
+    { "name": "path", "type": "string", "required": true, "description": "输入文件绝对路径。" },
+    { "name": "targetRange", "type": "string", "required": false, "description": "写入起始单元格，默认 A1；可带 Sheet! 前缀。" },
+    { "name": "sheetName", "type": "string", "required": false, "description": "目标工作表；targetRange 未含表名时使用。" },
+    { "name": "createSheet", "type": "boolean", "required": false, "description": "目标工作表不存在时是否创建，默认 false。" },
+    { "name": "delimiter", "type": "string", "required": false, "description": "CSV 分隔符，默认逗号；可传 tab。" },
+    { "name": "encoding", "type": "string", "required": false, "description": "CSV 编码：auto（默认）/utf8/gbk/default。" },
+    { "name": "inferTypes", "type": "boolean", "required": false, "description": "CSV 是否把可解析数字转为数值，默认 true；前导零保持文本。" }
+  ]
+}

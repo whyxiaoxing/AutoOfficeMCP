@@ -1,0 +1,14 @@
+{
+  "id": "excel_formula_reference_audit",
+  "name": "excel_formula_reference_audit",
+  "description": "批量套用公式后的引用平移审计（只读）。以 targetRange 中第一个公式为模板，按 expectedMode 校验每一行/列公式的相对/绝对引用是否按预期平移，并抽样用独立 evaluate 重算比对缓存值。expectedMode=auto/mixed/row/column/both/relative/absolute/none；absolute 要求全部 $ 绝对引用，relative 要求全部相对引用。示例：targetRange=\"Calc!D2:D500\", expectedMode=\"row\"。",
+  "appType": "excel",
+  "category": "diagnostic",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "targetRange", "type": "string", "required": true, "description": "包含已批量套用公式的区域，例如 Calc!D2:D500。" },
+    { "name": "expectedMode", "type": "string", "required": false, "description": "auto（默认）/mixed/row/column/both/relative/absolute/none。" },
+    { "name": "sampleRows", "type": "integer", "required": false, "description": "独立重算抽样行数，默认 3，最大 20。" },
+    { "name": "maxResults", "type": "integer", "required": false, "description": "问题明细上限，默认 100。" }
+  ]
+}

@@ -1,0 +1,18 @@
+[PASS] common office_activate_document 
+[PASS] common office_batch 
+[PASS] common office_batch_files 
+[PASS] common office_close_document 
+[PASS] common office_get_window_info 
+[PASS] common office_list_documents 
+[PASS] common office_open_document 
+[PASS] common office_pool_status 
+[PASS] common office_save_all 
+[PASS] common office_save_document 
+[PASS] common office_screenshot 
+[GATED] common office_stub_probe EXECUTOR_NOT_AVAILABLE
+[GATED] common office_undo CANCELLED
+[GATED] common office_undo_last CANCELLED
+[PASS] common office_undo_list 
+
+SUMMARY common part 1/1: total=15 pass=12 gated=3 fail=0
+REPORT D:\Code\c#\AutoOfficeMCP\tests\all-tools\results\common-part1.json

@@ -1,0 +1,16 @@
+{
+  "id": "ppt_set_table_cell",
+  "name": "ppt_set_table_cell",
+  "description": "修改表格单元格。单单元格用 row/col + value；批量用 cells=[{row,col,value}]。row/col 均为 1 基，返回值包含实际更新的单元格列表。示例：ppt_set_table_cell {\"shapeId\":8,\"cells\":[{\"row\":2,\"col\":1,\"value\":\"华东\"},{\"row\":2,\"col\":2,\"value\":128}]}。",
+  "appType": "ppt",
+  "category": "内容插入",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "幻灯片索引：省略/-1=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "shapeId", "type": "integer", "required": true, "description": "表格形状 id。" },
+    { "name": "row", "type": "integer", "required": false, "description": "单单元格模式：1 基行号。" },
+    { "name": "col", "type": "integer", "required": false, "description": "单单元格模式：1 基列号。" },
+    { "name": "value", "type": "string", "required": false, "description": "单单元格模式：新内容。" },
+    { "name": "cells", "type": "array", "required": false, "description": "批量模式：[{row,col,value}]，row/col 为 1 基。" }
+  ]
+}

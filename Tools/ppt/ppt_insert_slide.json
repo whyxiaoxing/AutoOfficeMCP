@@ -1,0 +1,15 @@
+{
+  "id": "ppt_insert_slide",
+  "name": "ppt_insert_slide",
+  "description": "在活动演示文稿中插入一张幻灯片。position=end 追加到末尾，position=current 插入到当前页之后，position=index 配合 index 插到第 N 页之后（0=第一页之前）；layout 支持 title/titleOnly/titleAndContent/twoContent/comparison/blank。title/content 会写入对应占位符，没有正文占位符时自动添加文本框。示例：ppt_insert_slide {\"position\":\"index\",\"index\":2,\"layout\":\"titleAndContent\",\"title\":\"季度复盘\",\"content\":\"本周进展\\n下周计划\"}。",
+  "appType": "ppt",
+  "category": "幻灯片操作",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "position", "type": "string", "required": false, "description": "插入位置：end（默认，末尾）、current（当前页之后）或 index（配合 index 参数）。" },
+    { "name": "index", "type": "integer", "required": false, "description": "position=index 时使用：插到第 N 页之后，0=第一页之前。" },
+    { "name": "layout", "type": "string", "required": false, "description": "版式：title/titleOnly/titleAndContent/twoContent/comparison/blank，默认 titleAndContent。" },
+    { "name": "title", "type": "string", "required": false, "description": "标题文字；写入标题占位符。" },
+    { "name": "content", "type": "string", "required": false, "description": "正文文字；换行用 \\n，写入正文/副标题占位符，无法写入时添加文本框。" }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "ppt_insert_image",
+  "name": "ppt_insert_image",
+  "description": "向指定页插入本地图片或（allowRemote=true 时）远程 URL 图片。source 为纯文件名时从工作目录解析，也可传本机绝对路径；fit 控制 contain/cover/stretch，默认居中并按原图比例。",
+  "appType": "ppt",
+  "category": "内容插入",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "source", "type": "string", "required": true, "description": "图片纯文件名、本机绝对路径，或 http(s) URL（需 allowRemote=true）。" },
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "幻灯片索引：省略/-1=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "x", "type": "number", "required": false, "description": "左上角横坐标（磅）；省略时水平居中。" },
+    { "name": "y", "type": "number", "required": false, "description": "左上角纵坐标（磅）；省略时垂直居中。" },
+    { "name": "width", "type": "number", "required": false, "description": "目标宽度（磅）；省略时按原图宽度。" },
+    { "name": "height", "type": "number", "required": false, "description": "目标高度（磅）；省略时按原图比例。" },
+    { "name": "fit", "type": "string", "required": false, "description": "contain/cover/stretch，默认 contain；cover 在同时提供 width/height 时按覆盖比例缩放并裁切溢出部分，保持目标框内无留白。" },
+    { "name": "allowRemote", "type": "boolean", "required": false, "description": "是否允许从 http(s) URL 下载图片，默认 false。" }
+  ]
+}

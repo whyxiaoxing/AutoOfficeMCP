@@ -1,0 +1,40 @@
+{
+  "id": "word_compare_documents",
+  "name": "word_compare_documents",
+  "description": "用 Word CompareDocuments 比较原始/修订文档，生成修订对比稿并保存到 outputPath；原始/修订文档只读临时打开，当前活动文档不修改。覆盖已有文件需 confirm=true。示例：word_compare_documents {\"originalPath\":\"C:\\\\a.docx\",\"revisedPath\":\"C:\\\\b.docx\",\"outputPath\":\"C:\\\\diff.docx\",\"confirm\":true}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "originalPath",
+      "type": "string",
+      "required": true,
+      "description": "原始文档路径。"
+    },
+    {
+      "name": "revisedPath",
+      "type": "string",
+      "required": true,
+      "description": "修订文档路径。"
+    },
+    {
+      "name": "outputPath",
+      "type": "string",
+      "required": true,
+      "description": "对比稿输出路径；相对路径按原始文档目录解析，无扩展名补 .docx。"
+    },
+    {
+      "name": "confirm",
+      "type": "boolean",
+      "required": false,
+      "description": "覆盖已存在对比稿时必须为 true。"
+    },
+    {
+      "name": "author",
+      "type": "string",
+      "required": false,
+      "description": "对比修订作者名，默认 AutoOfficeMCP。"
+    }
+  ]
+}

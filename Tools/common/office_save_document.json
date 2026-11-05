@@ -1,0 +1,14 @@
+{
+  "id": "office_save_document",
+  "name": "office_save_document",
+  "description": "保存一个已打开的 Excel/Word/PowerPoint 文档；document 省略时保存当前活动文档。普通保存直接写回原路径；saveAs 指定新路径属于覆盖写入，必须显式传 confirm=true，否则返回 CANCELLED 且不写文件。只附着已运行实例，不自动启动 Office；未保存过的新文档请用 saveAs。示例：office_save_document {\"document\":\"report.xlsx\"}；另存：office_save_document {\"document\":\"report.xlsx\",\"saveAs\":\"C:\\\\Temp\\\\new.xlsx\",\"confirm\":true}。",
+  "appType": "common",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "document", "type": "string", "required": false, "description": "完整路径或文件名（含扩展名）；省略时保存活动文档。" },
+    { "name": "app", "type": "string", "required": false, "description": "excel、word、ppt 或省略；省略时可从路径扩展名或前台 Office 应用推断。" },
+    { "name": "saveAs", "type": "string", "required": false, "description": "另存为路径（纯文件名、工作目录内相对子路径或绝对路径）；父目录不存在时仅在工作目录内自动创建，工作目录外需预先存在。Excel 支持 xlsx/xlsm/xlsb/xls/csv/txt/pdf；Word 支持 docx/docm/doc/rtf/txt/pdf；PowerPoint 支持 pptx/pptm/ppsx/pps/potx/potm/ppt。" },
+    { "name": "confirm", "type": "boolean", "required": false, "description": "仅 saveAs 时必填 true，表示确认覆盖目标路径；普通保存可省略。" }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "word_md_export",
+  "name": "word_md_export",
+  "description": "只读当前文档结构并生成 Markdown：标题样式→#、列表→- 或 1.、表格→管道表、内嵌/浮动图片→占位符；可直接返回 markdown，也可写 .md 文件（outputPath，覆盖需 confirm=true）。示例：word_md_export {}；写文件：{\"outputPath\":\"C:\\\\temp\\\\doc.md\",\"confirm\":true}；不需要表格：{\"includeTables\":false}",
+  "appType": "word",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": [
+    {
+      "name": "outputPath",
+      "type": "string",
+      "required": false,
+      "description": "可选 .md 输出路径（纯文件名、工作目录内相对子路径或绝对路径）；无扩展名时补 .md；父目录不存在时仅在工作目录内自动创建，工作目录外需预先存在。"
+    },
+    {
+      "name": "confirm",
+      "type": "boolean",
+      "required": false,
+      "description": "outputPath 已存在时必须为 true 才覆盖。"
+    },
+    {
+      "name": "includeTables",
+      "type": "boolean",
+      "required": false,
+      "description": "是否导出表格为 Markdown 管道表，默认 true。"
+    },
+    {
+      "name": "includeLists",
+      "type": "boolean",
+      "required": false,
+      "description": "是否把 Word 列表导出为 Markdown 列表，默认 true。"
+    },
+    {
+      "name": "includeImages",
+      "type": "boolean",
+      "required": false,
+      "description": "是否插入图片占位符 ![alt](word-inline:N) / ![alt](word-floating:N)，默认 true。"
+    },
+    {
+      "name": "maxCharacters",
+      "type": "integer",
+      "required": false,
+      "description": "Markdown 最大输出字符数，1000-2000000，默认 200000；超出会截断并标记 truncated。"
+    }
+  ]
+}

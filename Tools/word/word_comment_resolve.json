@@ -1,0 +1,16 @@
+{
+  "id": "word_comment_resolve",
+  "name": "word_comment_resolve",
+  "description": "将指定批注标记为完成并回读 Done 状态；返回操作前后状态与批注作者/文本预览。示例：word_comment_resolve {\"commentIndex\":1}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "low",
+  "parameters": [
+    {
+      "name": "commentIndex",
+      "type": "integer",
+      "required": true,
+      "description": "1 基批注索引，与 word_comments_read 的 index 一致。"
+    }
+  ]
+}

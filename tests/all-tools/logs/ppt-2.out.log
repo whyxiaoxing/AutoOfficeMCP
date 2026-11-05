@@ -1,0 +1,30 @@
+[PASS] ppt ppt_add_speaker_notes 
+[GATED] ppt ppt_apply_theme FILE_NOT_FOUND
+[PASS] ppt ppt_beautify_slides 
+[PASS] ppt ppt_copy_slide_from_file 
+[PASS] ppt ppt_crop_image 
+[PASS] ppt ppt_delete_shape 
+[PASS] ppt ppt_duplicate_slide 
+[PASS] ppt ppt_export_images 
+[PASS] ppt ppt_format_slide 
+[PASS] ppt ppt_format_text 
+[PASS] ppt ppt_get_slide_content 
+[PASS] ppt ppt_get_thumbnail 
+[PASS] ppt ppt_group_shapes 
+[PASS] ppt ppt_insert_chart 
+[PASS] ppt ppt_insert_image 
+[PASS] ppt ppt_insert_slide 
+[PASS] ppt ppt_insert_table_from_excel 
+[PASS] ppt ppt_list_animations 
+[PASS] ppt ppt_list_shapes 
+[PASS] ppt ppt_move_resize_shape 
+[PASS] ppt ppt_reorder_slides 
+[PASS] ppt ppt_set_bullet 
+[PASS] ppt ppt_set_paragraph 
+[PASS] ppt ppt_set_shape_text 
+[PASS] ppt ppt_set_slide_size 
+[PASS] ppt ppt_set_zorder 
+[PASS] ppt ppt_validate_layout 
+
+SUMMARY ppt part 2/2: total=27 pass=26 gated=1 fail=0
+REPORT D:\Code\c#\AutoOfficeMCP\tests\all-tools\results\ppt-part2.json

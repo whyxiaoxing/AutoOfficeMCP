@@ -1,0 +1,21 @@
+{
+  "id": "excel_format_range",
+  "name": "excel_format_range",
+  "description": "格式化单元格区域或图表对象。区域支持预设 style=header/total/data，以及 bold/italic/fontSize/fontColor/backgroundColor/borders(true|all|outline|none)/numberFormat/wrapText。若 range 是 ChartObjects 名称，则转图表格式化：title、fontSize、fontColor、bold、backgroundColor、legendPosition。示例：range=\"Data!A1:C1\", style=\"header\", borders=\"all\"。视觉格式不在区域撤销快照内，结果会给出 undoReason。",
+  "appType": "excel",
+  "category": "format",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "range", "type": "string", "required": true, "description": "目标区域或图表名称，如 Data!A1:C1、Chart 1、Data!Chart 1。" },
+    { "name": "style", "type": "string", "required": false, "description": "预设样式 header（蓝底白字加粗居中）/total（加粗双上边框）/data（细边框）；图表可直接传对象式参数。" },
+    { "name": "bold", "type": "boolean", "required": false, "description": "是否加粗；传 false 可取消加粗。" },
+    { "name": "italic", "type": "boolean", "required": false, "description": "是否斜体。" },
+    { "name": "fontSize", "type": "integer", "required": false, "description": "字号，必须大于 0。" },
+    { "name": "fontColor", "type": "string", "required": false, "description": "字体颜色，支持 #RRGGBB 或 red/green/blue/black/white 等。" },
+    { "name": "backgroundColor", "type": "string", "required": false, "description": "背景色，支持 #RRGGBB 或常用颜色名。" },
+    { "name": "borders", "type": "string", "required": false, "description": "边框：true/all、outline、none/false。" },
+    { "name": "numberFormat", "type": "string", "required": false, "description": "数字格式，如 \"0.00%\"、\"yyyy-mm-dd\"、\"@\"。" },
+    { "name": "title", "type": "string", "required": false, "description": "图表标题（当目标是图表对象时）。" },
+    { "name": "legendPosition", "type": "string", "required": false, "description": "图表图例位置：right/left/top/bottom/corner。" }
+  ]
+}

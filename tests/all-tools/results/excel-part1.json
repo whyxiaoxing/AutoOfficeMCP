@@ -1,0 +1,26 @@
+{
+  "app": "excel",
+  "part": 1,
+  "parts": 2,
+  "total": 2,
+  "pass": 2,
+  "gated": 0,
+  "fail": 0,
+  "generatedAt": "2026-11-03T12:40:24.1438650+08:00",
+  "tools": [
+    {
+      "tool": "excel_analyze_data",
+      "status": "PASS",
+      "errorCode": "",
+      "message": "已生成数据摘要，源区域 'Data'!A1:C11。 输出到 'Data'!H1:K11。",
+      "detail": "已生成数据摘要，源区域 'Data'!A1:C11。 输出到 'Data'!H1:K11。\n{\"type\":\"summary\",\"source\":\"'Data'!A1:C11\",\"rowCount\":11,\"columnCount\":3,\"numericColumns\":[{\"column\":\"B\",\"header\":\"Q1\",\"sum\":550.0,\"average\":55.0,\"count\":10},{\"column\":\"C\",\"header\":\"Q2\",\"sum\":945.0,\"average\":94.5,\"count\":10}],\"sheet\":\"Data\",\"address\":\"H1:K11\",\"outputRows\":11,\"outputColumns\":4,\"undoRestorable\":false,\"undoScope\":\"区域值/公式/数字格式\",\"observation\":{\"kind\":\"analyze_data\",\"summary\":\"已生成数据摘要，源区域 'Data'!A1:C11。 输出到 'Data'!H1:K11。\",\"changed\":true,\"targetRefs\":[\"'Data'!H1:K11\"],\"undoUnits\":[\"undo-20261103044023943-0001\"]},\"undoReason\":\"池内作业使用独立 STA worker，撤销节点按 worker/任务隔离；已从本次 worker 撤销栈移除。\",\"undoNodesRemoved\":1,\"parallel\":{\"jobId\":1,\"appType\":\"excel\",\"tool\":\"excel_analyze_data\",\"file\":\"F:\\\\c#2\\\\AutoOfficeMCP\\\\workspace\\\\all-tools-excel-1.xlsx\",\"savePolicy\":\"save\",\"timeoutSec\":600,\"status\":\"completed\",\"affinityKey\":\"\",\"priority\":0,\"idempotencyKey\":\"\",\"submittedAtUtc\":\"2026-11-03T04:40:22.8681789Z\",\"finishedAtUtc\":\"2026-11-03T04:40:23.9854079Z\",\"executionStartedAtUtc\":\"2026-11-03T04:40:22.8791812Z\",\"queueWaitMs\":11,\"durationMs\":1106,\"threadExited\":true,\"fileLockReleased\":true,\"appSlotReleased\":true,\"fileVersionVerified\":true,\"fileChangedOnDisk\":true,\"fileVersionNote\":\"SHA256 校验：文件内容已变化。\",\"fileBeforeHash\":\"9d410c7a8dd540f2d5c3d8e77a537ab7ec114eb125deedb59a26b7dd8cd2c5b2\",\"fileAfterHash\":\"3e2e73e221574e8b40786898aa9c3d907117c28e3aaea4ea2ea26b10179646e4\",\"fileBeforeLength\":19209,\"fileAfterLength\":19434,\"openedReadOnly\":false,\"saved\":true,\"saveSkippedReason\":\"\",\"undoNodesRemoved\":1,\"saveVerified\":true,\"saveVerificationNote\":\"SHA256 校验：文件内容已变化。\",\"saveChangedOnDisk\":true,\"saveBeforeHash\":\"9d410c7a8dd540f2d5c3d8e77a537ab7ec114eb125deedb59a26b7dd8cd2c5b2\",\"saveAfterHash\":\"3e2e73e221574e8b40786898aa9c3d907117c28e3aaea4ea2ea26b10179646e4\",\"saveBeforeLength\":19209,\"saveAfterLength\":19434,\"saveBeforeLastWriteUtc\":\"2026-11-02T17:47:46.6939254Z\",\"saveAfterLastWriteUtc\":\"2026-11-03T04:40:23.9583548Z\"}}"
+    },
+    {
+      "tool": "excel_autofit",
+      "status": "PASS",
+      "errorCode": "",
+      "message": "自动调整完成：'Data'!A1:C5。",
+      "detail": "自动调整完成：'Data'!A1:C5。\n{\"sheet\":\"Data\",\"address\":\"A1:C5\",\"type\":\"columns\",\"undoRestorable\":false,\"undoReason\":\"行高/列宽不在区域快照中，未登记自动撤销。\",\"observation\":{\"kind\":\"autofit\",\"summary\":\"已自动调整 'Data'!A1:C5 的 columns。\",\"changed\":true,\"targetRefs\":[\"'Data'!A1:C5\"],\"undoUnits\":[]},\"parallel\":{\"jobId\":2,\"appType\":\"excel\",\"tool\":\"excel_autofit\",\"file\":\"F:\\\\c#2\\\\AutoOfficeMCP\\\\workspace\\\\all-tools-excel-1.xlsx\",\"savePolicy\":\"save\",\"timeoutSec\":600,\"status\":\"completed\",\"affinityKey\":\"\",\"priority\":0,\"idempotencyKey\":\"\",\"submittedAtUtc\":\"2026-11-03T04:40:24.0179196Z\",\"finishedAtUtc\":\"2026-11-03T04:40:24.1361950Z\",\"executionStartedAtUtc\":\"2026-11-03T04:40:24.0229211Z\",\"queueWaitMs\":5,\"durationMs\":113,\"threadExited\":true,\"fileLockReleased\":true,\"appSlotReleased\":true,\"fileVersionVerified\":true,\"fileChangedOnDisk\":true,\"fileVersionNote\":\"SHA256 校验：文件内容已变化。\",\"fileBeforeHash\":\"9d410c7a8dd540f2d5c3d8e77a537ab7ec114eb125deedb59a26b7dd8cd2c5b2\",\"fileAfterHash\":\"9ee9d023fc074df21b299a8d69fa610539d414273d011f95fa0dfb902fbd58ab\",\"fileBeforeLength\":19209,\"fileAfterLength\":19242,\"openedReadOnly\":false,\"saved\":true,\"saveSkippedReason\":\"\",\"undoNodesRemoved\":0,\"saveVerified\":true,\"saveVerificationNote\":\"SHA256 校验：文件内容已变化。\",\"saveChangedOnDisk\":true,\"saveBeforeHash\":\"9d410c7a8dd540f2d5c3d8e77a537ab7ec114eb125deedb59a26b7dd8cd2c5b2\",\"saveAfterHash\":\"9ee9d023fc074df21b299a8d69fa610539d414273d011f95fa0dfb902fbd58ab\",\"saveBeforeLength\":19209,\"saveAfterLength\":19242,\"saveBeforeLastWriteUtc\":\"2026-11-02T17:47:46.6939254Z\",\"saveAfterLastWriteUtc\":\"2026-11-03T04:40:24.1214023Z\"}}"
+    }
+  ]
+}

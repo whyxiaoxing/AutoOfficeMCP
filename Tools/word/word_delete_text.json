@@ -1,0 +1,16 @@
+{
+  "id": "word_delete_text",
+  "name": "word_delete_text",
+  "description": "删除当前选区或全文内容。删除后会记录前后指纹；全文删除可能移除表格/图片/域，属高危操作。示例：word_delete_text {\"range\":\"selection\"}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "high",
+  "parameters": [
+    {
+      "name": "range",
+      "type": "string",
+      "required": false,
+      "description": "selection 或 all，默认 selection。"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "ppt_align_shapes",
+  "name": "ppt_align_shapes",
+  "description": "对齐/分布同一页上的形状。align 支持 left/centerH/right/top/centerV/bottom；distribute 支持 horizontal/vertical（至少三个形状）。shapeIds 省略时作用于当前页全部形状。返回每个形状的最终 left/top。示例：ppt_align_shapes {\"align\":\"left\",\"distribute\":\"vertical\",\"shapeIds\":[3,4,5]}。",
+  "appType": "ppt",
+  "category": "形状操作",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "幻灯片索引：省略/-1=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "shapeIds", "type": "array", "required": false, "description": "参与对齐的形状 id 数组；省略时使用当前页全部形状。" },
+    { "name": "align", "type": "string", "required": false, "description": "对齐方式：left/centerH/right/top/centerV/bottom。" },
+    { "name": "distribute", "type": "string", "required": false, "description": "分布方式：horizontal/vertical；至少三个形状。" }
+  ]
+}

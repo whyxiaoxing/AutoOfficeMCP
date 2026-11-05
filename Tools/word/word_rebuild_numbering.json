@@ -1,0 +1,16 @@
+{
+  "id": "word_rebuild_numbering",
+  "name": "word_rebuild_numbering",
+  "description": "将自动编号段落重排为连续 1..n；只处理 ListType 为自动编号的段落，不碰项目符号和手工编号。按文档倒序应用、正序回读 ListValue。示例：word_rebuild_numbering {\"scope\":\"all\"}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "scope",
+      "type": "string",
+      "required": false,
+      "description": "all 或 selection，默认 all。"
+    }
+  ]
+}

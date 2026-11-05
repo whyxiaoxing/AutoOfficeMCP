@@ -1,0 +1,14 @@
+{
+  "id": "excel_error_scan",
+  "name": "excel_error_scan",
+  "description": "扫描 #REF!、#N/A、#DIV/0!、#VALUE!、#NAME?、#NUM!、#NULL! 等错误单元格，返回工作表、完整地址、单元格公式、错误类型与错误分类统计。只读工具，changed=false。示例：sheetName=\"数据\", maxResults=500；或传 range=\"数据!A1:H200\" 仅扫描指定区域。",
+  "appType": "excel",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "range", "type": "string", "required": false, "description": "限定扫描区域（如 Data!A1:H200）；省略则扫描工作簿全部工作表。" },
+    { "name": "sheetName", "type": "string", "required": false, "description": "仅扫描指定工作表；与 range 二选一。" },
+    { "name": "includeHidden", "type": "boolean", "required": false, "description": "未指定 range/sheetName 时是否扫描隐藏工作表，默认 true。" },
+    { "name": "maxResults", "type": "integer", "required": false, "description": "最大返回错误数，默认 500，上限 10000。" }
+  ]
+}

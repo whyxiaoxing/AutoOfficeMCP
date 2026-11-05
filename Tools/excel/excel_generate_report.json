@@ -1,0 +1,15 @@
+{
+  "id": "excel_generate_report",
+  "name": "excel_generate_report",
+  "description": "生成格式化报表：复制源数据到目标工作表，写入标题、表头蓝底白字、全边框、列宽 AutoFit，可选创建图表。targetSheet 省略时新建“报表_yyyyMMdd_HHmmss”。示例：sourceRange=\"Data!A1:D100\", title=\"销售月报\", targetSheet=\"月报\", includeChart=true, chartType=\"column\"。复制格式与新建表不在区域快照完整范围内，结果会说明撤销限制。",
+  "appType": "excel",
+  "category": "analysis",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "sourceRange", "type": "string", "required": true, "description": "源数据区域。" },
+    { "name": "targetSheet", "type": "string", "required": false, "description": "目标工作表；不存在时创建；省略时自动命名。" },
+    { "name": "title", "type": "string", "required": false, "description": "报表标题，写入 A1，数据从第 3 行开始。" },
+    { "name": "includeChart", "type": "boolean", "required": false, "description": "是否在数据下方创建图表，默认 false。" },
+    { "name": "chartType", "type": "string", "required": false, "description": "图表类型：column/line/pie/bar/scatter/area，默认 column。" }
+  ]
+}

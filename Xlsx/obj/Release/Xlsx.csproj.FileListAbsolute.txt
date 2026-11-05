@@ -1,0 +1,7 @@
+F:\c#2\AutoOfficeMCP\Share\Xlsx.dll
+F:\c#2\AutoOfficeMCP\Share\Xlsx.pdb
+D:\Code\c#\AutoOfficeMCP\Xlsx\obj\Release\Xlsx.csproj.AssemblyReference.cache
+D:\Code\c#\AutoOfficeMCP\Xlsx\obj\Release\Xlsx.csproj.CoreCompileInputs.cache
+D:\Code\c#\AutoOfficeMCP\Xlsx\obj\Release\Xlsx.csproj.Up2Date
+D:\Code\c#\AutoOfficeMCP\Xlsx\obj\Release\Xlsx.dll
+D:\Code\c#\AutoOfficeMCP\Xlsx\obj\Release\Xlsx.pdb

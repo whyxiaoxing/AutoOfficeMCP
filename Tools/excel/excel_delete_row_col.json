@@ -1,0 +1,14 @@
+{
+  "id": "excel_delete_row_col",
+  "name": "excel_delete_row_col",
+  "description": "【高危】删除行或列。必须通过 SecurityGate（复用 security.allowDeleteSheet 配置），默认拒绝。type=row/column；position 为行号或列字母/列号；count 为数量。删除会改变结构，不登记自动撤销。示例：{\"type\":\"row\",\"position\":\"5\",\"count\":3}。",
+  "appType": "excel",
+  "category": "sheet",
+  "riskLevel": "high",
+  "parameters": [
+    { "name": "type", "type": "string", "required": true, "description": "row 或 column。" },
+    { "name": "position", "type": "string", "required": true, "description": "起始行号，或列字母/列号。" },
+    { "name": "count", "type": "integer", "required": false, "description": "删除数量，默认 1。" },
+    { "name": "sheetName", "type": "string", "required": false, "description": "目标工作表；省略使用活动工作表。" }
+  ]
+}

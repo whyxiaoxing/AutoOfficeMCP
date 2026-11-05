@@ -1,0 +1,16 @@
+{
+  "id": "excel_profile_files",
+  "name": "excel_profile_files",
+  "description": "多文件查询前置画像：默认用专用隐藏 Excel 实例只读打开每个 xlsx；backend=openxml 时改用 DocumentFormat.OpenXml 直接读文件（不启动 Excel、可并行、公式只返回文本）。对每文件每表返回表名、UsedRange 行列数、表头、逐列类型画像和采样。默认最多 10 个文件，不注册进当前 OfficeSession，不保存源文件。示例：files=[\"C:\\\\data\\\\a.xlsx\",\"C:\\\\data\\\\b.xlsx\"], sheets=[\"Sheet1\"], maxRows=30, backend=\"openxml\"。",
+  "appType": "excel",
+  "category": "diagnostic",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "files", "type": "array", "required": true, "description": "xlsx 文件路径数组；默认最多处理 10 个。" },
+    { "name": "sheets", "type": "array", "required": false, "description": "要画像的工作表名数组；省略则每文件全部工作表。" },
+    { "name": "maxFiles", "type": "integer", "required": false, "description": "文件数上限，默认 10，最大 50。" },
+    { "name": "maxRows", "type": "integer", "required": false, "description": "每表采样行数，默认 30，最大 100。" },
+    { "name": "maxColumns", "type": "integer", "required": false, "description": "每表采样列数，默认 8，最大 26。" },
+    { "name": "backend", "type": "string", "required": false, "description": "com（默认，隐藏 Excel）或 openxml（直接读 xlsx、并行、无 COM）。" }
+  ]
+}

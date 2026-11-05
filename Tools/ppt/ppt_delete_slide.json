@@ -1,0 +1,12 @@
+{
+  "id": "ppt_delete_slide",
+  "name": "ppt_delete_slide",
+  "description": "删除指定幻灯片。属于不可逆操作，必须显式传 confirm=true；演示文稿至少保留一张幻灯片。示例：ppt_delete_slide {\"slideIndex\":2,\"confirm\":true}。",
+  "appType": "ppt",
+  "category": "幻灯片操作",
+  "riskLevel": "high",
+  "parameters": [
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "目标页：-1/省略=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "confirm", "type": "boolean", "required": false, "description": "必须为 true 才会执行删除。" }
+  ]
+}

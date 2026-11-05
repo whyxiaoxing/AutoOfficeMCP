@@ -1,0 +1,9 @@
+{
+  "id": "word_fields_list",
+  "name": "word_fields_list",
+  "description": "枚举正文与页眉页脚等故事范围中的域：index/type/code/result/locked/outdated；outdated 仅在结果可证明异常时标记（错误占位、页码越界、正文 PAGE 结果与所在页不符等），并返回 outdatedReason。示例：word_fields_list {}",
+  "appType": "word",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": []
+}

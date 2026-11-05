@@ -1,0 +1,14 @@
+{
+  "id": "excel_precision_check",
+  "name": "excel_precision_check",
+  "description": "金额精度扫描（只读）。报告文本化金额、科学计数格式/文本、按显示格式被四舍五入、浮点累计与十进制累计差；tolerance 控制判定阈值（默认 0.005）。返回问题明细、分类计数与浮点累计差。示例：range=\"账务!A1:H500\", tolerance=0.001。",
+  "appType": "excel",
+  "category": "diagnostic",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "range", "type": "string", "required": false, "description": "扫描区域；省略时扫描活动工作表（或 sheetName 指定表）的 UsedRange。" },
+    { "name": "sheetName", "type": "string", "required": false, "description": "省略 range 时限定工作表。" },
+    { "name": "tolerance", "type": "number", "required": false, "description": "判定阈值，默认 0.005。" },
+    { "name": "maxResults", "type": "integer", "required": false, "description": "问题明细上限，默认 200。" }
+  ]
+}

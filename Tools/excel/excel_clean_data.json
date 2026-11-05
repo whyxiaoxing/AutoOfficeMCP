@@ -1,0 +1,18 @@
+{
+  "id": "excel_clean_data",
+  "name": "excel_clean_data",
+  "description": "数据清洗。operation=removeduplicates 删除重复行；fillempty 用 fillValue（默认 \"0\"）填充空单元格；trim 去除文本首尾空格；replace 在区域内查找替换（replaceText 为空表示删除）。示例：range=\"Data!A1:F100\", operation=\"fillempty\", fillValue=\"未知\"。removeduplicates 属于结构变更，不登记自动撤销；其余操作提供区域快照撤销。",
+  "appType": "excel",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "range", "type": "string", "required": true, "description": "待清洗区域。" },
+    { "name": "operation", "type": "string", "required": true, "description": "removeduplicates / fillempty / trim / replace。" },
+    { "name": "fillValue", "type": "string", "required": false, "description": "fillempty 的填充值，默认 \"0\"。" },
+    { "name": "findText", "type": "string", "required": false, "description": "replace 操作的查找文本。" },
+    { "name": "replaceText", "type": "string", "required": false, "description": "replace 操作的替换文本；空字符串表示删除匹配内容。" },
+    { "name": "matchCase", "type": "boolean", "required": false, "description": "replace 是否区分大小写，默认 false。" },
+    { "name": "hasHeader", "type": "boolean", "required": false, "description": "removeduplicates 时首行是否为表头，默认 true。" },
+    { "name": "createSheet", "type": "boolean", "required": false, "description": "工作表不存在时是否自动创建，默认 false。" }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "excel_freeze_and_view",
+  "name": "excel_freeze_and_view",
+  "description": "读取或设置工作表视图：冻结窗格（freezeCell 如 B2 表示冻结首行首列；或 freezeRows/freezeColumns）、取消冻结、显示/隐藏网格线、显示/隐藏行列标题、缩放 10-400%、视图模式 normal/pageBreakPreview/pageLayout。get 只读；set 会激活目标工作表（get 在非活动表时也会激活以读取窗口状态）并比较前后状态，changed 仅在真实变化时为 true。窗口状态不在区域快照中，不登记自动撤销。示例：action=\"set\", sheetName=\"Data\", freezeCell=\"B2\", gridlines=false；action=\"get\", sheetName=\"Data\"。",
+  "appType": "excel",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "action", "type": "string", "required": false, "description": "get 或 set，默认 get。" },
+    { "name": "sheetName", "type": "string", "required": false, "description": "目标工作表；省略为活动工作表。" },
+    { "name": "freezeCell", "type": "string", "required": false, "description": "冻结位置，如 B2：冻结第 1 行与 A 列。" },
+    { "name": "freezeRows", "type": "integer", "required": false, "description": "要冻结的顶部行数。" },
+    { "name": "freezeColumns", "type": "integer", "required": false, "description": "要冻结的左侧列数。" },
+    { "name": "unfreeze", "type": "boolean", "required": false, "description": "取消冻结窗格。" },
+    { "name": "gridlines", "type": "boolean", "required": false, "description": "是否显示网格线。" },
+    { "name": "showHeadings", "type": "boolean", "required": false, "description": "是否显示行列标题。" },
+    { "name": "zoom", "type": "integer", "required": false, "description": "缩放百分比 10-400。" },
+    { "name": "view", "type": "string", "required": false, "description": "normal / pageBreakPreview / pageLayout。" }
+  ]
+}

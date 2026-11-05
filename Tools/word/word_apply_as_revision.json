@@ -1,0 +1,34 @@
+{
+  "id": "word_apply_as_revision",
+  "name": "word_apply_as_revision",
+  "description": "在指定段落中精确查找 original 并替换为 corrected，先开启 TrackRevisions 使改动成为修订，完成后恢复原修订开关；回读修订增量。示例：word_apply_as_revision {\"paragraphIndex\":3,\"original\":\"旧文本\",\"corrected\":\"新文本\",\"matchCase\":true}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "paragraphIndex",
+      "type": "integer",
+      "required": true,
+      "description": "目标段落序号，1 基。"
+    },
+    {
+      "name": "original",
+      "type": "string",
+      "required": true,
+      "description": "段内要替换的原文，非空。"
+    },
+    {
+      "name": "corrected",
+      "type": "string",
+      "required": true,
+      "description": "替换后的文本，可为空字符串。"
+    },
+    {
+      "name": "matchCase",
+      "type": "boolean",
+      "required": false,
+      "description": "是否区分大小写，默认 true。"
+    }
+  ]
+}

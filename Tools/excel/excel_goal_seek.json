@@ -1,0 +1,14 @@
+{
+  "id": "excel_goal_seek",
+  "name": "excel_goal_seek",
+  "description": "单变量求解（Goal Seek）包装：调整 changingCell，使公式单元格 targetCell 达到 goalValue。targetCell 与 changingCell 必须是同一工作簿的单个单元格；求解前采集变量单元格快照并登记撤销。若未收敛，返回 PARTIAL_APPLY（变量单元格可能停留在最后迭代值）并附 undoUnits/回滚说明，绝不假装成功。示例：targetCell=\"模型!B10\", goalValue=0, changingCell=\"B3\"；targetCell=\"Sheet1!D5\", goalValue=100000, changingCell=\"Sheet1!D6\"。",
+  "appType": "excel",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "targetCell", "type": "string", "required": true, "description": "包含公式的目标单元格，可带 Sheet! 前缀。" },
+    { "name": "goalValue", "type": "number", "required": true, "description": "希望目标单元格达到的数值。" },
+    { "name": "changingCell", "type": "string", "required": true, "description": "可变单元格；省略 Sheet! 时与 targetCell 同表。" },
+    { "name": "sheetName", "type": "string", "required": false, "description": "为两个单元格提供默认工作表名（也支持在地址中显式指定）。" }
+  ]
+}

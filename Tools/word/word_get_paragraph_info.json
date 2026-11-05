@@ -1,0 +1,16 @@
+{
+  "id": "word_get_paragraph_info",
+  "name": "word_get_paragraph_info",
+  "description": "读取单段详情（1 基 paragraphIndex）：text/style/fontSize/fontName/bold/italic/underline/color/alignment/缩进/间距/编号。越界返回带“当前共 M 段”的参数错误。示例：word_get_paragraph_info {\"paragraphIndex\":2}",
+  "appType": "word",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": [
+    {
+      "name": "paragraphIndex",
+      "type": "integer",
+      "required": true,
+      "description": "段落序号，1 基；越界会返回当前实际段落数。"
+    }
+  ]
+}

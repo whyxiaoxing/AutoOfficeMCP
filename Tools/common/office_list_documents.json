@@ -1,0 +1,9 @@
+{
+  "id": "office_list_documents",
+  "name": "office_list_documents",
+  "description": "【只读】列出当前已打开的各应用文档：应用、名称、完整路径、是否活动、是否有未保存修改、是否只读。只附着已运行的 Excel/Word/PowerPoint 实例，绝不自动启动 Office。示例：office_list_documents {}",
+  "appType": "common",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": []
+}

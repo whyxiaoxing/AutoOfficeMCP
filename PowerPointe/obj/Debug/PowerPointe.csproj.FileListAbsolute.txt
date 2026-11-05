@@ -1,0 +1,9 @@
+F:\c#2\AutoOfficeMCP\Share\PowerPointe.dll
+F:\c#2\AutoOfficeMCP\Share\PowerPointe.pdb
+D:\Code\c#\AutoOfficeMCP\PowerPointe\obj\Debug\PowerPointe.csproj.AssemblyReference.cache
+D:\Code\c#\AutoOfficeMCP\PowerPointe\obj\Debug\PowerPointe.csproj.CoreCompileInputs.cache
+D:\Code\c#\AutoOfficeMCP\PowerPointe\obj\Debug\PowerPointe.dll
+D:\Code\c#\AutoOfficeMCP\PowerPointe\obj\Debug\PowerPointe.pdb
+D:\Code\c#\AutoOfficeMCP\PowerPointe\obj\Debug\PowerPoi.09A311D0.Up2Date
+D:\Code\c#\AutoOfficeMCP\.build-check2\PowerPointe.dll
+D:\Code\c#\AutoOfficeMCP\.build-check2\PowerPointe.pdb

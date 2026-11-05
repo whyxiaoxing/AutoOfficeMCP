@@ -1,0 +1,15 @@
+{
+  "id": "ppt_set_bullet",
+  "name": "ppt_set_bullet",
+  "description": "设置项目符号开关、层级与符号样式。shapeId 省略时作用于该页所有带文本框的形状；level 支持 0..8（按 PowerPoint 1..5 级钳制）。",
+  "appType": "ppt",
+  "category": "格式",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "shapeId", "type": "integer", "required": false, "description": "目标形状 ID；省略时作用于该页所有带文本框的形状。" },
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "幻灯片索引：省略/-1=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "enabled", "type": "boolean", "required": false, "description": "是否启用项目符号，默认 true。" },
+    { "name": "level", "type": "integer", "required": false, "description": "层级 0..8（按 1..5 钳制）。" },
+    { "name": "bulletChar", "type": "string", "required": false, "description": "符号字符，或 number/dash/dot。" }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "excel_sort_data",
+  "name": "excel_sort_data",
+  "description": "对区域排序。多键排序用 sortKeys=[{column,order}]（column 从 1 开始，也接受列字母或表头名；order=asc/desc），按键顺序作为主/次/第三键；超过 3 键时按最次要键到主键逐轮稳定排序。旧单键参数 sortColumn+order 仍兼容。hasHeader 控制首行是否作为表头。示例：range=\"Data!A1:D100\", sortKeys=[{\"column\":\"地区\",\"order\":\"asc\"},{\"column\":\"金额\",\"order\":\"desc\"}]。排序会移动单元格格式，自动撤销仅恢复值/公式/数字格式。",
+  "appType": "excel",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "range", "type": "string", "required": true, "description": "排序区域，包含表头时 hasHeader=true。" },
+    { "name": "sortKeys", "type": "array", "required": false, "description": "多键数组 [{column,order}]，提供时优先于 sortColumn。" },
+    { "name": "sortColumn", "type": "integer", "required": false, "description": "旧版单键排序列，从 1 开始；与 sortKeys 二选一。" },
+    { "name": "order", "type": "string", "required": false, "description": "旧版单键排序方向：asc（默认）或 desc。" },
+    { "name": "hasHeader", "type": "boolean", "required": false, "description": "首行是否表头，默认 true。" }
+  ]
+}

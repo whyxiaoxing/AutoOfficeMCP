@@ -1,0 +1,106 @@
+{
+  "id": "word_format_text",
+  "name": "word_format_text",
+  "description": "设置选区/全文的字符格式并逐属性回读：bold/italic/underlineStyle/subscript/superscript/strikethrough/doubleStrikethrough/fontSize/fontName/color/highlightColor/smallCaps/allCaps/characterSpacing。返回 verification 的 expected/actual/matched。示例：word_format_text {\"range\":\"selection\",\"superscript\":true,\"fontSize\":10.5}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "low",
+  "parameters": [
+    {
+      "name": "range",
+      "type": "string",
+      "required": false,
+      "description": "selection 或 all，默认 selection。"
+    },
+    {
+      "name": "bold",
+      "type": "boolean",
+      "required": false,
+      "description": "是否加粗。"
+    },
+    {
+      "name": "italic",
+      "type": "boolean",
+      "required": false,
+      "description": "是否斜体。"
+    },
+    {
+      "name": "underlineStyle",
+      "type": "string",
+      "required": false,
+      "description": "none/single/double/wavy/thick/dotted/dash/dotdash。"
+    },
+    {
+      "name": "underline",
+      "type": "boolean",
+      "required": false,
+      "description": "下划线布尔别名；与 underlineStyle 二选一。"
+    },
+    {
+      "name": "subscript",
+      "type": "boolean",
+      "required": false,
+      "description": "下标；不能与 superscript 同时为 true。"
+    },
+    {
+      "name": "superscript",
+      "type": "boolean",
+      "required": false,
+      "description": "上标；不能与 subscript 同时为 true。"
+    },
+    {
+      "name": "strikethrough",
+      "type": "boolean",
+      "required": false,
+      "description": "删除线。"
+    },
+    {
+      "name": "doubleStrikethrough",
+      "type": "boolean",
+      "required": false,
+      "description": "双删除线。"
+    },
+    {
+      "name": "smallCaps",
+      "type": "boolean",
+      "required": false,
+      "description": "小型大写字母。"
+    },
+    {
+      "name": "allCaps",
+      "type": "boolean",
+      "required": false,
+      "description": "全部大写字母。"
+    },
+    {
+      "name": "fontSize",
+      "type": "number",
+      "required": false,
+      "description": "字号磅值，如 12、10.5。"
+    },
+    {
+      "name": "fontName",
+      "type": "string",
+      "required": false,
+      "description": "字体名，同时写入 Name 与 NameFarEast。"
+    },
+    {
+      "name": "color",
+      "type": "string",
+      "required": false,
+      "description": "颜色名或 #RRGGBB，如 red、蓝色、#1F4E79。"
+    },
+    {
+      "name": "highlightColor",
+      "type": "string",
+      "required": false,
+      "description": "高亮颜色名或 wdColorIndex 整数，如 yellow、brightgreen、7。"
+    },
+    {
+      "name": "characterSpacing",
+      "type": "number",
+      "required": false,
+      "description": "字符间距磅值，可为负数。"
+    }
+  ]
+}

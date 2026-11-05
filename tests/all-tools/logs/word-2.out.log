@@ -1,0 +1,39 @@
+[PASS] word word_apply_style 
+[PASS] word word_caption_xref 
+[PASS] word word_clear_format 
+[PASS] word word_comment_delete 
+[PASS] word word_comments_read 
+[PASS] word word_content_controls 
+[PASS] word word_doc_merge 
+[PASS] word word_document_stats 
+[PASS] word word_export 
+[PASS] word word_field_update_all 
+[PASS] word word_find_and_select 
+[PASS] word word_format_text 
+[PASS] word word_get_context 
+[PASS] word word_goto_page 
+[PASS] word word_hidden_text_report 
+[PASS] word word_image_resize 
+[GATED] word word_insert_equation CLIPBOARD_DISABLED
+[PASS] word word_insert_table 
+[PASS] word word_line_numbering 
+[PASS] word word_md_export 
+[PASS] word word_normalize_headings 
+[PASS] word word_punctuation_normalize 
+[PASS] word word_reading_time 
+[PASS] word word_repeat_check 
+[PASS] word word_revision_accept 
+[PASS] word word_revisions_list 
+[PASS] word word_set_page_setup 
+[PASS] word word_style_audit 
+[PASS] word word_styles_list 
+[PASS] word word_table_convert 
+[PASS] word word_table_format 
+[PASS] word word_table_merge_cells 
+[PASS] word word_table_set_cell 
+[PASS] word word_table_set_row 
+[PASS] word word_track_changes_toggle 
+[PASS] word word_watermark 
+
+SUMMARY word part 2/2: total=36 pass=35 gated=1 fail=0
+REPORT D:\Code\c#\AutoOfficeMCP\tests\all-tools\results\word-part2.json

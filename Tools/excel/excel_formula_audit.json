@@ -1,0 +1,16 @@
+{
+  "id": "excel_formula_audit",
+  "name": "excel_formula_audit",
+  "description": "公式审计（只读，changed=false）。mode=scan 扫描公式并报告 #REF! 断链、外部引用 [Book.xlsx]、公式错误值等（includeAllFormulas=true 返回全部公式）；mode=precedents 追踪直接前例；mode=dependents 追踪直接依赖（Excel 可能不返回跨工作簿关系）；mode=external 列出工作簿外部链接与 #REF! 断链名称。示例：mode=\"scan\", sheetName=\"计算\", maxResults=300；mode=\"precedents\", range=\"计算!F2:F100\"；mode=\"external\"。",
+  "appType": "excel",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "mode", "type": "string", "required": false, "description": "scan / precedents / dependents / external，默认 scan。" },
+    { "name": "sheetName", "type": "string", "required": false, "description": "限定工作表；省略则扫描全部（受 includeHidden 控制）。" },
+    { "name": "range", "type": "string", "required": false, "description": "限定区域；scan 省略时逐表扫描 UsedRange，precedents/dependents 省略时用 UsedRange。" },
+    { "name": "includeHidden", "type": "boolean", "required": false, "description": "是否扫描隐藏工作表，默认 true。" },
+    { "name": "includeAllFormulas", "type": "boolean", "required": false, "description": "scan 时是否返回无问题的普通公式，默认 false。" },
+    { "name": "maxResults", "type": "integer", "required": false, "description": "最大返回条数，默认 200。" }
+  ]
+}

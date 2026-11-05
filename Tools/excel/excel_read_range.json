@@ -1,0 +1,17 @@
+{
+  "id": "excel_read_range",
+  "name": "excel_read_range",
+  "description": "读取区域值并同次返回单元格三元组 cells[{formula,value,errorType}]。支持 startRow/cursor 行分页，返回 {truncated,totalEstimate,nextCursor}；默认每页 100 行 × 26 列，maxRows 可到 5000、maxColumns 可到 100。向后兼容：values/rows/columns/returnedRows/returnedColumns/truncated 保持旧语义，includeFormula/includeFormat 仍返回旧矩阵。range 省略时读取当前选区。示例：range=\"Data!A1:Z200\", maxRows=50, startRow=51；下一页传 cursor=nextCursor。",
+  "appType": "excel",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "range", "type": "string", "required": false, "description": "读取区域；省略读取 selection。" },
+    { "name": "maxRows", "type": "integer", "required": false, "description": "每页返回行数上限，默认 100，最大 5000。" },
+    { "name": "maxColumns", "type": "integer", "required": false, "description": "返回列数上限，默认 26，最大 100。" },
+    { "name": "startRow", "type": "integer", "required": false, "description": "从区域第几行开始（1 基），默认 1。" },
+    { "name": "cursor", "type": "string", "required": false, "description": "上一页返回的 nextCursor，也兼容纯数字、row=N、startRow=N 或 Base64 JSON。" },
+    { "name": "includeFormula", "type": "boolean", "required": false, "description": "是否额外返回旧版公式矩阵；cells 始终包含公式三元组。" },
+    { "name": "includeFormat", "type": "boolean", "required": false, "description": "是否额外返回 NumberFormat 矩阵。" }
+  ]
+}

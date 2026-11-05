@@ -1,0 +1,70 @@
+{
+  "id": "word_table_format",
+  "name": "word_table_format",
+  "description": "表格格式：边框样式/颜色/宽度、底纹色、列宽数组、autofit(content/window/fixed)、行对齐、标题行重复、单元格垂直对齐。示例：word_table_format {\"tableIndex\":1,\"borderStyle\":\"single\",\"borderColor\":\"#808080\",\"shadingColor\":\"#F2F2F2\",\"autofit\":\"window\",\"repeatHeaderRow\":true}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "tableIndex",
+      "type": "integer",
+      "required": true,
+      "description": "表格索引，1 基。"
+    },
+    {
+      "name": "borderStyle",
+      "type": "string",
+      "required": false,
+      "description": "none/single/double/dashed/dotted。"
+    },
+    {
+      "name": "borderColor",
+      "type": "string",
+      "required": false,
+      "description": "颜色名或 #RRGGBB。"
+    },
+    {
+      "name": "borderWidthPt",
+      "type": "number",
+      "required": false,
+      "description": "边框宽度磅值，映射到 Word WdLineWidth。"
+    },
+    {
+      "name": "shadingColor",
+      "type": "string",
+      "required": false,
+      "description": "底纹颜色名或 #RRGGBB。"
+    },
+    {
+      "name": "columnWidths",
+      "type": "array",
+      "required": false,
+      "description": "各列宽度磅值数组。"
+    },
+    {
+      "name": "autofit",
+      "type": "string",
+      "required": false,
+      "description": "content/window/fixed。"
+    },
+    {
+      "name": "alignment",
+      "type": "string",
+      "required": false,
+      "description": "行对齐 left/center/right。"
+    },
+    {
+      "name": "repeatHeaderRow",
+      "type": "boolean",
+      "required": false,
+      "description": "是否重复标题行（Rows.HeadingFormat）。"
+    },
+    {
+      "name": "verticalAlignment",
+      "type": "string",
+      "required": false,
+      "description": "单元格垂直对齐 top/center/bottom。"
+    }
+  ]
+}

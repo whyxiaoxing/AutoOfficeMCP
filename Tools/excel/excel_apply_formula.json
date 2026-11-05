@@ -1,0 +1,15 @@
+{
+  "id": "excel_apply_formula",
+  "name": "excel_apply_formula",
+  "description": "向目标区域应用任意 Excel 公式，优先使用 Formula2（动态数组/溢出语义），旧版 Excel 自动回退 Formula。支持单公式、operations 数组（每项 range/formula/fillDown）、\"C1=A1+B1\" 赋值式自动拆解，以及 fillDown=true 时用首格公式 + AutoFill 向下填充。目标可写 C1:C{lastRow} 等动态范围。示例：targetRange=\"Data!C2:C{lastRow}\", formula=\"=A2+B2\", fillDown=true。返回每个操作的 formulaEngine 与 observation。",
+  "appType": "excel",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "targetRange", "type": "string", "required": false, "description": "目标区域，可含 Sheet! 前缀；省略时从 formula 的 C1= 形式推断，仍省略则默认 C1。" },
+    { "name": "formula", "type": "string", "required": false, "description": "公式文本，可带或不带前导 =；例如 \"=SUM(B2:B10)\" 或 \"C1=A1+B1\"。与 operations 至少提供一个。" },
+    { "name": "operations", "type": "array", "required": false, "description": "批量公式数组，每项形如 {\"range\":\"C2:C10\",\"formula\":\"=A2+B2\",\"fillDown\":true}。某步失败时返回 PARTIAL_APPLY 与 succeededCount。" },
+    { "name": "fillDown", "type": "boolean", "required": false, "description": "是否在目标首格写公式后使用 AutoFill 向下填充，默认 false。" },
+    { "name": "targetSheet", "type": "string", "required": false, "description": "targetRange 不含表名时使用的表名。" }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "excel_rename_sheet",
+  "name": "excel_rename_sheet",
+  "description": "重命名工作表。oldName 不存在返回 SHEET_NOT_FOUND，newName 重复或非法返回 INVALID_PARAMS。示例：oldName=\"Sheet1\", newName=\"数据\"。重命名不登记自动撤销。",
+  "appType": "excel",
+  "category": "sheet",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "oldName", "type": "string", "required": true, "description": "原工作表名称。" },
+    { "name": "newName", "type": "string", "required": true, "description": "新工作表名称，最长 31 字符且不能重名。" }
+  ]
+}

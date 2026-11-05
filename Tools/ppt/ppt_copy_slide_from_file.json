@@ -1,0 +1,13 @@
+{
+  "id": "ppt_copy_slide_from_file",
+  "name": "ppt_copy_slide_from_file",
+  "description": "从另一个 PowerPoint 文件复制一页到当前演示文稿。sourceFile 为纯文件名时从工作目录解析，也可传本机绝对路径；sourceSlideIndex 为源文件页码（1 基）；insertAfter 省略时追加到末尾，0 表示插到第一页之前。使用 PowerPoint 原生 InsertFromFile，保留源页格式。示例：ppt_copy_slide_from_file {\"sourceFile\":\"brand.pptx\",\"sourceSlideIndex\":1}。",
+  "appType": "ppt",
+  "category": "幻灯片操作",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "sourceFile", "type": "string", "required": true, "description": "源 PPT 文件纯文件名或本机绝对路径（.pptx/.pptm/.ppt/.ppsx/.ppsm）。" },
+    { "name": "sourceSlideIndex", "type": "integer", "required": false, "description": "源文件页码，1 基，默认 1。" },
+    { "name": "insertAfter", "type": "integer", "required": false, "description": "插入到当前第 N 页之后；省略=末尾，0=第一页之前。" }
+  ]
+}

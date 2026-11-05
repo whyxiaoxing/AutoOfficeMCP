@@ -1,0 +1,9 @@
+{
+  "id": "word_equations_list",
+  "name": "word_equations_list",
+  "description": "枚举文档 OMaths：索引/所在段/类型/范围/内容摘要。示例：word_equations_list {}",
+  "appType": "word",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": []
+}

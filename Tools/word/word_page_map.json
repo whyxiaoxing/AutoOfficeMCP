@@ -1,0 +1,9 @@
+{
+  "id": "word_page_map",
+  "name": "word_page_map",
+  "description": "返回文档页 ↔ 段号映射 [{page,startParagraph,endParagraph}]；页码来自 Word 分页后的实际回读，段号为 1 基。示例：word_page_map {}",
+  "appType": "word",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": []
+}

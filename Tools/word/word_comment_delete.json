@@ -1,0 +1,22 @@
+{
+  "id": "word_comment_delete",
+  "name": "word_comment_delete",
+  "description": "【高危】按索引倒序删除批注，必须显式确认；先校验全部索引存在，返回实际删除数、删除后批注总数与剩余缺失索引。示例：word_comment_delete {\"commentIndexes\":[2,3],\"confirm\":true}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "high",
+  "parameters": [
+    {
+      "name": "commentIndexes",
+      "type": "array",
+      "required": true,
+      "description": "1 基批注索引数组；会去重并按倒序删除。"
+    },
+    {
+      "name": "confirm",
+      "type": "boolean",
+      "required": true,
+      "description": "必须为 true；省略或 false 时拒绝删除。"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+[PASS] ppt ppt_add_animation 
+[PASS] ppt ppt_align_shapes 
+[PASS] ppt ppt_apply_transition 
+[PASS] ppt ppt_clear_slide 
+[PASS] ppt ppt_create_slides 
+[GATED] ppt ppt_delete_animation INVALID_PARAMS
+[PASS] ppt ppt_delete_slide 
+[GATED] ppt ppt_execute_vba VBA_DISABLED
+[PASS] ppt ppt_export_pdf 
+[PASS] ppt ppt_format_table 
+[PASS] ppt ppt_get_presentation_info 
+[PASS] ppt ppt_get_table 
+[PASS] ppt ppt_get_transition 
+[PASS] ppt ppt_hide_slide 
+[PASS] ppt ppt_insert_chart_from_excel 
+[PASS] ppt ppt_insert_shape 
+[PASS] ppt ppt_insert_table 
+[PASS] ppt ppt_insert_text 
+[PASS] ppt ppt_list_layouts 
+[PASS] ppt ppt_list_themes 
+[PASS] ppt ppt_move_slide 
+[PASS] ppt ppt_replace_image 
+[PASS] ppt ppt_set_image_format 
+[PASS] ppt ppt_set_shape_format 
+[PASS] ppt ppt_set_slide_layout 
+[PASS] ppt ppt_set_table_cell 
+[PASS] ppt ppt_ungroup_shapes 
+
+SUMMARY ppt part 1/2: total=27 pass=25 gated=2 fail=0
+REPORT D:\Code\c#\AutoOfficeMCP\tests\all-tools\results\ppt-part1.json

@@ -1,0 +1,18 @@
+{
+  "id": "ppt_insert_table",
+  "name": "ppt_insert_table",
+  "description": "在指定幻灯片上插入表格并可写入二维数组数据。data 的每一行对应表格一行，超出 rows/cols 的部分会被截断。示例：ppt_insert_table {\"rows\":2,\"cols\":2,\"data\":[[\"区域\",\"销售额\"],[\"华东\",\"1200\"]]}。",
+  "appType": "ppt",
+  "category": "内容操作",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "rows", "type": "integer", "required": true, "description": "表格行数，必须大于 0。" },
+    { "name": "cols", "type": "integer", "required": true, "description": "表格列数，必须大于 0。" },
+    { "name": "data", "type": "array", "required": false, "description": "二维数组；每行是数组，单元格值会转成文本。" },
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "目标页：-1/省略=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "x", "type": "number", "required": false, "description": "表格左上角 X 坐标，默认 50。" },
+    { "name": "y", "type": "number", "required": false, "description": "表格左上角 Y 坐标，默认 150。" },
+    { "name": "width", "type": "number", "required": false, "description": "表格宽度，默认 600。" },
+    { "name": "height", "type": "number", "required": false, "description": "表格高度，默认 300。" }
+  ]
+}

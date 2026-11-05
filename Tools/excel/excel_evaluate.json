@@ -1,0 +1,12 @@
+{
+  "id": "excel_evaluate",
+  "name": "excel_evaluate",
+  "description": "通过 Application.Evaluate 计算任意 Excel 公式（含工作表引用），失败时使用临时工作表单元格求值并清理。标量/数组结果分别返回；可选 writeTarget 把结果写入目标单元格（求值本身不保存工作簿）。示例：formula=\"=SUM(1,2,3)\" 返回 6；formula=\"=SUM(Data!B2:B100)\", writeTarget=\"Data!E1\"。",
+  "appType": "excel",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "formula", "type": "string", "required": true, "description": "任意 Excel 公式，可带或不带 =。" },
+    { "name": "writeTarget", "type": "string", "required": false, "description": "可选写入目标单元格/区域；写入操作返回 observation。" }
+  ]
+}

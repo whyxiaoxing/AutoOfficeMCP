@@ -1,0 +1,17 @@
+{
+  "id": "ppt_crop_image",
+  "name": "ppt_crop_image",
+  "description": "裁切图片形状。unit=ratio（默认）时 cropLeft/Top/Right/Bottom 取 0..1，按当前图片宽高比例裁切；unit=points 时按磅裁切。返回实际裁切值与裁切后宽高。示例：ppt_crop_image {\"shapeId\":9,\"cropLeft\":0.1,\"cropRight\":0.1}。",
+  "appType": "ppt",
+  "category": "图片",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "幻灯片索引：省略/-1=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "shapeId", "type": "integer", "required": true, "description": "图片形状 id。" },
+    { "name": "cropLeft", "type": "number", "required": false, "description": "左侧裁切量，默认 0。" },
+    { "name": "cropTop", "type": "number", "required": false, "description": "顶部裁切量，默认 0。" },
+    { "name": "cropRight", "type": "number", "required": false, "description": "右侧裁切量，默认 0。" },
+    { "name": "cropBottom", "type": "number", "required": false, "description": "底部裁切量，默认 0。" },
+    { "name": "unit", "type": "string", "required": false, "description": "裁切单位：ratio（0..1，默认）或 points（磅）。" }
+  ]
+}

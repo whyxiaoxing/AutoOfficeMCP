@@ -1,0 +1,12 @@
+{
+  "id": "excel_merge_cells",
+  "name": "excel_merge_cells",
+  "description": "合并或取消合并单元格。unmerge=true 时取消合并，否则合并。示例：range=\"Data!A1:C1\" 合并标题；{\"range\":\"Data!A1:C1\",\"unmerge\":true} 取消。结构变更不登记自动撤销。",
+  "appType": "excel",
+  "category": "format",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "range", "type": "string", "required": true, "description": "要合并/取消合并的区域。" },
+    { "name": "unmerge", "type": "boolean", "required": false, "description": "true 取消合并；默认 false 合并。" }
+  ]
+}

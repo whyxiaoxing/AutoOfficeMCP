@@ -1,0 +1,21 @@
+{
+  "id": "excel_sparkline_manage",
+  "name": "excel_sparkline_manage",
+  "description": "迷你图（Sparkline）管理：action=add 在 targetRange 的每个单元格生成迷你图，sourceRange 为一行/一列数据源；action=clear 清空 targetRange 内全部迷你图；action=list 只读列出迷你图组。type 支持 line/column/winloss；可选 showMarkers/showHighPoint/showLowPoint/showNegativePoints/showFirstPoint/showLastPoint。示例：action=add, targetRange=数据!D2:D10, sourceRange=数据!A2:C10, type=line。",
+  "appType": "excel",
+  "category": "write",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "action", "type": "string", "required": false, "description": "add（默认）/ clear / list。" },
+    { "name": "targetRange", "type": "string", "required": true, "description": "迷你图放置区域，如 数据!D2:D10；add/clear/list 均必填。" },
+    { "name": "sourceRange", "type": "string", "required": false, "description": "数据源区域，如 数据!A2:C10；action=add 时必填。" },
+    { "name": "type", "type": "string", "required": false, "description": "line（默认）/ column / winloss。" },
+    { "name": "showMarkers", "type": "boolean", "required": false, "description": "是否显示数据标记点。" },
+    { "name": "showHighPoint", "type": "boolean", "required": false, "description": "是否标记最高点。" },
+    { "name": "showLowPoint", "type": "boolean", "required": false, "description": "是否标记最低点。" },
+    { "name": "showNegativePoints", "type": "boolean", "required": false, "description": "是否标记负值点。" },
+    { "name": "showFirstPoint", "type": "boolean", "required": false, "description": "是否标记第一个点。" },
+    { "name": "showLastPoint", "type": "boolean", "required": false, "description": "是否标记最后一个点。" },
+    { "name": "dateAxisRange", "type": "string", "required": false, "description": "可选日期轴区域。" }
+  ]
+}

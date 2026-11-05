@@ -1,0 +1,11 @@
+{
+  "id": "ppt_list_animations",
+  "name": "ppt_list_animations",
+  "description": "【只读】列出指定页主时间线中的全部动画，按播放顺序返回 order、shapeId、shapeName、effect、effectType、duration、delay、trigger、startMode，供编排时序和删除前核对。示例：ppt_list_animations {\"slideIndex\":2}。",
+  "appType": "ppt",
+  "category": "样式和动画",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "幻灯片索引：省略/-1=当前页，0=第一页，1..N=1 基索引。" }
+  ]
+}

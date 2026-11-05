@@ -1,0 +1,15 @@
+{
+  "id": "excel_comment_manage",
+  "name": "excel_comment_manage",
+  "description": "批注（旧版 Note/Comment）读写。list 列出区域或 UsedRange 内批注地址、正文、作者、可见性；add 为区域中无批注的单元格添加批注（已有批注跳过）；update 修改现有批注正文；delete 清除区域内所有批注。批注内容不在区域快照中，写操作会如实记录 undoReason；线程批注（现代评论）无法通过旧版 Comment 接口读写。示例：action=\"add\", range=\"Data!D2:D10\", text=\"请复核\"；action=\"list\", sheetName=\"Data\"；action=\"delete\", range=\"Data!D2:D10\"。",
+  "appType": "excel",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "action", "type": "string", "required": false, "description": "list / add / update / delete，默认 list。" },
+    { "name": "range", "type": "string", "required": false, "description": "目标区域；list 省略时为 UsedRange。" },
+    { "name": "sheetName", "type": "string", "required": false, "description": "目标工作表；range 未含表名时使用。" },
+    { "name": "text", "type": "string", "required": false, "description": "批注正文（add/update 必填）。" },
+    { "name": "maxResults", "type": "integer", "required": false, "description": "list 最大返回条数，默认 1000。" }
+  ]
+}

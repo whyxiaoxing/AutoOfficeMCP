@@ -1,0 +1,12 @@
+{
+  "id": "ppt_duplicate_slide",
+  "name": "ppt_duplicate_slide",
+  "description": "复制指定幻灯片并插入到指定位置。insertAfter 省略时插入到源页之后。示例：ppt_duplicate_slide {\"slideIndex\":1,\"insertAfter\":1}。",
+  "appType": "ppt",
+  "category": "幻灯片操作",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "要复制的页：-1/省略=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "insertAfter", "type": "integer", "required": false, "description": "复制后插入到第几张之后；省略时插入到源页之后。" }
+  ]
+}

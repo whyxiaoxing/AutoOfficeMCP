@@ -1,0 +1,12 @@
+{
+  "id": "office_batch",
+  "name": "office_batch",
+  "description": "【高危】在一次调用中顺序执行一组已注册工具，减少往返。commands 为 {\"tool\":\"...\",\"arguments\":{...}} 数组，最多 50 项；任一步失败立即停止，整体返回 PARTIAL_APPLY，包含 completed 已完成项、failed 失败项与 rollback 说明。不会自动回滚；Excel/Word 已登记 T02 节点、PPT 已登记原生撤销组的写操作可用 office_undo_last 按逆序撤销。ppt_delete_slide / ppt_reorder_slides 等不可逆或复合操作请避免放入 batch。本工具自身及其中的高危子命令都需要 confirm=true。示例：office_batch {\"confirm\":true,\"commands\":[{\"tool\":\"excel_read_range\",\"arguments\":{\"range\":\"A1:B2\"}}]}。",
+  "appType": "common",
+  "category": "orchestration",
+  "riskLevel": "high",
+  "parameters": [
+    { "name": "commands", "type": "array", "required": true, "description": "命令数组，元素形状 {\"tool\":\"已注册工具名\",\"arguments\":{...}}；arguments 可省略。" },
+    { "name": "confirm", "type": "boolean", "required": false, "description": "本工具为高危工具，协议层要求调用时设置 confirm=true。" }
+  ]
+}

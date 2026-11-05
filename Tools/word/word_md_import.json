@@ -1,0 +1,46 @@
+{
+  "id": "word_md_import",
+  "name": "word_md_import",
+  "description": "把 Markdown 子集插入当前文档指定位置：标题 #→标题样式、-/* 列表→项目符号、1. 列表→编号列表、普通段落、表格行→制表符分隔文本；支持 **粗体**、*斜体*、__粗体__、_斜体_ 行内格式。内容追加/插入，不覆盖其他部分。示例：word_md_import {\"markdown\":\"# 标题\\n\\n正文 **重点**。\",\"position\":\"end\"}；读文件：{\"inputPath\":\"C:\\\\temp\\\\doc.md\",\"position\":\"cursor\"}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "markdown",
+      "type": "string",
+      "required": false,
+      "description": "Markdown 文本；与 inputPath 至少提供一个，同时提供时优先用 markdown。"
+    },
+    {
+      "name": "inputPath",
+      "type": "string",
+      "required": false,
+      "description": "Markdown 文件绝对路径（UTF-8）；markdown 未提供时读取。"
+    },
+    {
+      "name": "position",
+      "type": "string",
+      "required": false,
+      "description": "插入位置：start/end/cursor/paragraph，默认 cursor。"
+    },
+    {
+      "name": "paragraphIndex",
+      "type": "integer",
+      "required": false,
+      "description": "position=paragraph 时的 1 基段号（插入到该段起点之前）。"
+    },
+    {
+      "name": "headingOffset",
+      "type": "integer",
+      "required": false,
+      "description": "标题层级偏移 -5..5，默认 0。例如 # 在 offset=1 时套用“标题 2”。"
+    },
+    {
+      "name": "applyStyles",
+      "type": "boolean",
+      "required": false,
+      "description": "是否套用标题样式与列表格式，默认 true；false 时只插入纯文本。"
+    }
+  ]
+}

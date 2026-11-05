@@ -1,0 +1,16 @@
+{
+  "id": "word_revisions_list",
+  "name": "word_revisions_list",
+  "description": "枚举修订：索引/类型/作者/日期/锚定段号/范围预览/格式说明，支持 maxCount 截断。示例：word_revisions_list {\"maxCount\":100}",
+  "appType": "word",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": [
+    {
+      "name": "maxCount",
+      "type": "integer",
+      "required": false,
+      "description": "最大返回数量，默认 100。"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "excel_paste_special",
+  "name": "excel_paste_special",
+  "description": "选择性粘贴（不依赖 Windows 剪贴板）。mode=values/formulas/formats/transpose/valuesAndFormats；operate=none/add/subtract/multiply/divide 只对 values/valuesAndFormats 生效。目标可为单个起始单元格、同尺寸区域或源尺寸整数倍区域。formulas 模式会按目标偏移平移相对引用。返回实际应用单元格数、格式/列宽/行高/条件格式复制数。示例：sourceRange=\"Calc!D2:D100\", targetRange=\"Calc!E2\", mode=\"values\", operate=\"multiply\"。",
+  "appType": "excel",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "sourceRange", "type": "string", "required": true, "description": "源区域。" },
+    { "name": "targetRange", "type": "string", "required": true, "description": "目标区域或起始单元格。" },
+    { "name": "mode", "type": "string", "required": false, "description": "values（默认）/formulas/formats/transpose/valuesAndFormats。" },
+    { "name": "operate", "type": "string", "required": false, "description": "none（默认）/add/subtract/multiply/divide。" },
+    { "name": "transpose", "type": "boolean", "required": false, "description": "是否转置；mode=transpose 等价于 values+transpose=true。" },
+    { "name": "skipBlanks", "type": "boolean", "required": false, "description": "是否跳过源空单元格，默认 false。" },
+    { "name": "includeFormats", "type": "boolean", "required": false, "description": "values 模式下是否同时复制格式。" },
+    { "name": "includeColumnWidths", "type": "boolean", "required": false, "description": "复制格式时是否含列宽，默认 true。" },
+    { "name": "includeRowHeights", "type": "boolean", "required": false, "description": "复制格式时是否含行高，默认 true。" },
+    { "name": "includeConditionalFormats", "type": "boolean", "required": false, "description": "复制格式时是否克隆条件格式，默认 false。" }
+  ]
+}

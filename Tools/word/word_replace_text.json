@@ -1,0 +1,40 @@
+{
+  "id": "word_replace_text",
+  "name": "word_replace_text",
+  "description": "全文查找替换，返回替换次数；不传 format 时使用 Find.ClearFormatting + Wrap=wdFindContinue + ReplaceAll，保持原有行为。传 format 时逐处替换并立即套用格式、回读核验。支持 matchCase/matchWholeWord。示例：word_replace_text {\"find\":\"Alpha\",\"replace\":\"Beta\",\"format\":{\"bold\":true,\"color\":\"#C00000\"}}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "find",
+      "type": "string",
+      "required": true,
+      "description": "要查找的非空文本。"
+    },
+    {
+      "name": "replace",
+      "type": "string",
+      "required": false,
+      "description": "替换文本；省略或空字符串表示删除匹配。"
+    },
+    {
+      "name": "matchCase",
+      "type": "boolean",
+      "required": false,
+      "description": "是否区分大小写，默认 false。"
+    },
+    {
+      "name": "matchWholeWord",
+      "type": "boolean",
+      "required": false,
+      "description": "是否全字匹配，默认 false。"
+    },
+    {
+      "name": "format",
+      "type": "object",
+      "required": false,
+      "description": "可选替换格式：{bold:boolean,color:string,fontSize:number,fontName:string,underlineStyle:string}；至少一项。不传时完全沿用旧 ReplaceAll 行为。"
+    }
+  ]
+}

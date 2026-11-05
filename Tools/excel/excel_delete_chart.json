@@ -1,0 +1,13 @@
+{
+  "id": "excel_delete_chart",
+  "name": "excel_delete_chart",
+  "description": "【高危】删除指定图表对象或独立图表页。必须显式传 confirm=true。chartName 可用内嵌图表名或 Sheet!图表名；删除图表页会同时删除该页。图表删除不可用单元格快照撤销。示例：chartName=\"Chart 1\", sheetName=\"Dashboard\", confirm=true。",
+  "appType": "excel",
+  "category": "format",
+  "riskLevel": "high",
+  "parameters": [
+    { "name": "chartName", "type": "string", "required": true, "description": "图表名，支持 Sheet!图表名。" },
+    { "name": "sheetName", "type": "string", "required": false, "description": "图表所在工作表。" },
+    { "name": "confirm", "type": "boolean", "required": false, "description": "高危操作确认；必须为 true。" }
+  ]
+}

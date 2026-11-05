@@ -1,0 +1,34 @@
+{
+  "id": "word_apply_style",
+  "name": "word_apply_style",
+  "description": "应用段落/字符样式；内置映射（标题1→“标题 1”、Heading1→“标题 1”、正文/Normal 等）。支持选区、全文、单段或 paragraphIndexes 批量；批量倒序且失败不中断，失败项返回可修复原因。示例：word_apply_style {\"styleName\":\"标题1\",\"range\":\"paragraph\",\"paragraphIndex\":2}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "low",
+  "parameters": [
+    {
+      "name": "styleName",
+      "type": "string",
+      "required": true,
+      "description": "样式名，支持 标题1/Heading1/正文/Normal 等映射。"
+    },
+    {
+      "name": "range",
+      "type": "string",
+      "required": false,
+      "description": "selection/paragraph/all，默认 selection。"
+    },
+    {
+      "name": "paragraphIndex",
+      "type": "integer",
+      "required": false,
+      "description": "单段应用时的 1 基段号；range=paragraph 时必填。"
+    },
+    {
+      "name": "paragraphIndexes",
+      "type": "array",
+      "required": false,
+      "description": "批量段落号数组（1 基）；会倒序应用并返回每项失败原因。"
+    }
+  ]
+}

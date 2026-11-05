@@ -1,0 +1,13 @@
+{
+  "id": "excel_remove_duplicates",
+  "name": "excel_remove_duplicates",
+  "description": "按指定列删除重复行。columns 默认全部列（1 起）；hasHeader 指定首行是否为表头。示例：range=\"Data!A1:D100\", columns=[1,2], hasHeader=true。返回 removedRows 估计值；删除行属于结构变更，不登记自动撤销。",
+  "appType": "excel",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "range", "type": "string", "required": true, "description": "去重区域。" },
+    { "name": "columns", "type": "array", "required": false, "description": "参与比较的列索引数组（1 起）；省略使用全部列。" },
+    { "name": "hasHeader", "type": "boolean", "required": false, "description": "首行是否表头，默认 true。" }
+  ]
+}

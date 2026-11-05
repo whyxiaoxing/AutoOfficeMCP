@@ -1,0 +1,16 @@
+{
+  "id": "word_list_paragraphs",
+  "name": "word_list_paragraphs",
+  "description": "列出文档段落（默认 50 段），返回每段真实 1 基序号、摘要、样式、字号、长度，并在 Data 中返回 total/returned/truncated。示例：word_list_paragraphs {\"maxCount\":50}",
+  "appType": "word",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": [
+    {
+      "name": "maxCount",
+      "type": "integer",
+      "required": false,
+      "description": "最大返回段落数，1-2000，默认 50。"
+    }
+  ]
+}

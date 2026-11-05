@@ -1,0 +1,19 @@
+{
+  "id": "excel_export",
+  "name": "excel_export",
+  "description": "把工作表区域导出为 CSV/JSON/PDF/选区图片(PNG)。format=csv 按行列写带引号转义文本（encoding 默认 utf8bom，便于 Excel 打开中文）；json 输出 {sheet,address,rows,columns,values[,formulas]}；pdf 用 Excel ExportAsFixedFormat（scope=range 导区域，scope=sheet 导整表）；image 通过 CopyPicture→临时图表导出 PNG，导出后删除临时图表。默认 overwrite=false，目标存在时拒绝。示例：format=\"pdf\", path=\"D:\\\\out\\\\report.pdf\", range=\"报表!A1:H60\", overwrite=true；format=\"csv\", path=\"D:\\\\out\\\\data.csv\"。",
+  "appType": "excel",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "format", "type": "string", "required": true, "description": "csv / json / pdf / image（png 同 image）。" },
+    { "name": "path", "type": "string", "required": true, "description": "输出文件路径（纯文件名、工作目录内相对子路径或绝对路径）；父目录不存在时仅在工作目录内自动创建，工作目录外需预先存在。" },
+    { "name": "range", "type": "string", "required": false, "description": "导出区域；省略则使用 sheetName 或活动工作表的 UsedRange。" },
+    { "name": "sheetName", "type": "string", "required": false, "description": "未提供 range 时要导出的工作表；省略为活动工作表。" },
+    { "name": "overwrite", "type": "boolean", "required": false, "description": "目标文件已存在时是否覆盖，默认 false。" },
+    { "name": "scope", "type": "string", "required": false, "description": "pdf 导出范围：range（默认）或 sheet。" },
+    { "name": "delimiter", "type": "string", "required": false, "description": "CSV 分隔符，默认逗号；可传 tab。" },
+    { "name": "encoding", "type": "string", "required": false, "description": "CSV 编码：utf8bom（默认）/utf8/gbk/default。" },
+    { "name": "includeFormulas", "type": "boolean", "required": false, "description": "JSON 是否附带公式矩阵，默认 false。" }
+  ]
+}

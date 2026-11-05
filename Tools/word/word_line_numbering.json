@@ -1,0 +1,52 @@
+{
+  "id": "word_line_numbering",
+  "name": "word_line_numbering",
+  "description": "行号设置读写。action=get 只读每节行号状态；action=set 设置指定节/全部节的启用状态、每隔几行编号、起始编号、距正文距离、重新开始方式。示例：word_line_numbering {\"action\":\"get\"}；启用并在每页重排：{\"action\":\"set\",\"active\":true,\"countBy\":1,\"restartMode\":\"page\"}；只设置第 2 节：{\"action\":\"set\",\"sectionIndex\":2,\"active\":false}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "action",
+      "type": "string",
+      "required": false,
+      "description": "get（默认，只读）/set。"
+    },
+    {
+      "name": "sectionIndex",
+      "type": "integer",
+      "required": false,
+      "description": "1 基节号；0 或省略表示全部节。"
+    },
+    {
+      "name": "active",
+      "type": "boolean",
+      "required": false,
+      "description": "set 时是否启用行号。"
+    },
+    {
+      "name": "countBy",
+      "type": "integer",
+      "required": false,
+      "description": "每隔几行显示编号，1-100。"
+    },
+    {
+      "name": "startingNumber",
+      "type": "integer",
+      "required": false,
+      "description": "起始行号，≥0。"
+    },
+    {
+      "name": "distanceFromTextPt",
+      "type": "number",
+      "required": false,
+      "description": "行号距正文距离（磅），≥0。"
+    },
+    {
+      "name": "restartMode",
+      "type": "string",
+      "required": false,
+      "description": "重新开始方式：continuous（连续）/section（每节）/page（每页）。"
+    }
+  ]
+}

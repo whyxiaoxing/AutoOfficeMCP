@@ -1,0 +1,20 @@
+{
+  "id": "excel_create_chart",
+  "name": "excel_create_chart",
+  "description": "基于源数据区域创建图表。type 支持 column/line/pie/bar/scatter/area；默认 450×320。position 可指定单元格（如 Data!E2），默认放在数据区域右侧。seriesNames 可为数组或名称区域；categoryAxis 可为数组或 XValues 区域；plotBy=row 时按行绘图。示例：dataRange=\"Data!A1:B10\", type=\"column\", title=\"月度销售\", position=\"E2\", legendPosition=\"bottom\"。图表对象不在单元格快照中，undoUnits 为空并给出原因。",
+  "appType": "excel",
+  "category": "format",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "dataRange", "type": "string", "required": true, "description": "图表数据源区域，如 Data!A1:C10。" },
+    { "name": "type", "type": "string", "required": false, "description": "图表类型：column（默认）、line、pie、bar、scatter、area。" },
+    { "name": "title", "type": "string", "required": false, "description": "图表标题。" },
+    { "name": "position", "type": "string", "required": false, "description": "图表左上角位置或 Sheet!单元格；默认数据区域右侧一列。" },
+    { "name": "seriesNames", "type": "array", "required": false, "description": "系列名称数组，或字符串形式的名称区域地址。" },
+    { "name": "categoryAxis", "type": "array", "required": false, "description": "分类轴标签数组，或 XValues 区域地址。" },
+    { "name": "legendPosition", "type": "string", "required": false, "description": "right/left/top/bottom/corner/none。" },
+    { "name": "plotBy", "type": "string", "required": false, "description": "column（默认）或 row。" },
+    { "name": "width", "type": "integer", "required": false, "description": "图表宽度像素，默认 450，最小 100。" },
+    { "name": "height", "type": "integer", "required": false, "description": "图表高度像素，默认 320，最小 100。" }
+  ]
+}

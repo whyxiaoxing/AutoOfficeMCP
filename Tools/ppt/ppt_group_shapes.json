@@ -1,0 +1,12 @@
+{
+  "id": "ppt_group_shapes",
+  "name": "ppt_group_shapes",
+  "description": "把同一页上的多个形状组合为一个组。shapeIds 至少两个，返回 groupShapeId、groupShapeName、memberIds。组合后可整体移动/缩放；解组用 ppt_ungroup_shapes。示例：ppt_group_shapes {\"shapeIds\":[3,4,5]}。",
+  "appType": "ppt",
+  "category": "形状操作",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "幻灯片索引：省略/-1=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "shapeIds", "type": "array", "required": true, "description": "要组合的形状 id 数组，至少两个。" }
+  ]
+}

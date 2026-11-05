@@ -1,0 +1,10 @@
+<Solution>
+  <Project Path="AutoOfficeMCP.csproj" Id="80fc9ca2-bc3f-4667-b19a-2c710bb93254">
+    <BuildDependency Project="Office/Office.csproj" />
+    <BuildDependency Project="PowerPointe/PowerPointe.csproj" />
+    <BuildDependency Project="Xlsx/Xlsx.csproj" />
+  </Project>
+  <Project Path="Office/Office.csproj" Id="97e11ff2-4e91-457d-a568-67c92dc452ae" />
+  <Project Path="PowerPointe/PowerPointe.csproj" Id="ee444bf9-3d7e-4ee4-a5c0-f1dc85a55193" />
+  <Project Path="Xlsx/Xlsx.csproj" Id="55684400-3178-4d94-9b95-831737b014f4" />
+</Solution>

@@ -1,0 +1,22 @@
+{
+  "id": "word_reading_time",
+  "name": "word_reading_time",
+  "description": "只读估算阅读时长：统计汉字数、英文单词数、数字串/标点数、段落/标题/表格/图片数，按可配置的汉字速度与英文速度计算分钟与秒。示例：word_reading_time {}；调整速度：{\"cjkCharsPerMinute\":500,\"englishWordsPerMinute\":220}",
+  "appType": "word",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": [
+    {
+      "name": "cjkCharsPerMinute",
+      "type": "integer",
+      "required": false,
+      "description": "汉字阅读速度（字/分钟），50-3000，默认 400。"
+    },
+    {
+      "name": "englishWordsPerMinute",
+      "type": "integer",
+      "required": false,
+      "description": "英文阅读速度（词/分钟），30-2000，默认 200。"
+    }
+  ]
+}

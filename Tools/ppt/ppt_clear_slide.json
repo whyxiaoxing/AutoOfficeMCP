@@ -1,0 +1,13 @@
+{
+  "id": "ppt_clear_slide",
+  "name": "ppt_clear_slide",
+  "description": "【高危】清空指定页的全部形状但保留页面；keepLayout=false 时同时把版式重置为空白。必须显式传 confirm=true。",
+  "appType": "ppt",
+  "category": "幻灯片操作",
+  "riskLevel": "high",
+  "parameters": [
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "幻灯片索引：省略/-1=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "keepLayout", "type": "boolean", "required": false, "description": "是否保留原版式，默认 true；false 时重置为空白版式。" },
+    { "name": "confirm", "type": "boolean", "required": false, "description": "必须为 true 才会清空。" }
+  ]
+}

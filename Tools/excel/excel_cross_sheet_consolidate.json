@@ -1,0 +1,18 @@
+{
+  "id": "excel_cross_sheet_consolidate",
+  "name": "excel_cross_sheet_consolidate",
+  "description": "把多个同结构工作表纵向汇总到一个目标表。默认汇总全部可见工作表（可传 sheets 限定），每表读 UsedRange 或指定 range；hasHeader=true 时每表首行视为表头且目标只保留一份；includeSourceColumn=true 增加「来源工作表」列。会先校验所有来源列数一致，结构不一致时整体失败、不写入。目标表已存在则清空后重写并登记区域快照撤销；新建目标表属于结构变更，如实记录不可撤销。示例：sheets=[\"1月\",\"2月\"], targetSheet=\"汇总\", includeSourceColumn=true。",
+  "appType": "excel",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "targetSheet", "type": "string", "required": false, "description": "汇总目标工作表名，默认「汇总」；不存在则创建。" },
+    { "name": "sheets", "type": "array", "required": false, "description": "来源工作表名数组；省略则汇总全部可见工作表（排除目标表）。" },
+    { "name": "range", "type": "string", "required": false, "description": "各来源表统一读取的区域（本地地址，如 A1:F200）；省略则逐表使用 UsedRange。" },
+    { "name": "outputAddress", "type": "string", "required": false, "description": "目标表起始单元格，默认 A1。" },
+    { "name": "hasHeader", "type": "boolean", "required": false, "description": "来源首行是否为表头，默认 true。" },
+    { "name": "includeSourceColumn", "type": "boolean", "required": false, "description": "是否增加来源工作表名列，默认 false。" },
+    { "name": "sourceColumnHeader", "type": "string", "required": false, "description": "来源列标题，默认「来源工作表」。" },
+    { "name": "includeHidden", "type": "boolean", "required": false, "description": "未指定 sheets 时是否包含隐藏工作表，默认 false。" }
+  ]
+}

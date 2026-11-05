@@ -1,0 +1,15 @@
+{
+  "id": "excel_create_workbook",
+  "name": "excel_create_workbook",
+  "description": "从零新建工作簿并保存到 path（.xlsx/.xlsm/.xls/.csv）。无现成文件时创建工作簿；文件已存在且 overwrite=false 时打开现有工作簿并返回 created=false。可用 template 指定模板，sheets 指定初始工作表名（无模板时会重建这些表）。默认 open=true 保持打开；open=false 保存后关闭。示例：path=\"report.xlsx\", sheets=[\"汇总\",\"明细\"]。",
+  "appType": "excel",
+  "category": "file",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "path", "type": "string", "required": true, "description": "目标文件名、工作目录内相对子路径或绝对路径；父目录不存在时仅在工作目录内自动创建，工作目录外需预先存在。" },
+    { "name": "template", "type": "string", "required": false, "description": "可选模板文件路径。" },
+    { "name": "sheets", "type": "array", "required": false, "description": "初始工作表名称数组。" },
+    { "name": "overwrite", "type": "boolean", "required": false, "description": "目标已存在时是否覆盖，默认 false。" },
+    { "name": "open", "type": "boolean", "required": false, "description": "创建后是否保持打开，默认 true。" }
+  ]
+}

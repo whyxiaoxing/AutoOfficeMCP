@@ -1,0 +1,16 @@
+{
+  "id": "word_revision_accept",
+  "name": "word_revision_accept",
+  "description": "接受指定 1 基修订索引，返回修订数量变化；索引越界会返回实际修订数。示例：word_revision_accept {\"revisionIndex\":1}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "revisionIndex",
+      "type": "integer",
+      "required": true,
+      "description": "修订索引，1 基。"
+    }
+  ]
+}

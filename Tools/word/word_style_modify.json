@@ -1,0 +1,58 @@
+{
+  "id": "word_style_modify",
+  "name": "word_style_modify",
+  "description": "修改样式定义（不是段落内联格式），支持 font/size/color/bold/italic/lineSpacing/basedOn，并回读修改前后定义与逐项核验。color 支持 #RRGGBB 或颜色名；lineSpacing 为倍数且仅用于段落样式。示例：word_style_modify {\"name\":\"正文\",\"font\":\"微软雅黑\",\"size\":12,\"lineSpacing\":1.5}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "name",
+      "type": "string",
+      "required": true,
+      "description": "要修改的样式名（本地化名称）。"
+    },
+    {
+      "name": "font",
+      "type": "string",
+      "required": false,
+      "description": "字体名，例如 微软雅黑/Arial。"
+    },
+    {
+      "name": "size",
+      "type": "number",
+      "required": false,
+      "description": "字号（磅），允许 1-500。"
+    },
+    {
+      "name": "color",
+      "type": "string",
+      "required": false,
+      "description": "颜色，#RRGGBB 或 red/blue/auto 等颜色名。"
+    },
+    {
+      "name": "bold",
+      "type": "boolean",
+      "required": false,
+      "description": "是否加粗。"
+    },
+    {
+      "name": "italic",
+      "type": "boolean",
+      "required": false,
+      "description": "是否斜体。"
+    },
+    {
+      "name": "lineSpacing",
+      "type": "number",
+      "required": false,
+      "description": "行距倍数，例如 1.5；仅段落样式支持。"
+    },
+    {
+      "name": "basedOn",
+      "type": "string",
+      "required": false,
+      "description": "新的基准样式名；不能是样式自身。"
+    }
+  ]
+}

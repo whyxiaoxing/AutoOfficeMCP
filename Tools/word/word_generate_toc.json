@@ -1,0 +1,28 @@
+{
+  "id": "word_generate_toc",
+  "name": "word_generate_toc",
+  "description": "先删除已有目录，再在 start/cursor/end 插入目录并 Update/UpdatePageNumbers；levels 1-9。示例：word_generate_toc {\"position\":\"start\",\"levels\":3,\"includePageNumbers\":true}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "low",
+  "parameters": [
+    {
+      "name": "position",
+      "type": "string",
+      "required": false,
+      "description": "start/cursor/end，默认 start。"
+    },
+    {
+      "name": "levels",
+      "type": "integer",
+      "required": false,
+      "description": "目录级别 1-9，默认 3。"
+    },
+    {
+      "name": "includePageNumbers",
+      "type": "boolean",
+      "required": false,
+      "description": "是否包含页码，默认 true。"
+    }
+  ]
+}

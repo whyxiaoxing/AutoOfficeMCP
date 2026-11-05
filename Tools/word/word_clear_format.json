@@ -1,0 +1,16 @@
+{
+  "id": "word_clear_format",
+  "name": "word_clear_format",
+  "description": "清除当前选区/全文的直接字符格式与段落格式（Font.Reset + ParagraphFormat.Reset），返回清除字符数/段数及前后格式。示例：word_clear_format {\"range\":\"selection\"}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "range",
+      "type": "string",
+      "required": false,
+      "description": "selection 或 all，默认 selection。"
+    }
+  ]
+}

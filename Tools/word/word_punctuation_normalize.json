@@ -1,0 +1,40 @@
+{
+  "id": "word_punctuation_normalize",
+  "name": "word_punctuation_normalize",
+  "description": "把中英文标点规范化为全角/半角，支持限定段落范围并逐项报告变更（段号/偏移/原字符/新字符/上下文）。mode=auto 按相邻中文/英文上下文自动选择；fullwidth 全部转全角；halfwidth 全部转半角。只做 1:1 字符替换以保留原有格式；含图片/域/公式/表格的段落会跳过。示例：word_punctuation_normalize {\"mode\":\"auto\",\"range\":\"all\"}；只处理某段：{\"mode\":\"fullwidth\",\"paragraphIndexes\":[5]}；同时转换引号：{\"normalizeQuotes\":true}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "mode",
+      "type": "string",
+      "required": false,
+      "description": "auto（默认，按上下文）/fullwidth（全角）/halfwidth（半角），也接受“全角”“半角”。"
+    },
+    {
+      "name": "range",
+      "type": "string",
+      "required": false,
+      "description": "处理范围：all（默认，全文）或 selection（当前选区相交段落）。"
+    },
+    {
+      "name": "paragraphIndexes",
+      "type": "array",
+      "required": false,
+      "description": "限定处理的 1 基段号数组，例如 [2,3]。优先于 range。"
+    },
+    {
+      "name": "normalizeQuotes",
+      "type": "boolean",
+      "required": false,
+      "description": "是否转换直引号/弯引号，默认 false。全角模式按段落内配对顺序转换；auto 模式不改引号。"
+    },
+    {
+      "name": "maxReport",
+      "type": "integer",
+      "required": false,
+      "description": "最多返回的逐项变更数，1-2000，默认 300；总数仍会统计。"
+    }
+  ]
+}

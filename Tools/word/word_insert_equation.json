@@ -1,0 +1,28 @@
+{
+  "id": "word_insert_equation",
+  "name": "word_insert_equation",
+  "description": "在 paragraphIndex/position 插入 Word 公式（OMath）并 BuildUp。优先 UnicodeMath 线性格式（如 x^2+y^2=z^2）；LaTeX 命令（\\\\alpha、\\\\frac）不保证被 COM 解析。返回公式索引、OMaths.Count 与降级说明。示例：word_insert_equation {\"equation\":\"x^2+y^2=z^2\",\"position\":\"end\"}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "low",
+  "parameters": [
+    {
+      "name": "equation",
+      "type": "string",
+      "required": true,
+      "description": "UnicodeMath 线性公式文本，如 x^2+y^2=z^2。"
+    },
+    {
+      "name": "paragraphIndex",
+      "type": "integer",
+      "required": false,
+      "description": "目标段落 1 基序号；省略时使用 position。"
+    },
+    {
+      "name": "position",
+      "type": "string",
+      "required": false,
+      "description": "cursor/start/end，默认 cursor。"
+    }
+  ]
+}

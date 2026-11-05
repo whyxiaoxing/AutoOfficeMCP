@@ -1,0 +1,28 @@
+{
+  "id": "word_export",
+  "name": "word_export",
+  "description": "导出 PDF/XPS/纯文本到指定路径；路径必填，覆盖已有文件必须 confirm=true。导出后校验文件存在且非空，活动文档不修改。示例：word_export {\"path\":\"C:\\\\temp\\\\report.pdf\",\"format\":\"pdf\",\"confirm\":true}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "path",
+      "type": "string",
+      "required": true,
+      "description": "输出文件路径（纯文件名、工作目录内相对子路径或绝对路径）；无扩展名时按 format 自动补；父目录不存在时仅在工作目录内自动创建，工作目录外需预先存在。"
+    },
+    {
+      "name": "format",
+      "type": "string",
+      "required": false,
+      "description": "pdf/xps/txt，默认 pdf。"
+    },
+    {
+      "name": "confirm",
+      "type": "boolean",
+      "required": false,
+      "description": "覆盖已存在文件时必须为 true。"
+    }
+  ]
+}

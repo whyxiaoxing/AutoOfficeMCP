@@ -1,0 +1,20 @@
+{
+  "id": "excel_search_all",
+  "name": "excel_search_all",
+  "description": "跨全部（或指定）工作表全文搜索，逐单元格返回工作表名、完整地址、匹配内容与上下文。支持普通文本或正则、大小写/整格匹配；可选把结果写入「搜索结果」工作表（writeToSheet=true）。只读调用 changed=false，写入调用会报告真实观察与撤销限制。示例：query=\"订单\", useRegex=false, writeToSheet=true, resultSheet=\"搜索结果\", maxResults=200。",
+  "appType": "excel",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "query", "type": "string", "required": true, "description": "搜索文本；useRegex=true 时为正则表达式。" },
+    { "name": "useRegex", "type": "boolean", "required": false, "description": "是否把 query 当作正则表达式，默认 false。" },
+    { "name": "matchCase", "type": "boolean", "required": false, "description": "是否区分大小写，默认 false。" },
+    { "name": "matchEntireCell", "type": "boolean", "required": false, "description": "是否要求整格匹配，默认 false。" },
+    { "name": "sheets", "type": "array", "required": false, "description": "限定搜索的工作表名数组；省略则搜索全部可见（includeHidden=true 时含隐藏）工作表。" },
+    { "name": "includeHidden", "type": "boolean", "required": false, "description": "是否包含隐藏工作表，默认 false。" },
+    { "name": "maxResults", "type": "integer", "required": false, "description": "最大返回条数，默认 200，上限 5000。" },
+    { "name": "contextLength", "type": "integer", "required": false, "description": "匹配前后保留的上下文字符数，默认 30，上限 200。" },
+    { "name": "writeToSheet", "type": "boolean", "required": false, "description": "是否把结果写入工作表，默认 false。" },
+    { "name": "resultSheet", "type": "string", "required": false, "description": "结果工作表名，默认「搜索结果」；已存在时覆盖内容。" }
+  ]
+}

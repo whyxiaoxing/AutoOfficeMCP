@@ -1,0 +1,40 @@
+{
+  "id": "word_table_merge_cells",
+  "name": "word_table_merge_cells",
+  "description": "合并表格矩形区域 (startRow,startCol)-(endRow,endCol)，返回合并后的表格结构摘要；合并后行列索引会变化。示例：word_table_merge_cells {\"tableIndex\":1,\"startRow\":1,\"startCol\":1,\"endRow\":1,\"endCol\":2}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "high",
+  "parameters": [
+    {
+      "name": "tableIndex",
+      "type": "integer",
+      "required": true,
+      "description": "表格索引，1 基。"
+    },
+    {
+      "name": "startRow",
+      "type": "integer",
+      "required": true,
+      "description": "起始行，1 基。"
+    },
+    {
+      "name": "startCol",
+      "type": "integer",
+      "required": true,
+      "description": "起始列，1 基。"
+    },
+    {
+      "name": "endRow",
+      "type": "integer",
+      "required": true,
+      "description": "结束行，1 基。"
+    },
+    {
+      "name": "endCol",
+      "type": "integer",
+      "required": true,
+      "description": "结束列，1 基。"
+    }
+  ]
+}

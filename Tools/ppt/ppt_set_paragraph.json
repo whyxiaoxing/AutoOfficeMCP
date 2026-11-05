@@ -1,0 +1,17 @@
+{
+  "id": "ppt_set_paragraph",
+  "name": "ppt_set_paragraph",
+  "description": "设置段落缩进层级、段前/段后间距、行距与对齐。shapeId 省略时作用于该页所有带文本框的形状。",
+  "appType": "ppt",
+  "category": "格式",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "shapeId", "type": "integer", "required": false, "description": "目标形状 ID；省略时作用于该页所有带文本框的形状。" },
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "幻灯片索引：省略/-1=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "indentLevel", "type": "integer", "required": false, "description": "缩进层级 0..8（按 1..5 钳制）。" },
+    { "name": "spaceBefore", "type": "number", "required": false, "description": "段前间距（磅）。" },
+    { "name": "spaceAfter", "type": "number", "required": false, "description": "段后间距（磅）。" },
+    { "name": "lineSpacing", "type": "number", "required": false, "description": "行距倍数。" },
+    { "name": "align", "type": "string", "required": false, "description": "left/center/right/justify。" }
+  ]
+}

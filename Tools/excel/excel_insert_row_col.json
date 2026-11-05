@@ -1,0 +1,14 @@
+{
+  "id": "excel_insert_row_col",
+  "name": "excel_insert_row_col",
+  "description": "插入行或列。type=row/column；position 为行号或列字母/列号；count 为数量。示例：{\"sheetName\":\"Data\",\"type\":\"row\",\"position\":\"3\",\"count\":2} 在第 3 行前插入 2 行；列示例 position=\"C\"。结构变更不登记自动撤销。",
+  "appType": "excel",
+  "category": "sheet",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "type", "type": "string", "required": true, "description": "row 或 column。" },
+    { "name": "position", "type": "string", "required": true, "description": "起始行号，或列字母/列号。" },
+    { "name": "count", "type": "integer", "required": false, "description": "插入数量，默认 1。" },
+    { "name": "sheetName", "type": "string", "required": false, "description": "目标工作表；省略使用活动工作表。" }
+  ]
+}

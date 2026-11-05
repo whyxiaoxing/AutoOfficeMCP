@@ -1,0 +1,11 @@
+{
+  "id": "ppt_get_transition",
+  "name": "ppt_get_transition",
+  "description": "【只读】回读指定页的切换效果：entryEffect、entryEffectName、duration、advanceOnClick、advanceTime、hidden。与 ppt_apply_transition 配对，用于验证切换是否真正生效。示例：ppt_get_transition {\"slideIndex\":1}。",
+  "appType": "ppt",
+  "category": "样式和动画",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "幻灯片索引：省略/-1=当前页，0=第一页，1..N=1 基索引。" }
+  ]
+}

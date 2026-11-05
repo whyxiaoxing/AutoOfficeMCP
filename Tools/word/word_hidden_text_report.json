@@ -1,0 +1,16 @@
+{
+  "id": "word_hidden_text_report",
+  "name": "word_hidden_text_report",
+  "description": "只读扫描正文中隐藏文字（Font.Hidden=-1），返回隐藏范围数量、总字符数、每处段号/起止位置/文本预览。页眉页脚、文本框、脚注中的隐藏文字不在本次扫描范围。示例：word_hidden_text_report {}；最多返回 500 处：{\"maxItems\":500}",
+  "appType": "word",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": [
+    {
+      "name": "maxItems",
+      "type": "integer",
+      "required": false,
+      "description": "最多返回的隐藏范围条数，1-2000，默认 200；总量与总字符数仍统计。"
+    }
+  ]
+}

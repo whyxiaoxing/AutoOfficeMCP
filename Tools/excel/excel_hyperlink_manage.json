@@ -1,0 +1,18 @@
+{
+  "id": "excel_hyperlink_manage",
+  "name": "excel_hyperlink_manage",
+  "description": "管理单元格超链接。action=list 列出区域/工作表超链接（地址、子地址、显示文本、内部/外部）；action=set 在区域左上角单元格设置链接；action=clear 清除区域内全部超链接。type=internal/external/auto；内部链接用 subAddress（如 Sheet2!A1），外部链接用 address（URL/文件路径）。示例：action=\"set\", range=\"目录!B2\", address=\"https://example.com\", displayText=\"官网\"。",
+  "appType": "excel",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "action", "type": "string", "required": false, "description": "list（默认）/set/clear。" },
+    { "name": "range", "type": "string", "required": false, "description": "目标区域；省略时使用活动工作表（或 sheetName 指定表）的 UsedRange。" },
+    { "name": "sheetName", "type": "string", "required": false, "description": "省略 range 时限定工作表。" },
+    { "name": "address", "type": "string", "required": false, "description": "外部链接地址（URL/文件路径）。" },
+    { "name": "subAddress", "type": "string", "required": false, "description": "内部链接目标，如 Sheet2!A1。" },
+    { "name": "displayText", "type": "string", "required": false, "description": "单元格显示文本。" },
+    { "name": "screenTip", "type": "string", "required": false, "description": "鼠标悬停提示。" },
+    { "name": "type", "type": "string", "required": false, "description": "internal/external/auto，默认 auto。" }
+  ]
+}

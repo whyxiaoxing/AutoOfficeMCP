@@ -1,0 +1,16 @@
+{
+  "id": "excel_numbers_as_text_fix",
+  "name": "excel_numbers_as_text_fix",
+  "description": "检测并修复「文本型数字」：单元格值为可解析数字文本（含全角数字、千分位），或数值被设置为文本格式 @。fix=true 时写回数值并把文本格式改为 General（可指定 numberFormat），默认保留前导零（如 00123、电话号码、身份证号请保留默认 true 或用 skipPattern 排除）。fix=false 仅检测。写操作会采集区域快照；区域超过快照上限时如实返回 undoReason。示例：range=\"Data!B2:B500\", fix=true, preserveLeadingZeros=true, skipPattern=\"^1\\d{10}$\"。",
+  "appType": "excel",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "range", "type": "string", "required": false, "description": "检测/修复区域；省略则当前活动工作表 UsedRange。" },
+    { "name": "fix", "type": "boolean", "required": false, "description": "是否执行修复，默认 true；false 仅检测。" },
+    { "name": "preserveLeadingZeros", "type": "boolean", "required": false, "description": "是否跳过前导零文本（00123 等），默认 true。" },
+    { "name": "numberFormat", "type": "string", "required": false, "description": "修复后数字格式，默认 General。" },
+    { "name": "skipPattern", "type": "string", "required": false, "description": "可选正则：命中的单元格跳过（如排除手机号 ^1\\d{10}$）。" },
+    { "name": "maxCells", "type": "integer", "required": false, "description": "允许处理的最大单元格数，默认 100000，上限 500000。" }
+  ]
+}

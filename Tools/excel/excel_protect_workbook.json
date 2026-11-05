@@ -1,0 +1,29 @@
+{
+  "id": "excel_protect_workbook",
+  "name": "excel_protect_workbook",
+  "description": "工作簿结构/窗口保护与工作表细粒度保护。不传 sheetName 时保护/取消工作簿（structure 默认 true，windows 默认 false）；传 sheetName 时保护/取消该工作表，可设置 allowFiltering、allowSorting、allowFormattingCells、allowFormattingColumns/Rows、allowInsertingColumns/Rows/Hyperlinks、allowDeletingColumns/Rows、allowUsingPivotTables。protect=false 或 unprotect=true 表示取消。示例：sheetName=\"Data\", password=\"1234\", allowFiltering=true, allowSorting=true。",
+  "appType": "excel",
+  "category": "sheet",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "sheetName", "type": "string", "required": false, "description": "指定时执行工作表级保护；省略时执行工作簿级保护。" },
+    { "name": "password", "type": "string", "required": false, "description": "保护密码；取消时必须一致。" },
+    { "name": "protect", "type": "boolean", "required": false, "description": "true 保护（默认），false 取消。" },
+    { "name": "unprotect", "type": "boolean", "required": false, "description": "true 等价于 protect=false。" },
+    { "name": "structure", "type": "boolean", "required": false, "description": "工作簿结构保护，默认 true。" },
+    { "name": "windows", "type": "boolean", "required": false, "description": "工作簿窗口保护，默认 false。" },
+    { "name": "drawingObjects", "type": "boolean", "required": false, "description": "工作表保护时是否保护图形对象，默认 true。" },
+    { "name": "scenarios", "type": "boolean", "required": false, "description": "工作表保护时是否保护方案，默认 false。" },
+    { "name": "allowFiltering", "type": "boolean", "required": false, "description": "允许使用自动筛选，默认 false。" },
+    { "name": "allowSorting", "type": "boolean", "required": false, "description": "允许排序，默认 false。" },
+    { "name": "allowFormattingCells", "type": "boolean", "required": false, "description": "允许设置单元格格式，默认 false。" },
+    { "name": "allowFormattingColumns", "type": "boolean", "required": false, "description": "允许设置列格式，默认 false。" },
+    { "name": "allowFormattingRows", "type": "boolean", "required": false, "description": "允许设置行格式，默认 false。" },
+    { "name": "allowInsertingColumns", "type": "boolean", "required": false, "description": "允许插入列，默认 false。" },
+    { "name": "allowInsertingRows", "type": "boolean", "required": false, "description": "允许插入行，默认 false。" },
+    { "name": "allowInsertingHyperlinks", "type": "boolean", "required": false, "description": "允许插入超链接，默认 false。" },
+    { "name": "allowDeletingColumns", "type": "boolean", "required": false, "description": "允许删除列，默认 false。" },
+    { "name": "allowDeletingRows", "type": "boolean", "required": false, "description": "允许删除行，默认 false。" },
+    { "name": "allowUsingPivotTables", "type": "boolean", "required": false, "description": "允许使用数据透视表，默认 false。" }
+  ]
+}

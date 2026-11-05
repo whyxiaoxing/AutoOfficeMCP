@@ -1,0 +1,13 @@
+{
+  "id": "ppt_format_slide",
+  "name": "ppt_format_slide",
+  "description": "设置幻灯片背景色和/或版式。background 支持 #RRGGBB 或颜色名；layout 支持 title/titleOnly/titleAndContent/twoContent/comparison/blank。示例：ppt_format_slide {\"slideIndex\":1,\"background\":\"#F7F3EA\",\"layout\":\"titleAndContent\"}。",
+  "appType": "ppt",
+  "category": "样式和动画",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "目标页：-1/省略=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "background", "type": "string", "required": false, "description": "背景色，如 #F7F3EA 或 red；省略则不修改背景。" },
+    { "name": "layout", "type": "string", "required": false, "description": "版式名称；省略则不修改版式。" }
+  ]
+}

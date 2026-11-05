@@ -1,0 +1,34 @@
+{
+  "id": "word_style_audit",
+  "name": "word_style_audit",
+  "description": "只读排版治理审计：统计样式使用量，对比段落直接格式化（字体/字号/加粗/颜色/段落缩进等）与样式定义，并识别“手工编号、整段加粗、字号偏大”的正文段，报告应套用的标题样式。示例：word_style_audit {\"range\":\"all\",\"maxFindings\":50}；只审计选区：{\"range\":\"selection\"}；指定段：{\"paragraphIndexes\":[3,4,10]}",
+  "appType": "word",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": [
+    {
+      "name": "range",
+      "type": "string",
+      "required": false,
+      "description": "审计范围：all（默认，全文）或 selection（当前选区相交段落）。也可用 paragraphIndexes 指定段号。"
+    },
+    {
+      "name": "paragraphIndexes",
+      "type": "array",
+      "required": false,
+      "description": "限定审计的 1 基段号数组，例如 [1,2,5]。优先于 range。"
+    },
+    {
+      "name": "maxFindings",
+      "type": "integer",
+      "required": false,
+      "description": "最多返回的“应套标题样式”建议数，1-1000，默认 100。"
+    },
+    {
+      "name": "maxDirectSamples",
+      "type": "integer",
+      "required": false,
+      "description": "最多返回的直接格式化样例数，1-500，默认 50。"
+    }
+  ]
+}

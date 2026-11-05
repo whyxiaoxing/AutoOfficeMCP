@@ -1,0 +1,9 @@
+{
+  "id": "office_pool_status",
+  "name": "office_pool_status",
+  "description": "读取并行调度器状态：队列深度、在跑作业数（excel/word/ppt 分项）、并发上限（含 limits.pptMaxConcurrency）、当前文件锁占用与等待者、在飞作业明细、最近错误、worker 进程 PID/officePid/心跳年龄/重启次数、仍存活的池内 STA 线程数、工具调度桥是否已注入。无参数，只读，不会启动 Office。",
+  "appType": "common",
+  "category": "diagnostic",
+  "riskLevel": "low",
+  "parameters": []
+}

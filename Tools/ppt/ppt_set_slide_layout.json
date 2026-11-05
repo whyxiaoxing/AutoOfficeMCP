@@ -1,0 +1,12 @@
+{
+  "id": "ppt_set_slide_layout",
+  "name": "ppt_set_slide_layout",
+  "description": "设置幻灯片版式；优先使用 PowerPoint 内置版式。layout 支持 title/titleOnly/titleAndContent/twoContent/comparison/blank。写入后会读回 Layout 校验。示例：ppt_set_slide_layout {\"slideIndex\":1,\"layout\":\"titleAndContent\"}。",
+  "appType": "ppt",
+  "category": "样式和动画",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "layout", "type": "string", "required": true, "description": "版式：title/titleOnly/titleAndContent/twoContent/comparison/blank。" },
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "目标页：-1/省略=当前页，0=第一页，1..N=1 基索引。" }
+  ]
+}

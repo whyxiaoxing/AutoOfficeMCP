@@ -1,0 +1,18 @@
+{
+  "id": "excel_named_range_manage",
+  "name": "excel_named_range_manage",
+  "description": "命名区域（定义名称）增删改查与断链清点。action=list 返回名称、作用域、引用公式、可解析地址、可见性、是否 #REF! 断链；add/update 支持工作簿级或工作表级（scope=sheet + sheetName），refersTo 可写 =Data!$A$1:$B$10 或本地 A1:B10（自动补表名）；delete 删除单个名称；cleanBroken 清理所有 #REF! 名称。命名区域属于工作簿元数据，区域快照不可撤销，结果中如实记录 undoReason。示例：action=\"add\", name=\"销售额\", refersTo=\"=Data!$C$2:$C$100\"；action=\"cleanBroken\"。",
+  "appType": "excel",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "action", "type": "string", "required": false, "description": "list / add / update / delete / cleanBroken，默认 list。" },
+    { "name": "name", "type": "string", "required": false, "description": "命名区域名称（add/update/delete 必填）。" },
+    { "name": "newName", "type": "string", "required": false, "description": "update 时可选的新名称（重命名）。" },
+    { "name": "refersTo", "type": "string", "required": false, "description": "引用公式，如 =Data!$A$1:$B$10；本地地址会自动加 sheetName。" },
+    { "name": "scope", "type": "string", "required": false, "description": "workbook 或 sheet，默认 workbook。" },
+    { "name": "sheetName", "type": "string", "required": false, "description": "scope=sheet 时的工作表名。" },
+    { "name": "visible", "type": "boolean", "required": false, "description": "名称是否可见，默认 true。" },
+    { "name": "comment", "type": "string", "required": false, "description": "可选备注。" }
+  ]
+}

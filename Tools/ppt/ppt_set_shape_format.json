@@ -1,0 +1,19 @@
+{
+  "id": "ppt_set_shape_format",
+  "name": "ppt_set_shape_format",
+  "description": "修改已有形状的填充、透明度、边框、线型、圆角与旋转。shapeId 来自 ppt_list_shapes。只应用显式传入的属性，返回实际生效的属性列表。",
+  "appType": "ppt",
+  "category": "格式",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "shapeId", "type": "integer", "required": true, "description": "目标形状 ID（来自 ppt_list_shapes）。" },
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "幻灯片索引：省略/-1=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "fillColor", "type": "string", "required": false, "description": "填充颜色，#RRGGBB 或颜色名。" },
+    { "name": "fillTransparency", "type": "number", "required": false, "description": "填充透明度，0..1。" },
+    { "name": "lineColor", "type": "string", "required": false, "description": "边框颜色，#RRGGBB 或颜色名。" },
+    { "name": "lineWidth", "type": "number", "required": false, "description": "边框宽度（磅）。" },
+    { "name": "lineDash", "type": "string", "required": false, "description": "solid/dash/dot/dashDot/longDash。" },
+    { "name": "cornerRadius", "type": "number", "required": false, "description": "圆角半径（磅），仅支持可调圆角的形状。" },
+    { "name": "rotation", "type": "number", "required": false, "description": "旋转角度。" }
+  ]
+}

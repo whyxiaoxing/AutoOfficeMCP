@@ -1,0 +1,13 @@
+{
+  "id": "excel_range_profile",
+  "name": "excel_range_profile",
+  "description": "范围画像：识别表头、逐列统计 numeric/date/text/empty 数量与公式数，并返回默认 30 行 × 8 列采样数据。range 省略时使用当前 UsedRange。示例：range=\"Data!A1:F200\", maxRows=30, maxColumns=8。",
+  "appType": "excel",
+  "category": "analysis",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "range", "type": "string", "required": false, "description": "画像区域；省略使用 UsedRange。" },
+    { "name": "maxRows", "type": "integer", "required": false, "description": "采样行数，默认 30，最大 100。" },
+    { "name": "maxColumns", "type": "integer", "required": false, "description": "采样列数，默认 8，最大 26。" }
+  ]
+}

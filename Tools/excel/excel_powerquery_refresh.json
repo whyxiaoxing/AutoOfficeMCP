@@ -1,0 +1,13 @@
+{
+  "id": "excel_powerquery_refresh",
+  "name": "excel_powerquery_refresh",
+  "description": "Power Query 管理：action=list 只读列出工作簿中的查询名称与公式；action=refresh（默认）刷新指定 queryName，未指定且 refreshAll=true 时刷新全部查询。工作簿只读时拒绝刷新。示例：action=refresh, queryName=销售数据；或 action=refresh, refreshAll=true。",
+  "appType": "excel",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "action", "type": "string", "required": false, "description": "refresh（默认）/ list。" },
+    { "name": "queryName", "type": "string", "required": false, "description": "要刷新的查询名称；为空时按 refreshAll 处理。" },
+    { "name": "refreshAll", "type": "boolean", "required": false, "description": "未指定 queryName 时是否刷新全部查询，默认 true。" }
+  ]
+}

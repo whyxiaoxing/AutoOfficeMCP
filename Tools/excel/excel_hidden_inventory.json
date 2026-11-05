@@ -1,0 +1,12 @@
+{
+  "id": "excel_hidden_inventory",
+  "name": "excel_hidden_inventory",
+  "description": "隐藏内容清点（只读，changed=false）：列出隐藏/veryHidden 工作表，以及每个工作表 UsedRange 内被隐藏的行号与列字母，并报告扫描上限与是否截断。示例：maxRowsPerSheet=5000, maxColumnsPerSheet=512；无参数时按每表 2000 行、256 列扫描。",
+  "appType": "excel",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "maxRowsPerSheet", "type": "integer", "required": false, "description": "每表最多扫描行数，默认 2000。" },
+    { "name": "maxColumnsPerSheet", "type": "integer", "required": false, "description": "每表最多扫描列数，默认 256。" }
+  ]
+}

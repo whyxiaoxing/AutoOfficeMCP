@@ -1,0 +1,13 @@
+{
+  "id": "excel_list_charts",
+  "name": "excel_list_charts",
+  "description": "列出工作簿中的图表对象与图表页（只读）：图表名、所在工作表、类型、标题、首个系列数据源、位置尺寸与可见性。可指定 sheetName 只列一张表；includeChartSheets 控制是否包含独立图表页。示例：sheetName=\"Dashboard\"。",
+  "appType": "excel",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "sheetName", "type": "string", "required": false, "description": "只列出指定工作表或图表页上的图表。" },
+    { "name": "includeChartSheets", "type": "boolean", "required": false, "description": "是否包含独立图表页，默认 true。" },
+    { "name": "maxResults", "type": "integer", "required": false, "description": "返回上限，默认 200。" }
+  ]
+}

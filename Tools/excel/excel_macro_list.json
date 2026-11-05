@@ -1,0 +1,9 @@
+{
+  "id": "excel_macro_list",
+  "name": "excel_macro_list",
+  "description": "只读宏清单：检查当前工作簿是否含 VBA 工程，列出 VBComponents 的名称、类型（standardModule/classModule/userForm/documentModule）与代码行数，不读取源码。需要 Excel 信任中心启用「信任对 VBA 工程对象模型的访问」，否则返回 VBA_DISABLED 并说明如何启用。无参数，changed=false。",
+  "appType": "excel",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": []
+}

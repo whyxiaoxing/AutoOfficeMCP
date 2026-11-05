@@ -1,0 +1,22 @@
+{
+  "id": "excel_regex_extract",
+  "name": "excel_regex_extract",
+  "description": "用正则表达式从单元格文本中提取内容并写入新列（Excel 无原生正则，LLM 场景高频）。支持编号/命名捕获组、单个或多个捕获组拆成多列、多匹配合并；默认写入源区域右侧相邻列，可指定 outputColumn/outputSheet。示例：range=\"数据!C2:C100\", pattern=\"(\\d{4})-(\\d{2})-(\\d{2})\", groups=[1,2,3], outputColumn=\"F\", write=true。传 write=false 只返回预览。",
+  "appType": "excel",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "range", "type": "string", "required": true, "description": "源区域，如 Data!C2:C100；支持 usedrange、{lastRow} 占位符。" },
+    { "name": "pattern", "type": "string", "required": true, "description": "正则表达式（.NET 语法）。" },
+    { "name": "group", "type": "string", "required": false, "description": "单个捕获组：编号（0 表示整段匹配）或命名组名，默认 0。" },
+    { "name": "groupName", "type": "string", "required": false, "description": "命名捕获组名；优先于 group。" },
+    { "name": "groups", "type": "array", "required": false, "description": "多个捕获组，每项为编号或组名；每个捕获组输出一列。" },
+    { "name": "multiMatch", "type": "boolean", "required": false, "description": "是否提取单元格内全部匹配并用 joinSeparator 合并，默认 false（只取第一个匹配）。" },
+    { "name": "joinSeparator", "type": "string", "required": false, "description": "多匹配连接符，默认 \", \"。" },
+    { "name": "matchCase", "type": "boolean", "required": false, "description": "是否区分大小写，默认 false。" },
+    { "name": "outputColumn", "type": "string", "required": false, "description": "输出起始列（列字母、列号或源表头名）；默认源区域右侧一列。" },
+    { "name": "outputSheet", "type": "string", "required": false, "description": "输出工作表；默认与源区域同一工作表，指定其他表时必须已存在。" },
+    { "name": "write", "type": "boolean", "required": false, "description": "是否写入工作表，默认 true；false 时只返回预览。" },
+    { "name": "maxResults", "type": "integer", "required": false, "description": "预览最大条数，默认 200。" }
+  ]
+}

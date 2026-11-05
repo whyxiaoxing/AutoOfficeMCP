@@ -1,0 +1,15 @@
+{
+  "id": "excel_write_data",
+  "name": "excel_write_data",
+  "description": "向 Excel 指定区域写入单个值或二维数组。数组通过 Range.Resize(rows,cols).Value2 一次性写入；目标命中合并单元格时自动展开 MergeArea 并写合并区首格（二维数组不能覆盖合并区）。numberFormat 可在写入前设置数字格式，例如 \"@\" 可防止身份证号/订单号等长数字丢失前导零或精度。示例：targetRange=\"Data!A1\", data=[[\"姓名\",\"金额\"],[\"张三\",100]]；numberFormat=\"@\"。返回 observation（changed/targetRefs/undoUnits）。",
+  "appType": "excel",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "targetRange", "type": "string", "required": true, "description": "目标区域，如 Sheet1!A1 或 Data!B2；支持 {lastRow}/{lastCol} 占位符、selection/usedrange/currenttable。" },
+    { "name": "data", "type": "array", "required": true, "description": "要写入的数据：单个值可用单元素数组表示，或二维数组 [[行1],[行2]]。字符串 \"=...\" 会被 Excel 按值写入。" },
+    { "name": "targetSheet", "type": "string", "required": false, "description": "当 targetRange 不含工作表名时使用的表名。" },
+    { "name": "numberFormat", "type": "string", "required": false, "description": "写入前应用的数字格式，如 \"@\"（文本）、\"0.00\"、\"yyyy-mm-dd\"。设置发生在写值之前以保持长数字文本。" },
+    { "name": "createSheet", "type": "boolean", "required": false, "description": "工作表不存在时是否自动创建，默认 false。true 时会新建并在结果 observation 中标注。" }
+  ]
+}

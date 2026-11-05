@@ -1,0 +1,14 @@
+{
+  "id": "ppt_apply_transition",
+  "name": "ppt_apply_transition",
+  "description": "设置幻灯片切换效果。transitionType 支持 fade/push/wipe/split/reveal/random；scope=all 应用到全部页，scope=current 只应用当前/指定页。duration 单位为秒。示例：ppt_apply_transition {\"transitionType\":\"fade\",\"scope\":\"all\",\"duration\":1.0}。",
+  "appType": "ppt",
+  "category": "样式和动画",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "transitionType", "type": "string", "required": true, "description": "切换类型：fade/push/wipe/split/reveal/random。" },
+    { "name": "scope", "type": "string", "required": false, "description": "范围：all（默认）或 current。" },
+    { "name": "duration", "type": "number", "required": false, "description": "切换时长（秒），默认 1.0。" },
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "scope=current 时的目标页；-1/省略=当前页，0=第一页，1..N=1 基索引。" }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "ppt_add_animation",
+  "name": "ppt_add_animation",
+  "description": "为幻灯片元素添加动画，并支持编排时序。effect 支持 fadeIn/flyIn/zoom/wipe/appear/float；targetShapes=all 处理所有带文本框的形状，title/content 只处理对应占位符。duration/delay 单位为秒；order 指定插入到动画序列的位置（1 基，省略=末尾）；trigger/startMode 支持 onClick/withPrevious/afterPrevious。示例：ppt_add_animation {\"effect\":\"fadeIn\",\"targetShapes\":\"title\",\"duration\":0.8,\"delay\":0.2,\"trigger\":\"withPrevious\"}。",
+  "appType": "ppt",
+  "category": "样式和动画",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "effect", "type": "string", "required": false, "description": "动画效果：fadeIn/flyIn/zoom/wipe/appear/float，默认 fadeIn。" },
+    { "name": "targetShapes", "type": "string", "required": false, "description": "目标：all/title/content，默认 all。" },
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "目标页：-1/省略=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "duration", "type": "number", "required": false, "description": "动画时长（秒）；省略=PowerPoint 默认。" },
+    { "name": "delay", "type": "number", "required": false, "description": "触发延迟（秒），默认 0。" },
+    { "name": "order", "type": "integer", "required": false, "description": "插入到动画序列的位置（1 基）；省略=追加到末尾。" },
+    { "name": "trigger", "type": "string", "required": false, "description": "触发方式：onClick/withPrevious/afterPrevious，默认 onClick。" },
+    { "name": "startMode", "type": "string", "required": false, "description": "trigger 的别名；两者同时提供时以 trigger 为准。" }
+  ]
+}

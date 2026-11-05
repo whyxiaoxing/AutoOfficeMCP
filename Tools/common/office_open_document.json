@@ -1,0 +1,13 @@
+{
+  "id": "office_open_document",
+  "name": "office_open_document",
+  "description": "打开本地 Excel/Word/PowerPoint 文档并激活窗口。可按 config.json 的 autoLaunch 启动 Office；若文档已经打开则直接激活，不重复打开。扩展名可推断应用，也可用 app 显式指定。建议对来源不可信的文件使用 readOnly=true。示例：office_open_document {\"path\":\"C:\\\\Temp\\\\report.xlsx\",\"readOnly\":true}。",
+  "appType": "common",
+  "category": "document",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "path", "type": "string", "required": true, "description": "要打开的本地文档路径（纯文件名或工作目录内相对子路径从工作目录解析，或绝对路径）。Excel：xlsx/xlsm/xlsb/xls/csv；Word：docx/docm/doc/rtf/txt/pdf；PowerPoint：pptx/pptm/ppsx/pps/potx/potm/ppt。" },
+    { "name": "app", "type": "string", "required": false, "description": "excel、word、ppt 或省略；省略时按扩展名推断。" },
+    { "name": "readOnly", "type": "boolean", "required": false, "description": "是否以只读方式打开，默认 false。" }
+  ]
+}

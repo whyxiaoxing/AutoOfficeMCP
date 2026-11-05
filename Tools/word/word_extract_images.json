@@ -1,0 +1,46 @@
+{
+  "id": "word_extract_images",
+  "name": "word_extract_images",
+  "description": "只读文档并导出其中全部内嵌/浮动图片到指定目录：临时副本另存为 HTML，复制 Word 生成的图片文件，返回文件名/路径/字节数/集合类型/索引/锚定段号/尺寸/Alt。输出文件已存在时必须 confirm=true 才覆盖；原文档不修改、不另存。未保存的编辑不会进入导出结果。示例：word_extract_images {\"outputDirectory\":\"C:\\\\temp\\\\word-images\"}；指定前缀并允许覆盖：{\"outputDirectory\":\"C:\\\\temp\\\\img\",\"prefix\":\"report\",\"confirm\":true}",
+  "appType": "word",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": [
+    {
+      "name": "outputDirectory",
+      "type": "string",
+      "required": true,
+      "description": "图片输出目录（纯文件名、工作目录内相对子路径或绝对路径）；不存在时仅在工作目录内自动创建，工作目录外需预先存在。"
+    },
+    {
+      "name": "prefix",
+      "type": "string",
+      "required": false,
+      "description": "输出文件名前缀，默认 image；最终文件名为 前缀_001.png 等。"
+    },
+    {
+      "name": "confirm",
+      "type": "boolean",
+      "required": false,
+      "description": "输出目录已有同名文件时必须为 true；否则返回 CANCELLED 且不覆盖。"
+    },
+    {
+      "name": "includeInline",
+      "type": "boolean",
+      "required": false,
+      "description": "是否导出内嵌图片（InlineShapes），默认 true。"
+    },
+    {
+      "name": "includeFloating",
+      "type": "boolean",
+      "required": false,
+      "description": "是否导出浮动图片（Shapes 中的图片/图形），默认 true。"
+    },
+    {
+      "name": "maxImages",
+      "type": "integer",
+      "required": false,
+      "description": "最多导出的图片对象数，1-2000，默认 500。"
+    }
+  ]
+}

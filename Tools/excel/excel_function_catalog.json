@@ -1,0 +1,16 @@
+{
+  "id": "excel_function_catalog",
+  "name": "excel_function_catalog",
+  "description": "检索静态内置 Excel 函数目录：英文名、中文名、分类、签名、说明、示例、关键词，并标注 minVersion 与 availability（2016/2019/365/WPS）。mode=catalog（默认）检索函数；mode=fallback 返回旧版降级建议（XLOOKUP→INDEX+MATCH、FILTER→辅助列+IF、TEXTSPLIT→LEFT/MID 等）；mode=templates 返回对账、分组键脏值、条件取行、文本/日期规范化公式模板。version 参数按可用版本过滤。示例：keyword=\"查找 精确\"；mode=\"fallback\", keyword=\"XLOOKUP\"；mode=\"templates\"。",
+  "appType": "excel",
+  "category": "diagnostic",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "keyword", "type": "string", "required": false, "description": "检索词，可多个，空格分隔；匹配英文名/中文名/分类/签名/说明/示例/关键词；fallback/templates 匹配整条建议/模板。" },
+    { "name": "category", "type": "string", "required": false, "description": "分类过滤：数学/统计/逻辑/查找/文本/日期/财务/动态数组/信息。" },
+    { "name": "version", "type": "string", "required": false, "description": "按可用版本过滤：2016/2019/365/WPS。" },
+    { "name": "mode", "type": "string", "required": false, "description": "catalog（默认）/fallback/templates。" },
+    { "name": "includeTemplates", "type": "boolean", "required": false, "description": "catalog 模式是否附带公式模板，默认 false。" },
+    { "name": "limit", "type": "integer", "required": false, "description": "返回条数上限，默认 50，最大 500。" }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "excel_batch_rename_sheets",
+  "name": "excel_batch_rename_sheets",
+  "description": "【高危】按正则模式或映射表批量重命名工作表。必须先通过 SecurityGate：本工具沿用 security.allowDeleteSheet 开关（默认 false，因批量改名属结构变更且可能破坏公式/链接）；拒绝消息会说明如何放行。执行前对所有新名称做长度/非法字符/重复/现有表占用校验，任一失败则整体不修改；dryRun=true 只返回预览。重命名属于结构变更，区域快照不可撤销，结果如实写 undoReason。不支持互换两个表名（请分两步）。示例：mode=\"regex\", pattern=\"^旧_(.*)$\", replacement=\"$1\", dryRun=true；mode=\"mapping\", mapping=[{\"oldName\":\"Sheet1\",\"newName\":\"汇总\"}]。",
+  "appType": "excel",
+  "category": "write",
+  "riskLevel": "high",
+  "parameters": [
+    { "name": "mode", "type": "string", "required": false, "description": "regex 或 mapping，默认 regex。" },
+    { "name": "pattern", "type": "string", "required": false, "description": "regex 模式的正则表达式。" },
+    { "name": "replacement", "type": "string", "required": false, "description": "regex 替换模板，如 $1；默认空字符串。" },
+    { "name": "mapping", "type": "array", "required": false, "description": "mapping 模式：[{oldName,newName}]。" },
+    { "name": "sheets", "type": "array", "required": false, "description": "限定参与重命名的工作表名数组；省略为全部工作表。" },
+    { "name": "dryRun", "type": "boolean", "required": false, "description": "仅预览不修改，默认 false。" }
+  ]
+}

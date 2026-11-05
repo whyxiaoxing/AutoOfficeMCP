@@ -1,0 +1,18 @@
+{
+  "id": "ppt_insert_chart",
+  "name": "ppt_insert_chart",
+  "description": "插入原生 PowerPoint 图表。data 为二维数组：首行为系列表头，首列为类别；支持柱形/条形/折线/饼图/圆环/面积/散点。",
+  "appType": "ppt",
+  "category": "内容插入",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "chartType", "type": "string", "required": true, "description": "column/clusteredColumn/bar/line/pie/doughnut/area/scatter。" },
+    { "name": "data", "type": "array", "required": true, "description": "二维数组，首行为系列表头，首列为类别，例如 [[\"月份\",\"收入\"],[\"1月\",100],[\"2月\",120]]。" },
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "幻灯片索引：省略/-1=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "x", "type": "number", "required": false, "description": "左上角横坐标（磅），默认 50。" },
+    { "name": "y", "type": "number", "required": false, "description": "左上角纵坐标（磅），默认 150。" },
+    { "name": "width", "type": "number", "required": false, "description": "图表宽度（磅），默认 600。" },
+    { "name": "height", "type": "number", "required": false, "description": "图表高度（磅），默认 350。" },
+    { "name": "title", "type": "string", "required": false, "description": "图表标题。" }
+  ]
+}

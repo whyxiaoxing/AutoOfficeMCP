@@ -1,0 +1,13 @@
+{
+  "id": "office_undo_list",
+  "name": "office_undo_list",
+  "description": "查看当前 MCP 会话撤销栈内容（只读，changed=false）。按栈顶到栈底返回节点 id、kind、appType、文档、工作表、地址、摘要、创建时间与可还原原因；limit/offset 分页，includeSnapshot=true 时附带原始快照。示例：{\"limit\":20}。",
+  "appType": "common",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "limit", "type": "integer", "required": false, "description": "返回条数，默认 50，最大 500。" },
+    { "name": "offset", "type": "integer", "required": false, "description": "从栈顶跳过的条数，默认 0。" },
+    { "name": "includeSnapshot", "type": "boolean", "required": false, "description": "是否包含完整撤销快照，默认 false。" }
+  ]
+}

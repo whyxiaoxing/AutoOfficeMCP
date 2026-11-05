@@ -1,0 +1,40 @@
+[PASS] excel excel_analyze_data 
+[PASS] excel excel_autofit 
+[GATED] excel excel_camera_picture CLIPBOARD_DISABLED
+[PASS] excel excel_clear_range 
+[PASS] excel excel_conditional_format 
+[PASS] excel excel_copy_sheet 
+[PASS] excel excel_create_pivot_table 
+[PASS] excel excel_create_workbook 
+[PASS] excel excel_data_validation_manage 
+[GATED] excel excel_delete_row_col CANCELLED
+[PASS] excel excel_diff_sheets 
+[PASS] excel excel_evaluate 
+[PASS] excel excel_filter_data 
+[PASS] excel excel_format_range 
+[PASS] excel excel_formula_reference_audit 
+[PASS] excel excel_freeze_and_view 
+[PASS] excel excel_generate_report 
+[PASS] excel excel_get_protection_status 
+[PASS] excel excel_goal_seek 
+[PASS] excel excel_hide_row_col 
+[PASS] excel excel_import 
+[PASS] excel excel_list_charts 
+[PASS] excel excel_list_sheets 
+[PASS] excel excel_merge_cells 
+[PASS] excel excel_numbers_as_text_fix 
+[PASS] excel excel_powerquery_refresh 
+[PASS] excel excel_print_setup 
+[PASS] excel excel_protect_sheet 
+[PASS] excel excel_query_files 
+[PASS] excel excel_read_range 
+[PASS] excel excel_regex_extract 
+[PASS] excel excel_rename_sheet 
+[GATED] excel excel_run_vba VBA_DISABLED
+[PASS] excel excel_search_all 
+[PASS] excel excel_sort_data 
+[PASS] excel excel_table_manage 
+[PASS] excel excel_update_chart 
+
+SUMMARY excel part 1/2: total=37 pass=34 gated=3 fail=0
+REPORT D:\Code\c#\AutoOfficeMCP\tests\all-tools\results\excel-part1.json

@@ -1,0 +1,11 @@
+{
+  "id": "excel_get_protection_status",
+  "name": "excel_get_protection_status",
+  "description": "读取工作簿结构与窗口保护状态，以及每张工作表的保护状态和细粒度允许项（AllowFiltering/Sorting/FormattingCells/FormattingColumns/Rows/Inserting/Deleting 等）。可选 sheetName 只查一张表（只读）。示例：sheetName=\"Data\"。",
+  "appType": "excel",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "sheetName", "type": "string", "required": false, "description": "只查询指定工作表；省略时返回全部工作表。" }
+  ]
+}

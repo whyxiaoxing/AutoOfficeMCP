@@ -1,0 +1,9 @@
+{
+  "id": "ppt_list_layouts",
+  "name": "ppt_list_layouts",
+  "description": "枚举当前演示文稿母版中的可用版式，返回索引、名称、设计名、占位符数量与内置版式判断，便于自定义模板使用。",
+  "appType": "ppt",
+  "category": "读取",
+  "riskLevel": "low",
+  "parameters": []
+}

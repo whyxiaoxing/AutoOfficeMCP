@@ -1,0 +1,16 @@
+{
+  "id": "word_comments_read",
+  "name": "word_comments_read",
+  "description": "枚举批注：作者/缩写/日期/文本/是否完成/锚定段号/锚点预览，支持 maxCount 截断。示例：word_comments_read {\"maxCount\":100}",
+  "appType": "word",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": [
+    {
+      "name": "maxCount",
+      "type": "integer",
+      "required": false,
+      "description": "最大返回数量，默认 100。"
+    }
+  ]
+}

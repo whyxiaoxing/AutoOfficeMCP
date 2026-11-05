@@ -1,0 +1,9 @@
+{
+  "id": "excel_get_selection",
+  "name": "excel_get_selection",
+  "description": "读取当前选区：完整地址、行列数、单元格项数、类型推断（singleCell/row/column/table）以及最多 8×8 的值预览。无参数。",
+  "appType": "excel",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": []
+}

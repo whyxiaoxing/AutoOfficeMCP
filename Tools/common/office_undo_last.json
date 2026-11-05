@@ -1,0 +1,9 @@
+{
+  "id": "office_undo_last",
+  "name": "office_undo_last",
+  "description": "弹出并回放当前 MCP 会话 Undo 栈顶节点（T02 快照：Excel 区域值/公式/数字格式，Word 区段文本/字体；PPT 使用 PowerPoint 原生撤销组 + 状态签名校验）。成功返回“已还原 1 处、剩余 M 处”；回放失败时保留节点并如实说明原因（如活动文档不匹配、区域被再次修改）。只撤销 MCP 自己登记的节点。示例：office_undo_last {}",
+  "appType": "common",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": []
+}

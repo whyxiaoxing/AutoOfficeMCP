@@ -1,0 +1,14 @@
+{
+  "id": "office_close_document",
+  "name": "office_close_document",
+  "description": "【高危】关闭指定 Excel/Word/PowerPoint 文档。saveChanges=true 时先保存再关闭；saveChanges=false 且文档有未保存改动时，必须同时满足 confirm=true 与 config.json 的 security.allowCloseWithoutSave=true，否则拒绝关闭并返回 CANCELLED。只附着已运行实例，不自动启动 Office。示例：office_close_document {\"document\":\"C:\\\\Temp\\\\report.xlsx\",\"saveChanges\":true,\"confirm\":true}。",
+  "appType": "common",
+  "category": "document",
+  "riskLevel": "high",
+  "parameters": [
+    { "name": "document", "type": "string", "required": true, "description": "要关闭文档的完整路径或文件名（含扩展名）。" },
+    { "name": "app", "type": "string", "required": false, "description": "excel、word、ppt 或省略；省略时自动匹配运行中的应用。" },
+    { "name": "saveChanges", "type": "boolean", "required": false, "description": "关闭前是否保存，默认 false；true 时要求文档可写且有磁盘路径。" },
+    { "name": "confirm", "type": "boolean", "required": false, "description": "本工具为高危工具，协议层要求调用时设置 confirm=true。" }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "transport": {
+    "bind": "127.0.0.1",
+    "port": 8010,
+    "maxBodyBytes": 8388608
+  },
+  "server": {
+    "maxInflightPerSession": 4
+  },
+  "worker": {
+    "concurrencyMode": "balanced",
+    "maxWarmWorkers": 10,
+    "maxWorkersPerUser": 2,
+    "idleTimeoutSec": 600,
+    "startupTimeoutSec": 60,
+    "jobTimeoutSec": 300,
+    "memoryLimitMb": 0,
+    "pipeNamePrefix": "AutoOfficeMCP.Worker",
+    "heartbeatIntervalSec": 10,
+    "heartbeatTimeoutSec": 30,
+    "saveVerifyMaxHashMb": 64,
+    "fileLockTtlSec": 3600,
+    "fileLockProvider": "file",
+    "fileLockRoot": "",
+    "sqlLockConnectionString": ""
+  },
+  "office": {
+     "excel": {
+      "autoLaunch": true,
+      "visible":true
+    },
+    "word": {
+      "autoLaunch": true,
+      "visible": true
+    },
+    "ppt": {
+      "autoLaunch": true,
+      "visible": true
+    }
+  },
+  "session": {
+    "timeoutSec": 120
+  },
+  "security": {
+    "allowVba": false,
+    "allowDeleteSheet": false,
+    "allowCloseWithoutSave": false,
+    "allowClipboard": false,
+    "disableAddins": true,
+    "wordTemplatePath": "Templates\\AutoOfficeMCP.dotx"
+  },
+  "tools": {
+    "disabled": []
+  },
+  "workspace": {
+    "root": "workspace",
+    "maxUploadBytes": 268435456
+  },
+  "parallel": {
+    "excel": {
+      "maxConcurrency": 2
+    },
+    "word": {
+      "maxConcurrency": 2
+    },
+    "ppt": {
+      "maxConcurrency": 2
+    },
+    "itemTimeoutSec": 600,
+    "maxQueue": 100,
+    "idempotencyTtlSec": 100
+  }
+}

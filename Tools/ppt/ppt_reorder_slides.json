@@ -1,0 +1,12 @@
+{
+  "id": "ppt_reorder_slides",
+  "name": "ppt_reorder_slides",
+  "description": "【高危】按 order 数组批量重排幻灯片。order 为 1 基的新顺序排列，长度必须等于总页数，例如 [3,1,2]。必须显式传 confirm=true。",
+  "appType": "ppt",
+  "category": "幻灯片操作",
+  "riskLevel": "high",
+  "parameters": [
+    { "name": "order", "type": "array", "required": true, "description": "1 基新顺序数组，如 [3,1,2]；长度必须等于总页数且不能重复。" },
+    { "name": "confirm", "type": "boolean", "required": false, "description": "必须为 true 才会重排。" }
+  ]
+}

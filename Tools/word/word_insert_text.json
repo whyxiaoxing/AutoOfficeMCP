@@ -1,0 +1,22 @@
+{
+  "id": "word_insert_text",
+  "name": "word_insert_text",
+  "description": "在光标/文档开头/文档末尾插入文本；末尾使用 Content.InsertAfter，不额外新建段落（换行符来自 content 本身）。超过 32K 字符分块写入，TypeText→Range.Text→InsertAfter 三级降级，并回读核验。示例：word_insert_text {\"position\":\"end\",\"content\":\"\\r第二章\\r\"}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "low",
+  "parameters": [
+    {
+      "name": "content",
+      "type": "string",
+      "required": true,
+      "description": "要插入的文本，可包含换行；\\n 会转换为 Word 段落换行。"
+    },
+    {
+      "name": "position",
+      "type": "string",
+      "required": false,
+      "description": "cursor/start/end，默认 cursor。"
+    }
+  ]
+}

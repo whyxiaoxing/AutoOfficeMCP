@@ -1,0 +1,16 @@
+{
+  "id": "word_field_update_all",
+  "name": "word_field_update_all",
+  "description": "刷新全文 Fields.Update 与所有 TablesOfContents.Update/UpdatePageNumbers，返回域/目录计数及目录文本预览。示例：word_field_update_all {\"includeToc\":true}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "low",
+  "parameters": [
+    {
+      "name": "includeToc",
+      "type": "boolean",
+      "required": false,
+      "description": "是否刷新目录，默认 true。"
+    }
+  ]
+}

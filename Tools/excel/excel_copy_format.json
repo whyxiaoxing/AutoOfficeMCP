@@ -1,0 +1,16 @@
+{
+  "id": "excel_copy_format",
+  "name": "excel_copy_format",
+  "description": "只复制格式不复制值（不依赖剪贴板）。逐单元格复制数字格式、字体、填充、边框、对齐与保护属性，可选列宽、行高与条件格式。目标可为单个起始单元格、同尺寸区域或源尺寸整数倍区域；支持 transpose。返回复制的单元格/列宽/行高/条件格式数量。示例：sourceRange=\"模板!A1:D1\", targetRange=\"Data!A2\", includeColumnWidths=true。",
+  "appType": "excel",
+  "category": "format",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "sourceRange", "type": "string", "required": true, "description": "格式来源区域。" },
+    { "name": "targetRange", "type": "string", "required": true, "description": "目标区域或起始单元格。" },
+    { "name": "transpose", "type": "boolean", "required": false, "description": "是否转置映射源单元格格式。" },
+    { "name": "includeColumnWidths", "type": "boolean", "required": false, "description": "是否复制列宽，默认 true。" },
+    { "name": "includeRowHeights", "type": "boolean", "required": false, "description": "是否复制行高，默认 true。" },
+    { "name": "includeConditionalFormats", "type": "boolean", "required": false, "description": "是否克隆条件格式规则，默认 false。" }
+  ]
+}

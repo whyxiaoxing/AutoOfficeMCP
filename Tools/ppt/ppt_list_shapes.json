@@ -1,0 +1,12 @@
+{
+  "id": "ppt_list_shapes",
+  "name": "ppt_list_shapes",
+  "description": "列出指定页所有形状的 shapeId（同时保留 id 别名）、名称、类型、坐标、尺寸、zOrder、文本与是否包含表格/图表，供定位、避让和后续格式化操作。includeFormat=true 时额外返回填充/线条/字体格式（fillColor、fillTransparency、lineColor、lineWidth、lineDash、fontName、fontSize、fontColor、bold）。",
+  "appType": "ppt",
+  "category": "读取",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "幻灯片索引：省略/-1=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "includeFormat", "type": "boolean", "required": false, "description": "是否回读形状格式，默认 false。" }
+  ]
+}

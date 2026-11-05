@@ -1,0 +1,9 @@
+{
+  "id": "word_tables_list",
+  "name": "word_tables_list",
+  "description": "按文档顺序枚举 doc.Tables：索引/行列数/嵌套层级/是否统一/样式/首行摘要。页眉页脚和文本框中的表格不在该集合。示例：word_tables_list {}",
+  "appType": "word",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": []
+}

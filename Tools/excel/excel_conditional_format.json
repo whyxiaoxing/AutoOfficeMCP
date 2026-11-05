@@ -1,0 +1,21 @@
+{
+  "id": "excel_conditional_format",
+  "name": "excel_conditional_format",
+  "description": "条件格式维护。action=add（默认）沿用旧行为：rule=highlight 时用 operator+condition/condition2+color；rule=databar/colorscale/iconset 使用内置规则；clearExisting=true 先清空。action=list 列出现有规则、优先级、公式与格式；action=delete 按 ruleIndex（1 基）、rule（highlight/databar/colorscale/iconset）或 deleteAll=true 删除。示例：action=\"list\", range=\"Data!C2:C100\"；action=\"delete\", ruleIndex=1。条件格式规则不在区域快照中，不登记自动撤销。",
+  "appType": "excel",
+  "category": "format",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "range", "type": "string", "required": false, "description": "目标区域；action=list/delete 省略时使用 UsedRange。" },
+    { "name": "action", "type": "string", "required": false, "description": "add（默认）/list/delete。" },
+    { "name": "rule", "type": "string", "required": false, "description": "add：highlight/databar/colorscale/iconset；delete：按规则类型删除。" },
+    { "name": "operator", "type": "string", "required": false, "description": "highlight 比较符：greater、less、greaterEqual、lessEqual、equal、notEqual、between、notBetween；默认 greater。" },
+    { "name": "condition", "type": "string", "required": false, "description": "highlight 的比较值，默认 \"0\"。" },
+    { "name": "condition2", "type": "string", "required": false, "description": "between/notBetween 的第二个比较值。" },
+    { "name": "color", "type": "string", "required": false, "description": "highlight 背景色，#RRGGBB 或颜色名，默认 #FFC7CE。" },
+    { "name": "clearExisting", "type": "boolean", "required": false, "description": "add 时是否先删除该区域既有条件格式，默认 false。" },
+    { "name": "ruleIndex", "type": "integer", "required": false, "description": "delete 时按 1 基规则索引删除。" },
+    { "name": "deleteAll", "type": "boolean", "required": false, "description": "delete 时删除区域全部规则。" },
+    { "name": "maxResults", "type": "integer", "required": false, "description": "list 返回上限，默认 200。" }
+  ]
+}

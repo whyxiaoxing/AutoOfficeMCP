@@ -1,0 +1,25 @@
+{
+  "id": "excel_analyze_data",
+  "name": "excel_analyze_data",
+  "description": "数据分析。type=summary：输出行列数及每个数值列的合计/平均/个数；groupby：按 groupBy 分组，对 valueField 做 sum/count/avg；ranking：按 rankBy 排序取 topN，labelField 为标签列；pivot：复用透视表创建。示例：sourceRange=\"Data!A1:D100\", type=\"groupby\", groupBy=\"地区\", valueField=\"销售额\", aggregate=\"sum\"。默认输出到源区域右侧 +2 列；可选 targetRange。",
+  "appType": "excel",
+  "category": "analysis",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "type", "type": "string", "required": true, "description": "summary / pivot / groupby / ranking。" },
+    { "name": "sourceRange", "type": "string", "required": true, "description": "源数据区域。" },
+    { "name": "targetRange", "type": "string", "required": false, "description": "输出位置；省略时放在源区域右侧 +2 列。" },
+    { "name": "hasHeader", "type": "boolean", "required": false, "description": "首行是否为表头，默认 true。" },
+    { "name": "groupBy", "type": "string", "required": false, "description": "groupby 分组字段（表头名称、列字母或列号）。" },
+    { "name": "valueField", "type": "string", "required": false, "description": "groupby 数值字段。" },
+    { "name": "aggregate", "type": "string", "required": false, "description": "groupby 聚合：sum（默认）/count/avg。" },
+    { "name": "labelField", "type": "string", "required": false, "description": "ranking 的标签字段。" },
+    { "name": "rankBy", "type": "string", "required": false, "description": "ranking 的排序数值字段。" },
+    { "name": "descending", "type": "boolean", "required": false, "description": "ranking 是否降序，默认 true。" },
+    { "name": "topN", "type": "integer", "required": false, "description": "ranking 返回条数；省略返回全部。" },
+    { "name": "rowFields", "type": "array", "required": false, "description": "type=pivot 时的行字段。" },
+    { "name": "columnFields", "type": "array", "required": false, "description": "type=pivot 时的列字段。" },
+    { "name": "valueFields", "type": "array", "required": false, "description": "type=pivot 时的值字段。" },
+    { "name": "targetSheet", "type": "string", "required": false, "description": "type=pivot 的目标工作表。" }
+  ]
+}

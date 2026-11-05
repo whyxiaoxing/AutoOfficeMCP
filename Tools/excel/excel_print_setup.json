@@ -1,0 +1,29 @@
+{
+  "id": "excel_print_setup",
+  "name": "excel_print_setup",
+  "description": "打印设置读取/修改：打印区域、重复标题行/列、横向/纵向、纸张、缩放或适页宽/高、页边距（磅）、居中方式、打印网格线。get 只读；set 会激活目标工作表（PageSetup 多数属性要求活动表），逐项应用并在某项失败时返回 PARTIAL_APPLY + warnings，绝不假装全部成功。设置属于页面元数据，区域快照不可撤销。示例：action=\"set\", sheetName=\"报表\", printArea=\"A1:H60\", printTitleRows=\"1:3\", orientation=\"landscape\", fitToPagesWide=1, fitToPagesTall=0；action=\"get\"。",
+  "appType": "excel",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "action", "type": "string", "required": false, "description": "get 或 set，默认 get。" },
+    { "name": "sheetName", "type": "string", "required": false, "description": "目标工作表；省略为活动工作表。" },
+    { "name": "printArea", "type": "string", "required": false, "description": "打印区域，如 A1:H60；传 clear 清除。" },
+    { "name": "printTitleRows", "type": "string", "required": false, "description": "重复标题行，如 1:3；传 clear 清除。" },
+    { "name": "printTitleColumns", "type": "string", "required": false, "description": "重复标题列，如 A:B；传 clear 清除。" },
+    { "name": "orientation", "type": "string", "required": false, "description": "portrait 或 landscape。" },
+    { "name": "paperSize", "type": "string", "required": false, "description": "a4/a3/a5/letter/legal/b5 或纸张代码。" },
+    { "name": "fitToPagesWide", "type": "integer", "required": false, "description": "适应页宽（会先关闭缩放）。" },
+    { "name": "fitToPagesTall", "type": "integer", "required": false, "description": "适应页高（0 表示自动/不限）。" },
+    { "name": "zoom", "type": "integer", "required": false, "description": "打印缩放百分比 10-400。" },
+    { "name": "topMargin", "type": "number", "required": false, "description": "上边距（磅）。" },
+    { "name": "bottomMargin", "type": "number", "required": false, "description": "下边距（磅）。" },
+    { "name": "leftMargin", "type": "number", "required": false, "description": "左边距（磅）。" },
+    { "name": "rightMargin", "type": "number", "required": false, "description": "右边距（磅）。" },
+    { "name": "headerMargin", "type": "number", "required": false, "description": "页眉边距（磅）。" },
+    { "name": "footerMargin", "type": "number", "required": false, "description": "页脚边距（磅）。" },
+    { "name": "centerHorizontally", "type": "boolean", "required": false, "description": "是否水平居中。" },
+    { "name": "centerVertically", "type": "boolean", "required": false, "description": "是否垂直居中。" },
+    { "name": "printGridlines", "type": "boolean", "required": false, "description": "是否打印网格线。" }
+  ]
+}

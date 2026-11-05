@@ -1,0 +1,17 @@
+{
+  "id": "excel_recalculate",
+  "name": "excel_recalculate",
+  "description": "强制重算并回读验证。scope=workbook/sheet/range；fullRebuild=true 时调用 CalculateFullRebuild；calcMode=auto/manual/iterative 临时切换计算模式，完成后恢复原模式与迭代设置。返回公式/错误计数、值变化数与验证结果。重算只刷新计算缓存，不登记自动撤销。示例：scope=\"range\", range=\"Calc!A1:F100\", fullRebuild=true, calcMode=\"manual\"。",
+  "appType": "excel",
+  "category": "diagnostic",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "scope", "type": "string", "required": false, "description": "workbook（默认）/sheet/range。" },
+    { "name": "range", "type": "string", "required": false, "description": "scope=range 时的目标区域。" },
+    { "name": "sheetName", "type": "string", "required": false, "description": "scope=sheet 时的工作表；省略使用活动工作表。" },
+    { "name": "fullRebuild", "type": "boolean", "required": false, "description": "是否执行全量重建（CalculateFullRebuild），默认 false。" },
+    { "name": "calcMode", "type": "string", "required": false, "description": "auto（默认）/manual/iterative。" },
+    { "name": "maxIterations", "type": "integer", "required": false, "description": "calcMode=iterative 时的最大迭代次数。" },
+    { "name": "maxChange", "type": "number", "required": false, "description": "calcMode=iterative 时的最大变化量。" }
+  ]
+}

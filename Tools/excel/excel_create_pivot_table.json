@@ -1,0 +1,17 @@
+{
+  "id": "excel_create_pivot_table",
+  "name": "excel_create_pivot_table",
+  "description": "由源数据创建数据透视表。valueFields 可为字段名数组（默认 SUM）或 [{\"field\":\"销售额\",\"function\":\"sum\",\"caption\":\"销售合计\"}]；function 支持 sum/count/average/max/min/product。targetCell 可写成 Existing!A3；若只写 A3 或省略，则自动新建“透视表_HHmmss”工作表并放在 A3。示例：sourceRange=\"Data!A1:D100\", rowFields=[\"地区\"], columnFields=[\"月份\"], valueFields=[\"销售额\"], targetCell=\"A3\"。",
+  "appType": "excel",
+  "category": "analysis",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "sourceRange", "type": "string", "required": true, "description": "透视表数据源区域（首行建议为字段名）。" },
+    { "name": "targetCell", "type": "string", "required": false, "description": "目标单元格，可为 A3 或 SheetName!A3；省略时新建透视表工作表并使用 A3。" },
+    { "name": "targetSheet", "type": "string", "required": false, "description": "目标工作表名；不存在时创建。" },
+    { "name": "rowFields", "type": "array", "required": false, "description": "行字段名称数组。" },
+    { "name": "columnFields", "type": "array", "required": false, "description": "列字段名称数组。" },
+    { "name": "valueFields", "type": "array", "required": true, "description": "值字段数组；元素可为字段名或包含 field/function/caption 的对象。省略时会尝试自动识别数值列。" },
+    { "name": "tableName", "type": "string", "required": false, "description": "透视表名称，默认自动生成。" }
+  ]
+}

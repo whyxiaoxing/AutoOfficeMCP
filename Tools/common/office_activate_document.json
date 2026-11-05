@@ -1,0 +1,12 @@
+{
+  "id": "office_activate_document",
+  "name": "office_activate_document",
+  "description": "按完整路径或文件名（含扩展名）激活已打开的 Excel/Word/PowerPoint 文档窗口，并尽力置于前台。只附着已运行实例，不自动启动 Office；找不到文档返回稳定错误码 DOC_NOT_OPEN。示例：office_activate_document {\"document\":\"C:\\\\Temp\\\\report.xlsx\"}；同名文档跨应用时可加 app 消歧。",
+  "appType": "common",
+  "category": "window",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "document", "type": "string", "required": true, "description": "已打开文档的完整路径或文件名（含扩展名），例如 report.xlsx。" },
+    { "name": "app", "type": "string", "required": false, "description": "excel、word、ppt 或省略。省略时自动尝试三个应用；已知应用时建议显式传入。" }
+  ]
+}

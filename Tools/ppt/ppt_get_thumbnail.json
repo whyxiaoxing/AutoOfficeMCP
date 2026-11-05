@@ -1,0 +1,12 @@
+{
+  "id": "ppt_get_thumbnail",
+  "name": "ppt_get_thumbnail",
+  "description": "【只读】生成指定页 PNG 缩略图，作为 MCP image content 返回（协议层自动转 base64），同时返回页索引与像素尺寸，供 agent 视觉自检。降级说明：PowerPoint 窗口最小化、无可用窗口或 COM 导出被阻塞时，原生 Export 可能失败，工具返回 INTERNAL_ERROR 并提示先恢复/激活 PowerPoint 窗口后重试；不返回空图或假成功。",
+  "appType": "ppt",
+  "category": "读取",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "幻灯片索引：省略/-1=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "width", "type": "integer", "required": false, "description": "像素宽，默认 640，上限 4096。" }
+  ]
+}

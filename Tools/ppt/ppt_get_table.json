@@ -1,0 +1,12 @@
+{
+  "id": "ppt_get_table",
+  "name": "ppt_get_table",
+  "description": "【只读】读取表格内容与结构。shapeId 省略时取当前页第一个表格；返回 rows、cols、data 二维数组、columnWidths、rowHeights，以及 headerStyle（firstRow/firstCol/lastRow/lastCol/horizBanding/vertBanding）。示例：ppt_get_table {\"shapeId\":8}。",
+  "appType": "ppt",
+  "category": "读取",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "幻灯片索引：省略/-1=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "shapeId", "type": "integer", "required": false, "description": "表格形状 id；省略时取当前页第一个表格。" }
+  ]
+}

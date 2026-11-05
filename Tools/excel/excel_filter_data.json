@@ -1,0 +1,14 @@
+{
+  "id": "excel_filter_data",
+  "name": "excel_filter_data",
+  "description": "应用或清除自动筛选。column 从 1 开始，criteria 为 Excel 筛选项，如 \">1000\"、\"华东\"、\"<>0\"；clearFilter=true 清除当前工作表自动筛选。示例：range=\"Data!A1:D100\", column=3, criteria=\">1000\"；或 {\"clearFilter\":true}。筛选只改变行可见性，不登记自动撤销。",
+  "appType": "excel",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "range", "type": "string", "required": false, "description": "自动筛选区域；省略时使用当前工作表 UsedRange。" },
+    { "name": "column", "type": "integer", "required": false, "description": "筛选列，从 1 开始。" },
+    { "name": "criteria", "type": "string", "required": false, "description": "Excel AutoFilter 条件文本。" },
+    { "name": "clearFilter", "type": "boolean", "required": false, "description": "true 时清除当前工作表的自动筛选，忽略 column/criteria。" }
+  ]
+}

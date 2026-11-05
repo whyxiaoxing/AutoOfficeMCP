@@ -1,0 +1,27 @@
+{
+  "id": "excel_data_validation_manage",
+  "name": "excel_data_validation_manage",
+  "description": "数据验证（下拉列表/数值范围/日期/文本长度/自定义公式）读写。action=list 列出指定区域或 UsedRange 中现有规则；set 先清除目标区域旧规则再添加，list 类型可用 values=[\"是\",\"否\"] 生成内联下拉，或用 formula1=\"=字典!$A$1:$A$20\" 引用区域；clear 删除规则。数据验证不在区域快照中，写操作会如实记录 undoReason。示例：action=\"set\", range=\"Data!B2:B100\", type=\"list\", values=[\"待处理\",\"已完成\"]；action=\"set\", range=\"Data!C2:C100\", type=\"decimal\", operator=\"between\", formula1=\"0\", formula2=\"100\"。",
+  "appType": "excel",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "action", "type": "string", "required": false, "description": "list / set / clear，默认 list。" },
+    { "name": "range", "type": "string", "required": false, "description": "目标区域；list 省略时为 UsedRange。" },
+    { "name": "sheetName", "type": "string", "required": false, "description": "目标工作表；range 未含表名时使用。" },
+    { "name": "type", "type": "string", "required": false, "description": "list / whole / decimal / date / time / textLength / custom。" },
+    { "name": "operator", "type": "string", "required": false, "description": "between / notBetween / equal / notEqual / greater / less / greaterEqual / lessEqual。" },
+    { "name": "formula1", "type": "string", "required": false, "description": "第一个公式（list 可为逗号分隔文本或 =区域引用）；也可用 values 代替。" },
+    { "name": "formula2", "type": "string", "required": false, "description": "between/notBetween 的第二个公式。" },
+    { "name": "values", "type": "array", "required": false, "description": "list 类型的内联选项数组。" },
+    { "name": "ignoreBlank", "type": "boolean", "required": false, "description": "是否忽略空值，默认 true。" },
+    { "name": "inCellDropdown", "type": "boolean", "required": false, "description": "list 是否显示下拉箭头，默认 true。" },
+    { "name": "showError", "type": "boolean", "required": false, "description": "输入无效时是否显示错误提示，默认 true。" },
+    { "name": "showInput", "type": "boolean", "required": false, "description": "是否显示输入提示，默认 false。" },
+    { "name": "errorTitle", "type": "string", "required": false, "description": "错误提示标题。" },
+    { "name": "errorMessage", "type": "string", "required": false, "description": "错误提示正文。" },
+    { "name": "inputTitle", "type": "string", "required": false, "description": "输入提示标题。" },
+    { "name": "inputMessage", "type": "string", "required": false, "description": "输入提示正文。" },
+    { "name": "maxResults", "type": "integer", "required": false, "description": "list 最大返回条数，默认 500。" }
+  ]
+}

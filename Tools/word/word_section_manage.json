@@ -1,0 +1,106 @@
+{
+  "id": "word_section_manage",
+  "name": "word_section_manage",
+  "description": "分节管理。action=list：读取每节范围/页面设置/书写方向/页眉页脚是否存在；action=insert：在开头/末尾/光标/指定段插入“下一页”分节符；action=format：设置指定节或全部节的页边距、纸张、方向、垂直对齐、左右书写方向（SectionDirection 不是竖排文字）。示例：word_section_manage {\"action\":\"list\"}；插入分节符：{\"action\":\"insert\",\"position\":\"cursor\"}；横向 A4：{\"action\":\"format\",\"sectionIndex\":1,\"paperSize\":\"A4\",\"orientation\":\"landscape\"}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "action",
+      "type": "string",
+      "required": false,
+      "description": "list（默认，只读）/insert/format。"
+    },
+    {
+      "name": "sectionIndex",
+      "type": "integer",
+      "required": false,
+      "description": "format 时的 1 基节号；0 或省略表示全部节。insert 不使用。"
+    },
+    {
+      "name": "position",
+      "type": "string",
+      "required": false,
+      "description": "action=insert 时：start/end/cursor/paragraph，默认 cursor。"
+    },
+    {
+      "name": "paragraphIndex",
+      "type": "integer",
+      "required": false,
+      "description": "position=paragraph 时的 1 基段号。"
+    },
+    {
+      "name": "topMarginPt",
+      "type": "number",
+      "required": false,
+      "description": "上边距（磅），与 topMarginCm 二选一。"
+    },
+    {
+      "name": "bottomMarginPt",
+      "type": "number",
+      "required": false,
+      "description": "下边距（磅）。"
+    },
+    {
+      "name": "leftMarginPt",
+      "type": "number",
+      "required": false,
+      "description": "左边距（磅）。"
+    },
+    {
+      "name": "rightMarginPt",
+      "type": "number",
+      "required": false,
+      "description": "右边距（磅）。"
+    },
+    {
+      "name": "topMarginCm",
+      "type": "number",
+      "required": false,
+      "description": "上边距（厘米）。"
+    },
+    {
+      "name": "bottomMarginCm",
+      "type": "number",
+      "required": false,
+      "description": "下边距（厘米）。"
+    },
+    {
+      "name": "leftMarginCm",
+      "type": "number",
+      "required": false,
+      "description": "左边距（厘米）。"
+    },
+    {
+      "name": "rightMarginCm",
+      "type": "number",
+      "required": false,
+      "description": "右边距（厘米）。"
+    },
+    {
+      "name": "paperSize",
+      "type": "string",
+      "required": false,
+      "description": "A4/A3/A5/Letter/Legal/B4/B5/Executive。"
+    },
+    {
+      "name": "orientation",
+      "type": "string",
+      "required": false,
+      "description": "portrait（纵向）/landscape（横向）。"
+    },
+    {
+      "name": "verticalAlignment",
+      "type": "string",
+      "required": false,
+      "description": "top/center/bottom/justify（垂直对齐）。"
+    },
+    {
+      "name": "sectionDirection",
+      "type": "string",
+      "required": false,
+      "description": "ltr/rtl（左右书写方向，不是竖排文字）。"
+    }
+  ]
+}

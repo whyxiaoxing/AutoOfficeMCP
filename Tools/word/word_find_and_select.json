@@ -1,0 +1,16 @@
+{
+  "id": "word_find_and_select",
+  "name": "word_find_and_select",
+  "description": "按自然语言定位并选中：标题匹配 → “第N段” → 下一段/上一段 → 包含“文本”的段落 → 普通文本。返回定位类型、段号、字符边界和选区信息。示例：word_find_and_select {\"query\":\"包含\\\"关键词\\\"的段落\"}",
+  "appType": "word",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": [
+    {
+      "name": "query",
+      "type": "string",
+      "required": true,
+      "description": "定位描述，如 标题1、第3段、下一段、包含“关键词”的段落、或直接文本。"
+    }
+  ]
+}

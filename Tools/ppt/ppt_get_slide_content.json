@@ -1,0 +1,13 @@
+{
+  "id": "ppt_get_slide_content",
+  "name": "ppt_get_slide_content",
+  "description": "读取指定页的版式、标题、正文、演讲备注与形状明细，让写操作可验证、可基于现状决策。slideIndex 省略或 -1 表示当前页，0 表示第一页，1..N 为 1 基索引。includeShapes=true 时 shapes 数组元素包含 shapeId（同 id 别名）、name、type、left/top/width/height、zOrder、hasText、text、hasTable、hasChart；includeFormat=true 时还包含格式字段。",
+  "appType": "ppt",
+  "category": "读取",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "幻灯片索引：省略/-1=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "includeShapes", "type": "boolean", "required": false, "description": "是否返回形状明细，默认 true。" },
+    { "name": "includeFormat", "type": "boolean", "required": false, "description": "是否在形状明细中附带格式回读，默认 false；仅 includeShapes=true 时生效。" }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "ppt_validate_layout",
+  "name": "ppt_validate_layout",
+  "description": "【只读】版面质量自检。检查项：文字溢出文本框、形状重叠、形状超出页面边界、字体缺失、图片有效分辨率过低。checks 可只选部分；slideIndex 省略或 -1 时检查全部页。返回结构化告警 [{slideIndex,shapeId,shapeName,issueType,severity,detail}]，供自动修正。示例：ppt_validate_layout {\"checks\":[\"textOverflow\",\"outOfBounds\"]}。",
+  "appType": "ppt",
+  "category": "读取",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "幻灯片索引：省略/-1=全部页，0=第一页，1..N=指定页。" },
+    { "name": "checks", "type": "array", "required": false, "description": "检查项：textOverflow/overlap/outOfBounds/missingFont/lowResolution；省略=全部。" },
+    { "name": "minImageDpi", "type": "number", "required": false, "description": "图片有效分辨率阈值，默认 96 DPI。" }
+  ]
+}

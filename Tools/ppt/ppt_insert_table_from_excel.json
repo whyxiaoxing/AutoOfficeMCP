@@ -1,0 +1,19 @@
+{
+  "id": "ppt_insert_table_from_excel",
+  "name": "ppt_insert_table_from_excel",
+  "description": "从 Excel 文件区域读取数据并直接插入 PowerPoint 表格。excelFile 为纯文件名或本机绝对路径；range 支持 Sheet1!A1:D10 或配合 sheetName 使用 A1:D10；hasHeader 默认 true，false 时自动生成 Column1..N 表头。示例：ppt_insert_table_from_excel {\"excelFile\":\"data.xlsx\",\"range\":\"Sheet1!A1:D10\"}。",
+  "appType": "ppt",
+  "category": "内容插入",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "excelFile", "type": "string", "required": true, "description": "Excel 文件纯文件名或本机绝对路径。" },
+    { "name": "range", "type": "string", "required": true, "description": "区域地址，如 Sheet1!A1:D10 或 A1:D10。" },
+    { "name": "sheetName", "type": "string", "required": false, "description": "工作表名；range 已含 Sheet! 前缀时可省略。" },
+    { "name": "hasHeader", "type": "boolean", "required": false, "description": "首行是否为表头，默认 true。" },
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "幻灯片索引：省略/-1=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "x", "type": "number", "required": false, "description": "表格左上角横坐标（磅），默认 50。" },
+    { "name": "y", "type": "number", "required": false, "description": "表格左上角纵坐标（磅），默认 150。" },
+    { "name": "width", "type": "number", "required": false, "description": "表格宽度（磅），默认 600。" },
+    { "name": "height", "type": "number", "required": false, "description": "表格高度（磅），默认 300。" }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "excel_query_files",
+  "name": "excel_query_files",
+  "description": "多个 xlsx 只读联合查询。lookup={keyColumn, keys[], matchMode(exact|fuzzy|regex)} 在指定列匹配；filters 支持 = != > < >= <= contains startswith regex；returnColumns 省略返回整行。每行结果带 {file,sheet,rowNumber} 来源标注，默认 limit=1000 并返回 truncated。默认用专用隐藏 Excel 实例只读打开；backend=openxml 时改用 DocumentFormat.OpenXml 直接读文件（不启动 Excel、并行、公式只返回文本；不支持 writeResultToSheet）。绝不保存源文件。示例：files=[\"a.xlsx\",\"b.xlsx\"], lookup={\"keyColumn\":\"订单号\",\"keys\":[\"A001\",\"B002\"],\"matchMode\":\"exact\"}, returnColumns=[\"订单号\",\"金额\"], limit=1000, backend=\"openxml\"。",
+  "appType": "excel",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "files", "type": "array", "required": true, "description": "xlsx 路径数组；默认最多 10 个文件。" },
+    { "name": "sheets", "type": "array", "required": false, "description": "限定工作表名；省略则每文件所有工作表。" },
+    { "name": "lookup", "type": "object", "required": false, "description": "查找对象：keyColumn（表头/列字母/列号）、keys 数组、matchMode=exact/fuzzy/regex。" },
+    { "name": "filters", "type": "array", "required": false, "description": "筛选数组，每项 {column, op, value}；op 支持 = != > < >= <= contains startswith regex。" },
+    { "name": "returnColumns", "type": "array", "required": false, "description": "返回列名数组；省略返回整行所有列。" },
+    { "name": "limit", "type": "integer", "required": false, "description": "返回行数上限，默认 1000，最大 5000。" },
+    { "name": "hasHeader", "type": "boolean", "required": false, "description": "每个表首行是否表头，默认 true。" },
+    { "name": "caseSensitive", "type": "boolean", "required": false, "description": "exact/contains/startswith 是否区分大小写，默认 false。" },
+    { "name": "maxFiles", "type": "integer", "required": false, "description": "文件数上限，默认 10，最大 50。" },
+    { "name": "writeResultToSheet", "type": "boolean", "required": false, "description": "true 时把结果写入当前活动工作簿的新查询结果工作表；源文件永远不会被写入。openxml 后端不支持此参数。" },
+    { "name": "backend", "type": "string", "required": false, "description": "com（默认，隐藏 Excel）或 openxml（直接读 xlsx、并行、无 COM、不支持 writeResultToSheet）。" }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "ppt_format_table",
+  "name": "ppt_format_table",
+  "description": "格式化现有表格：表头加粗/填充、斑马纹、边框、表格样式开关，以及按单元格覆盖填充色/字体色/字号/加粗。颜色用 #RRGGBB。示例：ppt_format_table {\"shapeId\":8,\"headerBold\":true,\"headerFillColor\":\"#1F4E79\",\"zebraFillColor\":\"#F2F2F2\",\"borderColor\":\"#BFBFBF\"}。",
+  "appType": "ppt",
+  "category": "样式和动画",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "幻灯片索引：省略/-1=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "shapeId", "type": "integer", "required": true, "description": "表格形状 id。" },
+    { "name": "headerBold", "type": "boolean", "required": false, "description": "是否将表头行加粗。" },
+    { "name": "headerFillColor", "type": "string", "required": false, "description": "表头填充色，如 #1F4E79。" },
+    { "name": "zebraFillColor", "type": "string", "required": false, "description": "奇数数据行斑马纹填充色；表头行不参与。" },
+    { "name": "borderColor", "type": "string", "required": false, "description": "单元格边框颜色；提供后为所有单元格设置四边边框。" },
+    { "name": "borderWidth", "type": "number", "required": false, "description": "边框宽度（磅），默认 1。" },
+    { "name": "firstRow", "type": "boolean", "required": false, "description": "表格样式：首行特殊格式。" },
+    { "name": "firstCol", "type": "boolean", "required": false, "description": "表格样式：首列特殊格式。" },
+    { "name": "lastRow", "type": "boolean", "required": false, "description": "表格样式：末行特殊格式。" },
+    { "name": "lastCol", "type": "boolean", "required": false, "description": "表格样式：末列特殊格式。" },
+    { "name": "horizBanding", "type": "boolean", "required": false, "description": "表格样式：水平斑马纹。" },
+    { "name": "cells", "type": "array", "required": false, "description": "按单元格覆盖：[{row,col,fillColor,fontColor,fontSize,bold}]。" }
+  ]
+}

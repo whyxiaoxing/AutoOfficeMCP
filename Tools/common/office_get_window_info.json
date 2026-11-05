@@ -1,0 +1,11 @@
+{
+  "id": "office_get_window_info",
+  "name": "office_get_window_info",
+  "description": "【只读】读取 Office 窗口信息：标题、句柄、进程、矩形、前台/最小化/最大化状态；Excel 额外返回活动工作簿/工作表、缩放、冻结窗格、拆分行列，Word 返回活动文档、缩放、视图类型与拆分，PowerPoint 返回活动演示文稿、页数与当前页。app 省略时读取当前前台 Office 窗口；指定 app 时只附着已运行实例。示例：office_get_window_info {\"app\":\"excel\"}。",
+  "appType": "common",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "app", "type": "string", "required": false, "description": "excel、word、ppt 或省略；省略读取前台 Office 窗口，指定时读取该应用活动窗口。" }
+  ]
+}

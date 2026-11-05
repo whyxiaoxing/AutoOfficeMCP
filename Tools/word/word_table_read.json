@@ -1,0 +1,40 @@
+{
+  "id": "word_table_read",
+  "name": "word_table_read",
+  "description": "读取表格指定行列范围的值（1 基），自动剥离单元格结束标记 \\\\r\\\\a；合并单元格处返回 null 并提示。示例：word_table_read {\"tableIndex\":1,\"startRow\":1,\"endRow\":3,\"startCol\":1,\"endCol\":4}",
+  "appType": "word",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": [
+    {
+      "name": "tableIndex",
+      "type": "integer",
+      "required": true,
+      "description": "表格索引，1 基。"
+    },
+    {
+      "name": "startRow",
+      "type": "integer",
+      "required": false,
+      "description": "起始行，默认 1。"
+    },
+    {
+      "name": "endRow",
+      "type": "integer",
+      "required": false,
+      "description": "结束行，默认表格末行。"
+    },
+    {
+      "name": "startCol",
+      "type": "integer",
+      "required": false,
+      "description": "起始列，默认 1。"
+    },
+    {
+      "name": "endCol",
+      "type": "integer",
+      "required": false,
+      "description": "结束列，默认表格末列。"
+    }
+  ]
+}

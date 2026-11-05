@@ -1,0 +1,88 @@
+{
+  "id": "word_insert_image",
+  "name": "word_insert_image",
+  "description": "插入内嵌或浮动图片，支持宽度上限、固定宽高、按比例缩放、Alt 文本、图注（9pt 斜体段落）与浮动位置/环绕。默认 lockAspect=true 防拉伸，单位磅。示例：word_insert_image {\"filePath\":\"C:\\\\temp\\\\a.png\",\"widthLimitPt\":300,\"altText\":\"流程图\",\"caption\":true}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "low",
+  "parameters": [
+    {
+      "name": "filePath",
+      "type": "string",
+      "required": true,
+      "description": "图片文件绝对路径（文件必须存在）。"
+    },
+    {
+      "name": "position",
+      "type": "string",
+      "required": false,
+      "description": "cursor/start/end，默认 cursor。"
+    },
+    {
+      "name": "floating",
+      "type": "boolean",
+      "required": false,
+      "description": "true 使用 Shapes.AddPicture 插入浮动图片。"
+    },
+    {
+      "name": "caption",
+      "type": "boolean",
+      "required": false,
+      "description": "是否在图片后插入“图 N + Alt 文本”的 9pt 斜体图注。"
+    },
+    {
+      "name": "lockAspect",
+      "type": "boolean",
+      "required": false,
+      "description": "默认 true；true 时按原比例计算宽高，防拉伸。"
+    },
+    {
+      "name": "widthPt",
+      "type": "number",
+      "required": false,
+      "description": "目标宽度，磅。"
+    },
+    {
+      "name": "heightPt",
+      "type": "number",
+      "required": false,
+      "description": "目标高度，磅。"
+    },
+    {
+      "name": "widthLimitPt",
+      "type": "number",
+      "required": false,
+      "description": "最大宽度，磅；超过时等比缩小。"
+    },
+    {
+      "name": "scalePercent",
+      "type": "number",
+      "required": false,
+      "description": "相对当前插入尺寸的百分比；不能与 width/height/widthLimit 同用。"
+    },
+    {
+      "name": "xPt",
+      "type": "number",
+      "required": false,
+      "description": "浮动图片左位置，磅。"
+    },
+    {
+      "name": "yPt",
+      "type": "number",
+      "required": false,
+      "description": "浮动图片上位置，磅。"
+    },
+    {
+      "name": "altText",
+      "type": "string",
+      "required": false,
+      "description": "替代文本。"
+    },
+    {
+      "name": "wrap",
+      "type": "string",
+      "required": false,
+      "description": "floating 时的环绕：square/topbottom/tight/through/behind/front。"
+    }
+  ]
+}

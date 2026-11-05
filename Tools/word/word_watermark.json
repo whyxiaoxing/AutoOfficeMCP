@@ -1,0 +1,58 @@
+{
+  "id": "word_watermark",
+  "name": "word_watermark",
+  "description": "文字水印管理：add 在指定节/全部节页眉 Shapes 中创建半透明旋转文字水印（名称前缀 AutoOfficeMCPWatermark_，衬于文字下方）；remove 只删除该前缀的水印；list 只读清点。链接到上一节的页眉不会重复添加。示例：word_watermark {\"action\":\"add\",\"text\":\"内部资料\",\"transparency\":0.5}；删除：{\"action\":\"remove\"}；清点：{\"action\":\"list\"}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "action",
+      "type": "string",
+      "required": false,
+      "description": "add（默认）/remove/list。"
+    },
+    {
+      "name": "sectionIndex",
+      "type": "integer",
+      "required": false,
+      "description": "1 基节号；0 或省略表示全部节。"
+    },
+    {
+      "name": "text",
+      "type": "string",
+      "required": false,
+      "description": "水印文字，默认“内部资料”。"
+    },
+    {
+      "name": "fontName",
+      "type": "string",
+      "required": false,
+      "description": "字体名，默认“宋体”。"
+    },
+    {
+      "name": "fontSize",
+      "type": "number",
+      "required": false,
+      "description": "字号（磅），8-200，默认 54。"
+    },
+    {
+      "name": "color",
+      "type": "string",
+      "required": false,
+      "description": "文字/填充颜色，#RRGGBB 或颜色名，默认 #C0C0C0。"
+    },
+    {
+      "name": "rotation",
+      "type": "number",
+      "required": false,
+      "description": "旋转角度 0-360，默认 315（对角）。"
+    },
+    {
+      "name": "transparency",
+      "type": "number",
+      "required": false,
+      "description": "填充透明度 0-1，默认 0.5。"
+    }
+  ]
+}

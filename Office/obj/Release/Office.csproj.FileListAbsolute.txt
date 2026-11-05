@@ -1,0 +1,7 @@
+F:\c#2\AutoOfficeMCP\Share\Office.dll
+F:\c#2\AutoOfficeMCP\Share\Office.pdb
+D:\Code\c#\AutoOfficeMCP\Office\obj\Release\Office.csproj.AssemblyReference.cache
+D:\Code\c#\AutoOfficeMCP\Office\obj\Release\Office.csproj.CoreCompileInputs.cache
+D:\Code\c#\AutoOfficeMCP\Office\obj\Release\Office.csproj.Up2Date
+D:\Code\c#\AutoOfficeMCP\Office\obj\Release\Office.dll
+D:\Code\c#\AutoOfficeMCP\Office\obj\Release\Office.pdb

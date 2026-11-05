@@ -1,0 +1,40 @@
+{
+  "id": "word_table_set_cell",
+  "name": "word_table_set_cell",
+  "description": "写入单元格文本（可为空字符串）并可设置字体子集 bold/italic/fontSize/fontName/color；回读文本和格式。示例：word_table_set_cell {\"tableIndex\":1,\"row\":1,\"col\":1,\"text\":\"合计\",\"format\":{\"bold\":true,\"fontSize\":12}}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "tableIndex",
+      "type": "integer",
+      "required": true,
+      "description": "表格索引，1 基。"
+    },
+    {
+      "name": "row",
+      "type": "integer",
+      "required": true,
+      "description": "行号，1 基。"
+    },
+    {
+      "name": "col",
+      "type": "integer",
+      "required": true,
+      "description": "列号，1 基。"
+    },
+    {
+      "name": "text",
+      "type": "string",
+      "required": true,
+      "description": "单元格文本；允许空字符串。"
+    },
+    {
+      "name": "format",
+      "type": "object",
+      "required": false,
+      "description": "字体子集：bold/italic/fontSize/fontName/color。"
+    }
+  ]
+}

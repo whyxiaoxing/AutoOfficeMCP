@@ -1,0 +1,9 @@
+{
+  "id": "word_images_list",
+  "name": "word_images_list",
+  "description": "分别枚举 InlineShapes 与 Shapes：索引/类型/宽高（磅）/Alt/锚定段/环绕或位置。两套集合必须分开读取；Shapes 可能含非图片对象。示例：word_images_list {}",
+  "appType": "word",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": []
+}

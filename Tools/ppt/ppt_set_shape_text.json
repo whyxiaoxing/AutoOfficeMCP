@@ -1,0 +1,13 @@
+{
+  "id": "ppt_set_shape_text",
+  "name": "ppt_set_shape_text",
+  "description": "修改已有形状/文本框的文字内容（ppt_insert_text 只能新建）。换行用 \\n；写入后回读校验，不一致时返回 PARTIAL_APPLY。",
+  "appType": "ppt",
+  "category": "内容编辑",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "shapeId", "type": "integer", "required": true, "description": "目标形状 ID（来自 ppt_list_shapes）。" },
+    { "name": "content", "type": "string", "required": true, "description": "新文字内容，换行用 \\n。" },
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "幻灯片索引：省略/-1=当前页，0=第一页，1..N=1 基索引。" }
+  ]
+}

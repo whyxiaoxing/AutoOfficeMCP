@@ -1,0 +1,12 @@
+{
+  "id": "excel_clear_range",
+  "name": "excel_clear_range",
+  "description": "清除区域内容或格式。scope=contents 仅清内容并保留数字格式（ClearContents）；formats 清格式；all 清全部（Clear）；comments 清批注；hyperlinks 清超链接。返回清除单元格计数。示例：range=\"Data!A2:D100\", scope=\"contents\"。数字格式保留是该工具的关键验收语义。",
+  "appType": "excel",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "range", "type": "string", "required": true, "description": "要清除的区域。" },
+    { "name": "scope", "type": "string", "required": false, "description": "contents（默认）/formats/all/comments/hyperlinks。" }
+  ]
+}

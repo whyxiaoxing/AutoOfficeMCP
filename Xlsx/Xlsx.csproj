@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{55684400-3178-4D94-9B95-831737B014F4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Xlsx</RootNamespace>
+    <AssemblyName>Xlsx</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>F:\c#2\AutoOfficeMCP\Share\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>F:\c#2\AutoOfficeMCP\Share\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DocumentFormat.OpenXml" Version="2.20.0" />
+    <PackageReference Include="Microsoft.Office.Interop.Excel" Version="15.0.4795.1001">
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Office\Office.csproj">
+      <Project>{97E11FF2-4E91-457D-A568-67C92DC452AE}</Project>
+      <Name>Office</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExcelAnalysisTools.cs" />
+    <Compile Include="ExcelArgumentReader.cs" />
+    <Compile Include="ExcelCalcAuditTools.cs" />
+    <Compile Include="ExcelChartTools.cs" />
+    <Compile Include="ExcelClipboardTools.cs" />
+    <Compile Include="ExcelComSupport.cs" />
+    <Compile Include="ExcelDataExtensionTools.cs" />
+    <Compile Include="ExcelDataTools.cs" />
+    <Compile Include="ExcelEvaluateTools.cs" />
+    <Compile Include="ExcelFormulaReferenceEngine.cs" />
+    <Compile Include="ExcelFunctionMetadata.cs" />
+    <Compile Include="ExcelWorkbookTools.cs" />
+    <Compile Include="ExcelExtensions.cs" />
+    <Compile Include="ExcelExtensionsAuditTools.cs" />
+    <Compile Include="ExcelExtensionsIOTools.cs" />
+    <Compile Include="ExcelExtensionsManageTools.cs" />
+    <Compile Include="ExcelExtensionsP1SheetTools.cs" />
+    <Compile Include="ExcelExtensionsP1WriteTools.cs" />
+    <Compile Include="ExcelExtensionsP3MoreTools.cs" />
+    <Compile Include="ExcelExtensionsP3Tools.cs" />
+    <Compile Include="ExcelExtensionsSearchTools.cs" />
+    <Compile Include="ExcelExtensionsSupport.cs" />
+    <Compile Include="ExcelExtensionsViewTools.cs" />
+    <Compile Include="ExcelExternalWorkbookService.cs" />
+    <Compile Include="ExcelOpenXmlReadService.cs" />
+    <Compile Include="ExcelFormatTools.cs" />
+    <Compile Include="ExcelFunctionCatalog.cs" />
+    <Compile Include="ExcelPivotService.cs" />
+    <Compile Include="ExcelRangeProfileService.cs" />
+    <Compile Include="ExcelReadTools.cs" />
+    <Compile Include="ExcelSheetTools.cs" />
+    <Compile Include="ExcelToolExecutor.cs" />
+    <Compile Include="ExcelUndoScope.cs" />
+    <Compile Include="ExcelVbaTools.cs" />
+    <Compile Include="ExcelWriteTools.cs" />
+    <Compile Include="RangeResolver.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\Tools\excel\resources\excel_functions.json">
+      <Link>Resources\excel_functions.json</Link>
+      <LogicalName>Xlsx.Resources.excel_functions.json</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

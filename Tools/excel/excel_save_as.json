@@ -1,0 +1,12 @@
+{
+  "id": "excel_save_as",
+  "name": "excel_save_as",
+  "description": "把当前活动工作簿另存为副本，不改变原文件的路径与内容。支持 .xlsx/.xlsm/.xls/.csv（CSV 只导出活动工作表）。同格式优先 SaveCopyAs，跨格式使用副本 SaveAs。目标已存在时需 overwrite=true。返回目标路径、大小、原文件未变标记。示例：path=\"副本.xlsx\", overwrite=false。",
+  "appType": "excel",
+  "category": "file",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "path", "type": "string", "required": true, "description": "副本目标文件名、工作目录内相对子路径或绝对路径；父目录不存在时仅在工作目录内自动创建，工作目录外需预先存在。" },
+    { "name": "overwrite", "type": "boolean", "required": false, "description": "目标存在时是否覆盖，默认 false。" }
+  ]
+}

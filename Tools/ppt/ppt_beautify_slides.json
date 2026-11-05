@@ -1,0 +1,13 @@
+{
+  "id": "ppt_beautify_slides",
+  "name": "ppt_beautify_slides",
+  "description": "统一美化幻灯片：设置背景色，并按标题/正文占位符应用字体。theme 对象支持 background、titleFont{name,size,color,bold}、bodyFont{name,size,color,bold}；省略 theme 时使用内置浅色主题。示例：ppt_beautify_slides {\"scope\":\"all\",\"theme\":{\"background\":\"#F7F3EA\",\"titleFont\":{\"name\":\"Microsoft YaHei\",\"size\":30,\"bold\":true,\"color\":\"#7A3E2E\"}}}。",
+  "appType": "ppt",
+  "category": "样式和动画",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "scope", "type": "string", "required": false, "description": "范围：all（默认）或 current。" },
+    { "name": "theme", "type": "object", "required": false, "description": "主题对象：background、titleFont、bodyFont；省略使用内置主题。" },
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "scope=current 时的目标页；-1/省略=当前页，0=第一页，1..N=1 基索引。" }
+  ]
+}

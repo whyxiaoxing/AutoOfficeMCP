@@ -1,0 +1,13 @@
+{
+  "id": "ppt_set_zorder",
+  "name": "ppt_set_zorder",
+  "description": "调整指定形状在页面上的层级（z-order）。position=front/back/forward/backward 分别对应置于顶层/底层/上移一层/下移一层；返回调整前后的 ZOrderPosition 和形状总数，便于重叠排版后验证。示例：ppt_set_zorder {\"shapeId\":12,\"position\":\"front\"}。",
+  "appType": "ppt",
+  "category": "形状操作",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "shapeId", "type": "integer", "required": true, "description": "目标形状 id（ppt_list_shapes 返回的 shapeId）。" },
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "幻灯片索引：省略/-1=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "position", "type": "string", "required": true, "description": "层级调整方向：front、back、forward、backward。" }
+  ]
+}

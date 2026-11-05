@@ -1,0 +1,58 @@
+{
+  "id": "word_image_resize",
+  "name": "word_image_resize",
+  "description": "缩放内嵌或浮动图片，单位磅：widthPt/heightPt/scalePercent/widthLimitPt，lockAspect 默认 true 按原比例防拉伸。返回 before/after 宽高和 ±0.5 磅回读核验。示例：word_image_resize {\"index\":1,\"collection\":\"inline\",\"widthPt\":120,\"lockAspect\":true}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "low",
+  "parameters": [
+    {
+      "name": "index",
+      "type": "integer",
+      "required": false,
+      "description": "1 基图片索引；useSelection=true 时可省略。"
+    },
+    {
+      "name": "collection",
+      "type": "string",
+      "required": false,
+      "description": "inline 或 floating，默认 inline。"
+    },
+    {
+      "name": "useSelection",
+      "type": "boolean",
+      "required": false,
+      "description": "true 时使用当前选区中的第一个图片。"
+    },
+    {
+      "name": "widthPt",
+      "type": "number",
+      "required": false,
+      "description": "目标宽度，磅。"
+    },
+    {
+      "name": "heightPt",
+      "type": "number",
+      "required": false,
+      "description": "目标高度，磅。"
+    },
+    {
+      "name": "scalePercent",
+      "type": "number",
+      "required": false,
+      "description": "相对当前尺寸的百分比。"
+    },
+    {
+      "name": "widthLimitPt",
+      "type": "number",
+      "required": false,
+      "description": "最大宽度，磅。"
+    },
+    {
+      "name": "lockAspect",
+      "type": "boolean",
+      "required": false,
+      "description": "默认 true；按原宽高比缩放。"
+    }
+  ]
+}

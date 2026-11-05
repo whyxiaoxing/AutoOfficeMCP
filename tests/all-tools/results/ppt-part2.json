@@ -1,0 +1,201 @@
+{
+  "app": "ppt",
+  "part": 2,
+  "parts": 2,
+  "total": 27,
+  "pass": 26,
+  "gated": 1,
+  "fail": 0,
+  "generatedAt": "2026-11-03T02:10:22.3893188+08:00",
+  "tools": [
+    {
+      "tool": "ppt_add_speaker_notes",
+      "status": "PASS",
+      "errorCode": "",
+      "message": "已为第 1 张幻灯片添加演讲备注。",
+      "detail": "已为第 1 张幻灯片添加演讲备注。\n{\"slideIndex\":1,\"notesLength\":27,\"observation\":{\"kind\":\"write\",\"summary\":\"已为第 1 张幻灯片添加演讲备注。\",\"changed\":true,\"targetRefs\":[\"ppt:all-tools-common-1.pptx!Slide1\"],\"undoUnits\":[]}}"
+    },
+    {
+      "tool": "ppt_apply_theme",
+      "status": "GATED",
+      "errorCode": "FILE_NOT_FOUND",
+      "message": "主题文件不存在：F:\\c#2\\AutoOfficeMCP\\workspace\\test.thmx",
+      "detail": "主题文件不存在：F:\\c#2\\AutoOfficeMCP\\workspace\\test.thmx\n{\"errorCode\":\"FILE_NOT_FOUND\",\"recoverable\":true}"
+    },
+    {
+      "tool": "ppt_beautify_slides",
+      "status": "PASS",
+      "errorCode": "",
+      "message": "已美化 2 张幻灯片。",
+      "detail": "已美化 2 张幻灯片。\n{\"scope\":\"all\",\"processedCount\":2,\"undoRestorable\":true,\"undoNodeId\":\"undo-20261102180942708-0004\",\"documentName\":\"all-tools-ppt-2.pptx\",\"observation\":{\"kind\":\"write\",\"summary\":\"已美化 2 张幻灯片。\",\"changed\":true,\"targetRefs\":[\"ppt:all-tools-ppt-2.pptx\"],\"undoUnits\":[\"undo-20261102180942708-0004\"]}}"
+    },
+    {
+      "tool": "ppt_copy_slide_from_file",
+      "status": "PASS",
+      "errorCode": "",
+      "message": "已从 all-tools-ppt-2-copy.pptx 复制第 1 页到第 1 页。",
+      "detail": "已从 all-tools-ppt-2-copy.pptx 复制第 1 页到第 1 页。\n{\"sourceFile\":\"F:\\\\c#2\\\\AutoOfficeMCP\\\\workspace\\\\all-tools-ppt-2-copy.pptx\",\"sourceSlideIndex\":1,\"insertAfter\":0,\"newIndex\":1,\"slideCount\":3,\"undoRestorable\":true,\"undoNodeId\":\"undo-20261102180945038-0006\",\"documentName\":\"all-tools-ppt-2.pptx\",\"observation\":{\"kind\":\"write\",\"summary\":\"已从 all-tools-ppt-2-copy.pptx 复制第 1 页到第 1 页。\",\"changed\":true,\"targetRefs\":[\"ppt:all-tools-ppt-2.pptx!Slide1\"],\"undoUnits\":[\"undo-20261102180945038-0006\"]}}"
+    },
+    {
+      "tool": "ppt_crop_image",
+      "status": "PASS",
+      "errorCode": "",
+      "message": "已裁切第 2 张幻灯片上的图片 Picture 6。",
+      "detail": "已裁切第 2 张幻灯片上的图片 Picture 6。\n{\"slideIndex\":2,\"shapeId\":7,\"shapeName\":\"Picture 6\",\"unit\":\"ratio\",\"cropLeft\":6.0,\"cropTop\":6.0,\"cropRight\":6.0,\"cropBottom\":6.0,\"width\":60.009,\"height\":60.009,\"undoRestorable\":true,\"undoNodeId\":\"undo-20261102180946284-0007\",\"documentName\":\"all-tools-common-1.pptx\",\"observation\":{\"kind\":\"write\",\"summary\":\"已裁切第 2 张幻灯片上的图片 Picture 6。\",\"changed\":true,\"targetRefs\":[\"ppt:all-tools-common-1.pptx!Slide2!Picture 6\"],\"undoUnits\":[\"undo-20261102180946284-0007\"]}}"
+    },
+    {
+      "tool": "ppt_delete_shape",
+      "status": "PASS",
+      "errorCode": "",
+      "message": "已删除第 1 张幻灯片上的形状 Title 1。",
+      "detail": "已删除第 1 张幻灯片上的形状 Title 1。\n{\"slideIndex\":1,\"shapeId\":2,\"shapeName\":\"Title 1\",\"deleted\":true,\"undoRestorable\":true,\"undoNodeId\":\"undo-20261102180948448-0009\",\"documentName\":\"all-tools-common-1.pptx\",\"observation\":{\"kind\":\"write\",\"summary\":\"已删除第 1 张幻灯片上的形状 Title 1。\",\"changed\":true,\"targetRefs\":[\"ppt:all-tools-common-1.pptx!Slide1!Title 1\"],\"undoUnits\":[\"undo-20261102180948448-0009\"]}}"
+    },
+    {
+      "tool": "ppt_duplicate_slide",
+      "status": "PASS",
+      "errorCode": "",
+      "message": "已复制第 1 张幻灯片到第 2 张。",
+      "detail": "已复制第 1 张幻灯片到第 2 张。\n{\"sourceIndex\":1,\"newIndex\":2,\"slideCount\":2,\"undoRestorable\":true,\"undoNodeId\":\"undo-20261102180949974-0011\",\"documentName\":\"all-tools-common-1.pptx\",\"observation\":{\"kind\":\"write\",\"summary\":\"已复制第 1 张幻灯片到第 2 张。\",\"changed\":true,\"targetRefs\":[\"ppt:all-tools-common-1.pptx!Slide2\"],\"undoUnits\":[\"undo-20261102180949974-0011\"]}}"
+    },
+    {
+      "tool": "ppt_export_images",
+      "status": "PASS",
+      "errorCode": "",
+      "message": "已导出 2 张幻灯片图片到：F:\\c#2\\AutoOfficeMCP\\workspace\\all-tools-ppt-2-images",
+      "detail": "已导出 2 张幻灯片图片到：F:\\c#2\\AutoOfficeMCP\\workspace\\all-tools-ppt-2-images\n{\"outputDir\":\"F:\\\\c#2\\\\AutoOfficeMCP\\\\workspace\\\\all-tools-ppt-2-images\",\"format\":\"png\",\"width\":1920,\"height\":1080,\"fileCount\":2,\"files\":[{\"slideIndex\":1,\"fileName\":\"slide-001.png\",\"filePath\":\"F:\\\\c#2\\\\AutoOfficeMCP\\\\workspace\\\\all-tools-ppt-2-images\\\\slide-001.png\",\"width\":1920,\"height\":1080,\"sizeBytes\":15861},{\"slideIndex\":2,\"fileName\":\"slide-002.png\",\"filePath\":\"F:\\\\c#2\\\\AutoOfficeMCP\\\\workspace\\\\all-tools-ppt-2-images\\\\slide-002.png\",\"width\":1920,\"height\":1080,\"sizeBytes\":19642}],\"observation\":{\"kind\":\"read\",\"summary\":\"已导出 2 张幻灯片图片到：F:\\\\c#2\\\\AutoOfficeMCP\\\\workspace\\\\all-tools-ppt-2-images\",\"changed\":true,\"targetRefs\":[\"ppt:all-tools-common-1.pptx\"],\"undoUnits\":[]}}"
+    },
+    {
+      "tool": "ppt_format_slide",
+      "status": "PASS",
+      "errorCode": "",
+      "message": "已格式化第 1 张幻灯片。",
+      "detail": "已格式化第 1 张幻灯片。\n{\"slideIndex\":1,\"background\":\"\",\"layout\":\"\",\"observation\":{\"kind\":\"write\",\"summary\":\"已格式化第 1 张幻灯片。\",\"changed\":false,\"targetRefs\":[\"ppt:all-tools-ppt-2.pptx!Slide1\"],\"undoUnits\":[]}}"
+    },
+    {
+      "tool": "ppt_format_text",
+      "status": "PASS",
+      "errorCode": "",
+      "message": "已对第 1 张幻灯片的 1 个文本框应用文字格式。",
+      "detail": "已对第 1 张幻灯片的 1 个文本框应用文字格式。\n{\"slideIndex\":1,\"shapeId\":2,\"changedShapeCount\":1,\"changedRunCount\":0,\"applied\":[\"bold\"],\"undoRestorable\":true,\"undoNodeId\":\"undo-20261102180954492-0012\",\"documentName\":\"all-tools-ppt-2.pptx\",\"observation\":{\"kind\":\"write\",\"summary\":\"已对第 1 张幻灯片的 1 个文本框应用文字格式。\",\"changed\":true,\"targetRefs\":[\"ppt:all-tools-ppt-2.pptx!Slide1\"],\"undoUnits\":[\"undo-20261102180954492-0012\"]}}"
+    },
+    {
+      "tool": "ppt_get_slide_content",
+      "status": "PASS",
+      "errorCode": "",
+      "message": "已读取第 1 张幻灯片内容。",
+      "detail": "已读取第 1 张幻灯片内容。\n{\"slideIndex\":1,\"layout\":\"标题幻灯片\",\"title\":\"AutoOfficeMCP All Tools\",\"content\":\"Smoke test fixtures\",\"notes\":\"AutoOfficeMCP speaker notes\",\"shapes\":[{\"id\":2,\"name\":\"Title 1\",\"type\":14,\"left\":120.0,\"top\":88.375,\"width\":720.0,\"height\":188.0,\"hasText\":true,\"text\":\"AutoOfficeMCP All Tools\",\"hasTable\":false,\"hasChart\":false,\"shapeId\":2,\"zOrder\":1},{\"id\":3,\"name\":\"Subtitle 2\",\"type\":14,\"left\":120.0,\"top\":283.625,\"width\":720.0,\"height\":130.375,\"hasText\":true,\"text\":\"Smoke test fixtures\",\"hasTable\":false,\"hasChart\":false,\"shapeId\":3,\"zOrder\":2},{\"id\":4,\"name\":\"GroupRect1\",\"type\":1,\"left\":40.0,\"top\":380.0,\"width\":80.0,\"height\":40.0,\"hasText\":true,\"text\":\"\",\"hasTable\":false,\"hasChart\":false,\"shapeId\":4,\"zOrder\":3},{\"id\":5,\"name\":\"GroupRect2\",\"type\":1,\"left\":140.0,\"top\":380.0,\"width\":80.0,\"height\":40.0,\"hasText\":true,\"text\":\"\",\"hasTable\":false,\"hasChart\":false,\"shapeId\":5,\"zOrder\":4},{\"id\":8,\"name\":\"TestGroup\",\"type\":6,\"left\":240.0,\"top\":380.0,\"width\":180.0,\"height\":40.0,\"hasText\":false,\"text\":\"\",\"hasTable\":false,\"hasChart\":false,\"shapeId\":8,\"zOrder\":5}],\"shapesIncludeFormat\":false,\"observation\":{\"kind\":\"read\",\"summary\":\"已读取第 1 张幻灯片内容。\",\"changed\":false,\"targetRefs\":[\"ppt:all-tools-ppt-2.pptx!Slide1\"],\"undoUnits\":[]}}"
+    },
+    {
+      "tool": "ppt_get_thumbnail",
+      "status": "PASS",
+      "errorCode": "",
+      "message": "已生成第 1 张幻灯片缩略图（640×360）。",
+      "detail": "已生成第 1 张幻灯片缩略图（640×360）。\n{\"slideIndex\":1,\"width\":640,\"height\":360,\"mimeType\":\"image/png\",\"pngBytes\":3924,\"observation\":{\"kind\":\"read\",\"summary\":\"已生成第 1 张幻灯片缩略图（640×360）。\",\"changed\":false,\"targetRefs\":[\"ppt:all-tools-ppt-2.pptx!Slide1\"],\"undoUnits\":[]}}"
+    },
+    {
+      "tool": "ppt_group_shapes",
+      "status": "PASS",
+      "errorCode": "",
+      "message": "已组合第 1 张幻灯片上的 2 个形状。",
+      "detail": "已组合第 1 张幻灯片上的 2 个形状。\n{\"slideIndex\":1,\"groupShapeId\":9,\"groupShapeName\":\"Group 8\",\"memberIds\":[4,5],\"memberCount\":2,\"undoRestorable\":true,\"undoNodeId\":\"undo-20261102180957953-0013\",\"documentName\":\"all-tools-ppt-2.pptx\",\"observation\":{\"kind\":\"write\",\"summary\":\"已组合第 1 张幻灯片上的 2 个形状。\",\"changed\":true,\"targetRefs\":[\"ppt:all-tools-ppt-2.pptx!Slide1!Group 8\"],\"undoUnits\":[\"undo-20261102180957953-0013\"]}}"
+    },
+    {
+      "tool": "ppt_insert_chart",
+      "status": "PASS",
+      "errorCode": "",
+      "message": "已在第 1 张幻灯片插入图表（2 行，1 个系列）。",
+      "detail": "已在第 1 张幻灯片插入图表（2 行，1 个系列）。\n{\"slideIndex\":1,\"shapeId\":9,\"shapeName\":\"Chart 8\",\"chartType\":\"column\",\"rows\":2,\"seriesCount\":1,\"undoRestorable\":true,\"undoNodeId\":\"undo-20261102181002997-0015\",\"documentName\":\"all-tools-ppt-2.pptx\",\"observation\":{\"kind\":\"write\",\"summary\":\"已在第 1 张幻灯片插入图表（2 行，1 个系列）。\",\"changed\":true,\"targetRefs\":[\"ppt:all-tools-ppt-2.pptx!Slide1!Chart 8\"],\"undoUnits\":[\"undo-20261102181002997-0015\"]}}"
+    },
+    {
+      "tool": "ppt_insert_image",
+      "status": "PASS",
+      "errorCode": "",
+      "message": "已在第 1 张幻灯片插入图片：all-tools-ppt-2.png。",
+      "detail": "已在第 1 张幻灯片插入图片：all-tools-ppt-2.png。\n{\"slideIndex\":1,\"shapeId\":11,\"shapeName\":\"Picture 10\",\"source\":\"all-tools-ppt-2.png\",\"fit\":\"contain\",\"x\":467.998352,\"y\":257.998352,\"actualWidth\":24.0033855,\"actualHeight\":24.0033855,\"originalWidth\":24.0033855,\"originalHeight\":24.0033855,\"coverCropped\":false,\"undoRestorable\":true,\"undoNodeId\":\"undo-20261102181008231-0017\",\"documentName\":\"all-tools-ppt-2.pptx\",\"observation\":{\"kind\":\"write\",\"summary\":\"已在第 1 张幻灯片插入图片：all-tools-ppt-2.png。\",\"changed\":true,\"targetRefs\":[\"ppt:all-tools-ppt-2.pptx!Slide1!Picture 10\"],\"undoUnits\":[\"undo-20261102181008231-0017\"]}}"
+    },
+    {
+      "tool": "ppt_insert_slide",
+      "status": "PASS",
+      "errorCode": "",
+      "message": "已插入第 3 张幻灯片。",
+      "detail": "已插入第 3 张幻灯片。\n{\"slideIndex\":3,\"position\":\"end\",\"index\":-1,\"layout\":\"titleAndContent\",\"slideCount\":3,\"undoRestorable\":true,\"undoNodeId\":\"undo-20261102181009686-0019\",\"documentName\":\"all-tools-ppt-2.pptx\",\"observation\":{\"kind\":\"write\",\"summary\":\"已插入第 3 张幻灯片。\",\"changed\":true,\"targetRefs\":[\"ppt:all-tools-ppt-2.pptx!Slide3\"],\"undoUnits\":[\"undo-20261102181009686-0019\"]}}"
+    },
+    {
+      "tool": "ppt_insert_table_from_excel",
+      "status": "PASS",
+      "errorCode": "",
+      "message": "已从 Excel 区域 Data!A1:B3 向第 1 张幻灯片插入 3×2 表格。",
+      "detail": "已从 Excel 区域 Data!A1:B3 向第 1 张幻灯片插入 3×2 表格。\n{\"slideIndex\":1,\"shapeId\":10,\"shapeName\":\"Table 9\",\"rows\":3,\"cols\":2,\"filledCells\":6,\"excelFile\":\"all-tools-ppt-2.xlsx\",\"range\":\"Data!A1:B3\",\"hasHeader\":true,\"undoRestorable\":true,\"undoNodeId\":\"undo-20261102181011536-0021\",\"documentName\":\"all-tools-ppt-2.pptx\",\"observation\":{\"kind\":\"write\",\"summary\":\"已从 Excel 区域 Data!A1:B3 向第 1 张幻灯片插入 3×2 表格。\",\"changed\":true,\"targetRefs\":[\"ppt:all-tools-ppt-2.pptx!Slide1!Table 9\"],\"undoUnits\":[\"undo-20261102181011536-0021\"]}}"
+    },
+    {
+      "tool": "ppt_list_animations",
+      "status": "PASS",
+      "errorCode": "",
+      "message": "第 1 张幻灯片共有 0 个动画。",
+      "detail": "第 1 张幻灯片共有 0 个动画。\n{\"slideIndex\":1,\"animationCount\":0,\"animations\":[],\"observation\":{\"kind\":\"read\",\"summary\":\"第 1 张幻灯片共有 0 个动画。\",\"changed\":false,\"targetRefs\":[\"ppt:all-tools-ppt-1.pptx!Slide1\"],\"undoUnits\":[]}}"
+    },
+    {
+      "tool": "ppt_list_shapes",
+      "status": "PASS",
+      "errorCode": "",
+      "message": "第 1 张幻灯片共有 5 个形状。",
+      "detail": "第 1 张幻灯片共有 5 个形状。\n{\"slideIndex\":1,\"shapeCount\":5,\"includeFormat\":false,\"shapes\":[{\"id\":2,\"name\":\"Title 1\",\"type\":14,\"left\":120.0,\"top\":88.375,\"width\":720.0,\"height\":188.0,\"hasText\":true,\"text\":\"AutoOfficeMCP All Tools\",\"hasTable\":false,\"hasChart\":false,\"shapeId\":2,\"zOrder\":1},{\"id\":3,\"name\":\"Subtitle 2\",\"type\":14,\"left\":120.0,\"top\":283.625,\"width\":720.0,\"height\":130.375,\"hasText\":true,\"text\":\"Smoke test fixtures\",\"hasTable\":false,\"hasChart\":false,\"shapeId\":3,\"zOrder\":2},{\"id\":4,\"name\":\"GroupRect1\",\"type\":1,\"left\":40.0,\"top\":380.0,\"width\":80.0,\"height\":40.0,\"hasText\":true,\"text\":\"\",\"hasTable\":false,\"hasChart\":false,\"shapeId\":4,\"zOrder\":3},{\"id\":5,\"name\":\"GroupRect2\",\"type\":1,\"left\":140.0,\"top\":380.0,\"width\":80.0,\"height\":40.0,\"hasText\":true,\"text\":\"\",\"hasTable\":false,\"hasChart\":false,\"shapeId\":5,\"zOrder\":4},{\"id\":8,\"name\":\"TestGroup\",\"type\":6,\"left\":240.0,\"top\":380.0,\"width\":180.0,\"height\":40.0,\"hasText\":false,\"text\":\"\",\"hasTable\":false,\"hasChart\":false,\"shapeId\":8,\"zOrder\":5}],\"observation\":{\"kind\":\"read\",\"summary\":\"第 1 张幻灯片共有 5 个形状。\",\"changed\":false,\"targetRefs\":[\"ppt:all-tools-ppt-1.pptx!Slide1\"],\"undoUnits\":[]}}"
+    },
+    {
+      "tool": "ppt_move_resize_shape",
+      "status": "PASS",
+      "errorCode": "",
+      "message": "已调整第 1 张幻灯片形状 Title 1 的位置/尺寸。",
+      "detail": "已调整第 1 张幻灯片形状 Title 1 的位置/尺寸。\n{\"slideIndex\":1,\"shapeId\":2,\"shapeName\":\"Title 1\",\"x\":20.0,\"y\":20.0,\"width\":120.0,\"height\":60.0,\"applied\":[\"x\",\"y\",\"width\",\"height\"],\"undoRestorable\":true,\"undoNodeId\":\"undo-20261102181014121-0023\",\"documentName\":\"all-tools-ppt-1.pptx\",\"observation\":{\"kind\":\"write\",\"summary\":\"已调整第 1 张幻灯片形状 Title 1 的位置/尺寸。\",\"changed\":true,\"targetRefs\":[\"ppt:all-tools-ppt-1.pptx!Slide1!Title 1\"],\"undoUnits\":[\"undo-20261102181014121-0023\"]}}"
+    },
+    {
+      "tool": "ppt_reorder_slides",
+      "status": "PASS",
+      "errorCode": "",
+      "message": "已按指定顺序重排 2 张幻灯片。",
+      "detail": "已按指定顺序重排 2 张幻灯片。\n{\"applied\":true,\"newOrder\":[1,2],\"slideCount\":2,\"undoRestorable\":true,\"undoNodeId\":\"undo-20261102181015059-0024\",\"documentName\":\"all-tools-ppt-1.pptx\",\"observation\":{\"kind\":\"write\",\"summary\":\"已按指定顺序重排 2 张幻灯片。\",\"changed\":true,\"targetRefs\":[\"ppt:all-tools-ppt-1.pptx\"],\"undoUnits\":[\"undo-20261102181015059-0024\"]}}"
+    },
+    {
+      "tool": "ppt_set_bullet",
+      "status": "PASS",
+      "errorCode": "",
+      "message": "已对第 1 张幻灯片的 1 个文本框应用段落设置。",
+      "detail": "已对第 1 张幻灯片的 1 个文本框应用段落设置。\n{\"slideIndex\":1,\"shapeId\":2,\"changedShapeCount\":1,\"applied\":[\"bulletVisible\"],\"observation\":{\"kind\":\"write\",\"summary\":\"已对第 1 张幻灯片的 1 个文本框应用段落设置。\",\"changed\":true,\"targetRefs\":[\"ppt:all-tools-ppt-1.pptx!Slide1\"],\"undoUnits\":[]}}"
+    },
+    {
+      "tool": "ppt_set_paragraph",
+      "status": "PASS",
+      "errorCode": "",
+      "message": "已对第 1 张幻灯片的 1 个文本框应用段落设置。",
+      "detail": "已对第 1 张幻灯片的 1 个文本框应用段落设置。\n{\"slideIndex\":1,\"shapeId\":2,\"changedShapeCount\":1,\"applied\":[\"align\"],\"undoRestorable\":true,\"undoNodeId\":\"undo-20261102181017576-0027\",\"documentName\":\"all-tools-ppt-1.pptx\",\"observation\":{\"kind\":\"write\",\"summary\":\"已对第 1 张幻灯片的 1 个文本框应用段落设置。\",\"changed\":true,\"targetRefs\":[\"ppt:all-tools-ppt-1.pptx!Slide1\"],\"undoUnits\":[\"undo-20261102181017576-0027\"]}}"
+    },
+    {
+      "tool": "ppt_set_shape_text",
+      "status": "PASS",
+      "errorCode": "",
+      "message": "已修改第 1 张幻灯片形状 Title 1 的文字。",
+      "detail": "已修改第 1 张幻灯片形状 Title 1 的文字。\n{\"slideIndex\":1,\"shapeId\":2,\"shapeName\":\"Title 1\",\"textLength\":18,\"undoRestorable\":true,\"undoNodeId\":\"undo-20261102181018853-0029\",\"documentName\":\"all-tools-ppt-1.pptx\",\"observation\":{\"kind\":\"write\",\"summary\":\"已修改第 1 张幻灯片形状 Title 1 的文字。\",\"changed\":true,\"targetRefs\":[\"ppt:all-tools-ppt-1.pptx!Slide1!Title 1\"],\"undoUnits\":[\"undo-20261102181018853-0029\"]}}"
+    },
+    {
+      "tool": "ppt_set_slide_size",
+      "status": "PASS",
+      "errorCode": "",
+      "message": "已把页面尺寸设置为 16:9（960×540 磅）。",
+      "detail": "已把页面尺寸设置为 16:9（960×540 磅）。\n{\"size\":\"16:9\",\"slideWidth\":960.0,\"slideHeight\":540.0,\"observation\":{\"kind\":\"write\",\"summary\":\"已把页面尺寸设置为 16:9（960×540 磅）。\",\"changed\":true,\"targetRefs\":[\"ppt:all-tools-ppt-1.pptx\"],\"undoUnits\":[]}}"
+    },
+    {
+      "tool": "ppt_set_zorder",
+      "status": "PASS",
+      "errorCode": "",
+      "message": "已调整第 1 张幻灯片形状 Title 1 的层级（1 → 7）。",
+      "detail": "已调整第 1 张幻灯片形状 Title 1 的层级（1 → 7）。\n{\"slideIndex\":1,\"shapeId\":2,\"shapeName\":\"Title 1\",\"position\":\"front\",\"beforeZOrder\":1,\"afterZOrder\":7,\"shapeCount\":5,\"undoRestorable\":true,\"undoNodeId\":\"undo-20261102181021117-0032\",\"documentName\":\"all-tools-ppt-1.pptx\",\"observation\":{\"kind\":\"write\",\"summary\":\"已调整第 1 张幻灯片形状 Title 1 的层级（1 → 7）。\",\"changed\":true,\"targetRefs\":[\"ppt:all-tools-ppt-1.pptx!Slide1!Title 1\"],\"undoUnits\":[\"undo-20261102181021117-0032\"]}}"
+    },
+    {
+      "tool": "ppt_validate_layout",
+      "status": "PASS",
+      "errorCode": "",
+      "message": "布局自检完成：检查 1 张幻灯片、共 5 个形状，发现 2 个问题。",
+      "detail": "布局自检完成：检查 1 张幻灯片、共 5 个形状，发现 2 个问题。\n{\"checkedSlideCount\":1,\"checkedSlideIndices\":[1],\"checkedShapeCount\":5,\"checks\":[\"textOverflow\",\"overlap\",\"outOfBounds\",\"missingFont\",\"lowResolution\"],\"issueCount\":2,\"issues\":[{\"slideIndex\":1,\"shapeId\":3,\"shapeName\":\"Subtitle 2\",\"issueType\":\"overlap\",\"severity\":\"warning\",\"detail\":\"形状与「GroupRect2」(id=5) 重叠约 85%。\"},{\"slideIndex\":1,\"shapeId\":3,\"shapeName\":\"Subtitle 2\",\"issueType\":\"overlap\",\"severity\":\"warning\",\"detail\":\"形状与「TestGroup」(id=8) 重叠约 85%。\"}],\"observation\":{\"kind\":\"read\",\"summary\":\"布局自检完成：检查 1 张幻灯片、共 5 个形状，发现 2 个问题。\",\"changed\":false,\"targetRefs\":[\"ppt:all-tools-ppt-1.pptx\"],\"undoUnits\":[]}}"
+    }
+  ]
+}

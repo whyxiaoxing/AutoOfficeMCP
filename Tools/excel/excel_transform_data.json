@@ -1,0 +1,14 @@
+{
+  "id": "excel_transform_data",
+  "name": "excel_transform_data",
+  "description": "数据转换。operation=transpose：复制并 PasteSpecial Transpose 到 targetRange；split：按 delimiter 使用 TextToColumns 分列；merge：生成 =CONCAT(...) 公式把多列合并到目标列。示例：sourceRange=\"Data!A1:C10\", operation=\"transpose\", targetRange=\"E1\"；operation=\"split\", delimiter=\",\"；operation=\"merge\", delimiter=\"-\", targetRange=\"D1\"。",
+  "appType": "excel",
+  "category": "analysis",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "operation", "type": "string", "required": true, "description": "transpose / split / merge。" },
+    { "name": "sourceRange", "type": "string", "required": true, "description": "源区域。" },
+    { "name": "targetRange", "type": "string", "required": false, "description": "目标起始单元格或区域；默认放在源区域右侧。" },
+    { "name": "delimiter", "type": "string", "required": false, "description": "split/merge 使用的分隔符；merge 默认空格。" }
+  ]
+}

@@ -1,0 +1,9 @@
+F:\c#2\AutoOfficeMCP\Share\Office.dll
+F:\c#2\AutoOfficeMCP\Share\Office.pdb
+D:\Code\c#\AutoOfficeMCP\Office\obj\Debug\Office.csproj.AssemblyReference.cache
+D:\Code\c#\AutoOfficeMCP\Office\obj\Debug\Office.csproj.CoreCompileInputs.cache
+D:\Code\c#\AutoOfficeMCP\Office\obj\Debug\Office.csproj.Up2Date
+D:\Code\c#\AutoOfficeMCP\Office\obj\Debug\Office.dll
+D:\Code\c#\AutoOfficeMCP\Office\obj\Debug\Office.pdb
+D:\Code\c#\AutoOfficeMCP\.build-check2\Office.dll
+D:\Code\c#\AutoOfficeMCP\.build-check2\Office.pdb

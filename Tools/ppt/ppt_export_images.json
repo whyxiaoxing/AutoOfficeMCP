@@ -1,0 +1,15 @@
+{
+  "id": "ppt_export_images",
+  "name": "ppt_export_images",
+  "description": "把幻灯片导出为 PNG/JPG 图片，用于视觉自检或交付预览。outputDir 为纯文件名目录（工作目录下）或本机绝对路径；默认导出到工作目录 export。",
+  "appType": "ppt",
+  "category": "导出",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "scope", "type": "string", "required": false, "description": "all（默认）或 current。" },
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "scope=current 时的目标页；省略/-1=当前页。" },
+    { "name": "outputDir", "type": "string", "required": false, "description": "输出目录；纯文件名从工作目录解析，或传本机绝对路径。默认 export。" },
+    { "name": "width", "type": "number", "required": false, "description": "像素宽，默认 1920，上限 8192。" },
+    { "name": "format", "type": "string", "required": false, "description": "png 或 jpg，默认 png。" }
+  ]
+}

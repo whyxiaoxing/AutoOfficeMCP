@@ -1,0 +1,16 @@
+{
+  "id": "word_goto_page",
+  "name": "word_goto_page",
+  "description": "选中指定页的首段并回读选区段号；页码越界时返回 INVALID_PARAMS 与文档实际总页数。示例：word_goto_page {\"page\":2}",
+  "appType": "word",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": [
+    {
+      "name": "page",
+      "type": "integer",
+      "required": true,
+      "description": "1 基页码。"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "word_table_set_row",
+  "name": "word_table_set_row",
+  "description": "按列顺序写入整行 values 数组，可设置行字体子集；逐格回读，倒序写入。示例：word_table_set_row {\"tableIndex\":1,\"row\":1,\"values\":[\"姓名\",\"分数\",\"备注\"]}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "tableIndex",
+      "type": "integer",
+      "required": true,
+      "description": "表格索引，1 基。"
+    },
+    {
+      "name": "row",
+      "type": "integer",
+      "required": true,
+      "description": "行号，1 基。"
+    },
+    {
+      "name": "values",
+      "type": "array",
+      "required": true,
+      "description": "按列顺序的字符串数组，可为空字符串。"
+    },
+    {
+      "name": "format",
+      "type": "object",
+      "required": false,
+      "description": "字体子集：bold/italic/fontSize/fontName/color。"
+    }
+  ]
+}

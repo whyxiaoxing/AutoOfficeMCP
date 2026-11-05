@@ -1,0 +1,70 @@
+{
+  "id": "word_set_paragraph_format",
+  "name": "word_set_paragraph_format",
+  "description": "设置单段格式（1 基段号）：alignment/firstLineIndent(字符)/beforeSpacing/afterSpacing/fontSize/fontName/bold/italic/color，逐项回读。越界返回“第 N 段不存在（当前共 M 段）”。示例：word_set_paragraph_format {\"paragraphIndex\":2,\"alignment\":\"center\",\"fontSize\":12}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "low",
+  "parameters": [
+    {
+      "name": "paragraphIndex",
+      "type": "integer",
+      "required": true,
+      "description": "段落序号，1 基。"
+    },
+    {
+      "name": "alignment",
+      "type": "string",
+      "required": false,
+      "description": "left/center/right/justify/distribute。"
+    },
+    {
+      "name": "firstLineIndent",
+      "type": "number",
+      "required": false,
+      "description": "首行缩进字符数，写入 CharacterUnitFirstLineIndent。"
+    },
+    {
+      "name": "beforeSpacing",
+      "type": "number",
+      "required": false,
+      "description": "段前距，磅。"
+    },
+    {
+      "name": "afterSpacing",
+      "type": "number",
+      "required": false,
+      "description": "段后距，磅。"
+    },
+    {
+      "name": "fontSize",
+      "type": "number",
+      "required": false,
+      "description": "字号，磅。"
+    },
+    {
+      "name": "fontName",
+      "type": "string",
+      "required": false,
+      "description": "字体名，同时写 Name 与 NameFarEast。"
+    },
+    {
+      "name": "bold",
+      "type": "boolean",
+      "required": false,
+      "description": "加粗。"
+    },
+    {
+      "name": "italic",
+      "type": "boolean",
+      "required": false,
+      "description": "斜体。"
+    },
+    {
+      "name": "color",
+      "type": "string",
+      "required": false,
+      "description": "颜色名或 #RRGGBB。"
+    }
+  ]
+}

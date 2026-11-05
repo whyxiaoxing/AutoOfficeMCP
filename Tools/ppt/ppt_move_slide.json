@@ -1,0 +1,12 @@
+{
+  "id": "ppt_move_slide",
+  "name": "ppt_move_slide",
+  "description": "把幻灯片从 fromIndex 移动到 toIndex（均为 1 基索引）。示例：ppt_move_slide {\"fromIndex\":3,\"toIndex\":1}。",
+  "appType": "ppt",
+  "category": "幻灯片操作",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "fromIndex", "type": "integer", "required": true, "description": "源页位置，1..N。" },
+    { "name": "toIndex", "type": "integer", "required": true, "description": "目标页位置，1..N。" }
+  ]
+}

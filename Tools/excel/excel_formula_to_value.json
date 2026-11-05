@@ -1,0 +1,12 @@
+{
+  "id": "excel_formula_to_value",
+  "name": "excel_formula_to_value",
+  "description": "【高危】把区域内的公式固化为当前值，删除公式文本。必须显式传 confirm=true。返回转换数、剩余公式数；仍有公式时返回 PARTIAL_APPLY 并说明原因。已登记区域值/公式/数字格式撤销快照。示例：range=\"Calc!D2:D500\", confirm=true。",
+  "appType": "excel",
+  "category": "write",
+  "riskLevel": "high",
+  "parameters": [
+    { "name": "range", "type": "string", "required": true, "description": "要固化的公式区域。" },
+    { "name": "confirm", "type": "boolean", "required": false, "description": "高危操作确认；必须为 true。" }
+  ]
+}

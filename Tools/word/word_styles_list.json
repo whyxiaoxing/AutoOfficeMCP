@@ -1,0 +1,16 @@
+{
+  "id": "word_styles_list",
+  "name": "word_styles_list",
+  "description": "列出 Word 样式定义：name/type/inUseCount/basedOn，支持 type=paragraph/character/table 过滤；段落按实际段落数、表格按实际表格数、字符样式按 Find 命中的连续运行段数统计。示例：word_styles_list {\"type\":\"paragraph\"}",
+  "appType": "word",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": [
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "过滤类型：paragraph/character/table；省略或 all 返回全部样式。"
+    }
+  ]
+}

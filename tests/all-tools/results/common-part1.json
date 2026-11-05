@@ -1,0 +1,26 @@
+{
+  "app": "common",
+  "part": 1,
+  "parts": 1,
+  "total": 2,
+  "pass": 2,
+  "gated": 0,
+  "fail": 0,
+  "generatedAt": "2026-11-03T12:40:25.7727510+08:00",
+  "tools": [
+    {
+      "tool": "office_activate_document",
+      "status": "PASS",
+      "errorCode": "",
+      "message": "已激活 PowerPoint 文档「all-tools-common-1.pptx」，并已置于前台。",
+      "detail": "已激活 PowerPoint 文档「all-tools-common-1.pptx」，并已置于前台。\n{\"app\":\"ppt\",\"name\":\"all-tools-common-1.pptx\",\"fullName\":\"F:\\\\c#2\\\\AutoOfficeMCP\\\\workspace\\\\all-tools-common-1.pptx\",\"activated\":true,\"foreground\":true,\"hwnd\":199190,\"observation\":{\"kind\":\"activate\",\"summary\":\"已激活 PowerPoint 文档「all-tools-common-1.pptx」，并已置于前台。\",\"changed\":false,\"targetRefs\":[\"ppt:F:\\\\c#2\\\\AutoOfficeMCP\\\\workspace\\\\all-tools-common-1.pptx\"],\"undoUnits\":[]}}"
+    },
+    {
+      "tool": "office_batch",
+      "status": "PASS",
+      "errorCode": "",
+      "message": "office_batch 已完成 1 项命令。",
+      "detail": "office_batch 已完成 1 项命令。\n{\"requestedCount\":1,\"completedCount\":1,\"results\":[{\"index\":0,\"tool\":\"ppt_get_presentation_info\",\"success\":true,\"errorCode\":\"\",\"message\":\"已读取演示文稿信息：all-tools-common-1.pptx，共 2 张幻灯片。\",\"arguments\":{\"file\":\"all-tools-common-1.pptx\"},\"data\":{\"filePath\":\"F:\\\\c#2\\\\AutoOfficeMCP\\\\workspace\\\\all-tools-common-1.pptx\",\"name\":\"all-tools-common-1.pptx\",\"slideCount\":2,\"activeSlideIndex\":1,\"slideWidth\":960.0,\"slideHeight\":540.0,\"aspectRatio\":\"16:9\",\"saved\":true,\"readOnly\":false,\"hasUnsavedChanges\":false,\"observation\":{\"kind\":\"read\",\"summary\":\"已读取演示文稿信息：all-tools-common-1.pptx，共 2 张幻灯片。\",\"changed\":false,\"targetRefs\":[\"ppt:all-tools-common-1.pptx\"],\"undoUnits\":[]}}}],\"partialApply\":false,\"observation\":{\"kind\":\"write\",\"summary\":\"批量执行成功：1 项全部完成。\",\"changed\":true,\"targetRefs\":[\"batch:ppt_get_presentation_info\"],\"undoUnits\":[]}}"
+    }
+  ]
+}

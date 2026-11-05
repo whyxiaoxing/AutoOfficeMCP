@@ -1,0 +1,13 @@
+{
+  "id": "excel_protect_sheet",
+  "name": "excel_protect_sheet",
+  "description": "保护或取消保护工作表。protect 时启用 DrawingObjects/Contents，Scenarios 保持关闭；unprotect=true 需要正确密码。示例：sheetName=\"Data\", password=\"1234\"；取消保护：{\"sheetName\":\"Data\",\"password\":\"1234\",\"unprotect\":true}。密码不会回显。保护状态不在区域快照中，不登记自动撤销。",
+  "appType": "excel",
+  "category": "sheet",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "sheetName", "type": "string", "required": false, "description": "目标工作表；省略使用活动工作表。" },
+    { "name": "password", "type": "string", "required": false, "description": "保护密码；取消保护时必须与设置时一致。" },
+    { "name": "unprotect", "type": "boolean", "required": false, "description": "true 取消保护；默认 false 保护。" }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "word_document_stats",
+  "name": "word_document_stats",
+  "description": "统计字数/字符数/页数/段数/表格数/内嵌图片数/浮动形状数/批注数/修订数/域数/公式数/节数。示例：word_document_stats {}",
+  "appType": "word",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": []
+}

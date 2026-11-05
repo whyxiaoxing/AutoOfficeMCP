@@ -1,0 +1,64 @@
+{
+  "id": "word_content_controls",
+  "name": "word_content_controls",
+  "description": "内容控件（Content Controls）管理。action=list 只读清单（类型/标题/标签/文本/范围）；add 在光标或指定段起点创建 text/richText/checkbox/dropdown/combobox/date/picture 控件；remove 按 1 基索引删除（必须 confirm=true，可选是否删除内容）；set 修改 title/tag/text。示例：word_content_controls {\"action\":\"list\"}；创建文本控件：{\"action\":\"add\",\"type\":\"text\",\"title\":\"客户名称\",\"text\":\"请输入\"}；修改：{\"action\":\"set\",\"index\":1,\"tag\":\"customer\"}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "action",
+      "type": "string",
+      "required": false,
+      "description": "list（默认）/add/remove/set。"
+    },
+    {
+      "name": "index",
+      "type": "integer",
+      "required": false,
+      "description": "remove/set 时的 1 基内容控件索引。"
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "add 时控件类型：text（默认）/richText/checkbox/dropdown/combobox/date/picture。"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "控件标题（add 默认 AutoOfficeMCP；set 时可选）。"
+    },
+    {
+      "name": "tag",
+      "type": "string",
+      "required": false,
+      "description": "控件标签（add 默认 AutoOfficeMCP；set 时可选）。"
+    },
+    {
+      "name": "text",
+      "type": "string",
+      "required": false,
+      "description": "add 时写入 text/richText 控件的初始文本；set 时修改控件文本。"
+    },
+    {
+      "name": "paragraphIndex",
+      "type": "integer",
+      "required": false,
+      "description": "add 时的 1 基段号（在段起点创建）；省略时使用当前选区。"
+    },
+    {
+      "name": "confirm",
+      "type": "boolean",
+      "required": false,
+      "description": "action=remove 必须为 true。"
+    },
+    {
+      "name": "deleteContents",
+      "type": "boolean",
+      "required": false,
+      "description": "action=remove 时是否同时删除控件内容，默认 true；false 时仅移除控件外壳。"
+    }
+  ]
+}

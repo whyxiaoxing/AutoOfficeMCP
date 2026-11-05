@@ -1,0 +1,9 @@
+{
+  "id": "word_read_selection",
+  "name": "word_read_selection",
+  "description": "读取当前选区纯文本、字符边界、所在段号、选区格式，返回 boundaryDescription。示例：word_read_selection {}",
+  "appType": "word",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": []
+}

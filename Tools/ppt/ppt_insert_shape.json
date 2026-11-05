@@ -1,0 +1,16 @@
+{
+  "id": "ppt_insert_shape",
+  "name": "ppt_insert_shape",
+  "description": "在指定幻灯片上插入形状。shapeType 支持 rectangle/oval/circle/triangle/arrow/roundedRectangle/diamond/chevron/pentagon/hexagon。示例：ppt_insert_shape {\"shapeType\":\"roundedRectangle\",\"x\":80,\"y\":100,\"width\":240,\"height\":120}。",
+  "appType": "ppt",
+  "category": "内容操作",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "shapeType", "type": "string", "required": false, "description": "形状类型，默认 rectangle。" },
+    { "name": "x", "type": "number", "required": false, "description": "形状左上角 X 坐标，默认 100。" },
+    { "name": "y", "type": "number", "required": false, "description": "形状左上角 Y 坐标，默认 100。" },
+    { "name": "width", "type": "number", "required": false, "description": "宽度，默认 100。" },
+    { "name": "height", "type": "number", "required": false, "description": "高度，默认 100。" },
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "目标页：-1/省略=当前页，0=第一页，1..N=1 基索引。" }
+  ]
+}

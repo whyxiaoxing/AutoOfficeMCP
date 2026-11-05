@@ -1,0 +1,9 @@
+{
+  "id": "ppt_list_themes",
+  "name": "ppt_list_themes",
+  "description": "枚举工作目录根目录下可用的 .thmx 主题文件，返回文件名、路径、大小与修改时间；供 ppt_apply_theme 的 themeFile 使用。",
+  "appType": "ppt",
+  "category": "读取",
+  "riskLevel": "low",
+  "parameters": []
+}

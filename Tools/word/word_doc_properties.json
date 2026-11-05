@@ -1,0 +1,40 @@
+{
+  "id": "word_doc_properties",
+  "name": "word_doc_properties",
+  "description": "读取或写入内置文档属性 title/author/keywords/subject/comments。全部省略时只读；提供任意字段时写入并回读。示例：word_doc_properties {\"title\":\"项目报告\",\"author\":\"张三\"}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "标题；提供即写入。"
+    },
+    {
+      "name": "author",
+      "type": "string",
+      "required": false,
+      "description": "作者；提供即写入。"
+    },
+    {
+      "name": "keywords",
+      "type": "string",
+      "required": false,
+      "description": "关键词；提供即写入。"
+    },
+    {
+      "name": "subject",
+      "type": "string",
+      "required": false,
+      "description": "主题；提供即写入。"
+    },
+    {
+      "name": "comments",
+      "type": "string",
+      "required": false,
+      "description": "备注；提供即写入。"
+    }
+  ]
+}

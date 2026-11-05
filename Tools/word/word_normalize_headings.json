@@ -1,0 +1,40 @@
+{
+  "id": "word_normalize_headings",
+  "name": "word_normalize_headings",
+  "description": "把“手工编号 + 标题文字”的正文段转换为标题样式：识别第X章/第X节、一、二、、（一）、1. / 1.2 / 1.2.3 + 空格、1 空格 标题等格式，去掉手工编号文本并套用“标题 N”样式；addNumbering=true 时尝试把多级编号链接到标题样式（编号进样式）。示例：word_normalize_headings {\"range\":\"all\",\"addNumbering\":true,\"maxLevel\":3}；只转换指定段：{\"paragraphIndexes\":[4,7]}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "range",
+      "type": "string",
+      "required": false,
+      "description": "转换范围：all（默认，全文）或 selection（当前选区相交段落）。"
+    },
+    {
+      "name": "paragraphIndexes",
+      "type": "array",
+      "required": false,
+      "description": "限定转换的 1 基段号数组。优先于 range。"
+    },
+    {
+      "name": "addNumbering",
+      "type": "boolean",
+      "required": false,
+      "description": "是否创建多级自动编号并链接到标题样式，默认 true。false 时只去手工编号并套标题样式。"
+    },
+    {
+      "name": "maxLevel",
+      "type": "integer",
+      "required": false,
+      "description": "最高标题层级 1-6，默认 3；超过的检测层级会被压到该值。"
+    },
+    {
+      "name": "maxReport",
+      "type": "integer",
+      "required": false,
+      "description": "最多返回的候选数，1-2000，默认 300。"
+    }
+  ]
+}

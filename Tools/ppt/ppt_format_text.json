@@ -1,0 +1,23 @@
+{
+  "id": "ppt_format_text",
+  "name": "ppt_format_text",
+  "description": "对指定形状或整页所有文本框做字体、字号、颜色、粗体/斜体/下划线、对齐、行距与段前后间距的精调。shapeId 省略时作用于该页所有带文本框的形状。runs 支持 run 级局部格式化：每个 run 用 1 基 start 与 length 定位（length 省略=到文本末尾），可单独设置 fontName/fontSize/color/bold/italic/underline/align；提供 runs 时必须同时提供 shapeId。",
+  "appType": "ppt",
+  "category": "格式",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "shapeId", "type": "integer", "required": false, "description": "目标形状 ID；省略时作用于该页所有带文本框的形状。" },
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "幻灯片索引：省略/-1=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "fontName", "type": "string", "required": false, "description": "字体名称。" },
+    { "name": "fontSize", "type": "number", "required": false, "description": "字号（磅）。" },
+    { "name": "color", "type": "string", "required": false, "description": "文字颜色，#RRGGBB 或颜色名。" },
+    { "name": "bold", "type": "boolean", "required": false, "description": "是否加粗。" },
+    { "name": "italic", "type": "boolean", "required": false, "description": "是否斜体。" },
+    { "name": "underline", "type": "boolean", "required": false, "description": "是否下划线。" },
+    { "name": "align", "type": "string", "required": false, "description": "left/center/right/justify。" },
+    { "name": "lineSpacing", "type": "number", "required": false, "description": "行距倍数。" },
+    { "name": "spaceBefore", "type": "number", "required": false, "description": "段前间距（磅）。" },
+    { "name": "spaceAfter", "type": "number", "required": false, "description": "段后间距（磅）。" },
+    { "name": "runs", "type": "array", "required": false, "description": "局部富文本数组：[{start,length,fontName,fontSize,color,bold,italic,underline,align}]，start 为 1 基；需要 shapeId。" }
+  ]
+}

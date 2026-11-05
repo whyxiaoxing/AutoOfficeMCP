@@ -1,0 +1,52 @@
+{
+  "id": "word_header_footer",
+  "name": "word_header_footer",
+  "description": "设置页眉/页脚文本与页码域。pageNumbers 支持 none/page/x/xOfY/pageOfPages/第X页共Y页；pageNumberTarget=header/footer；headerType=primary/first/even。返回域数量和回读文本。示例：word_header_footer {\"footerText\":\"内部资料\",\"pageNumbers\":\"第X页共Y页\",\"pageNumberTarget\":\"footer\"}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "headerText",
+      "type": "string",
+      "required": false,
+      "description": "页眉文本；提供时替换原页眉内容。"
+    },
+    {
+      "name": "footerText",
+      "type": "string",
+      "required": false,
+      "description": "页脚文本；提供时替换原页脚内容。"
+    },
+    {
+      "name": "pageNumbers",
+      "type": "string",
+      "required": false,
+      "description": "none/page/x/xOfY/pageOfPages/第X页共Y页。"
+    },
+    {
+      "name": "pageNumberTarget",
+      "type": "string",
+      "required": false,
+      "description": "header 或 footer，默认 footer。"
+    },
+    {
+      "name": "headerType",
+      "type": "string",
+      "required": false,
+      "description": "primary/first/even，默认 primary。"
+    },
+    {
+      "name": "sectionIndex",
+      "type": "integer",
+      "required": false,
+      "description": "1 基节号，默认 1。"
+    },
+    {
+      "name": "linkToPrevious",
+      "type": "boolean",
+      "required": false,
+      "description": "是否链接到上一节页眉页脚。"
+    }
+  ]
+}

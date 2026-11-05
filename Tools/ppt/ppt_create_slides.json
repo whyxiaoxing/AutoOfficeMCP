@@ -1,0 +1,11 @@
+{
+  "id": "ppt_create_slides",
+  "name": "ppt_create_slides",
+  "description": "批量追加幻灯片（最多 50 页）。每项支持 title/content/layout；按数组顺序创建并写入占位符，没有正文占位符时自动添加文本框。某页失败时返回 PARTIAL_APPLY，已创建的页不会自动删除。示例：ppt_create_slides {\"slides\":[{\"title\":\"封面\",\"layout\":\"title\"},{\"title\":\"结论\",\"content\":\"要点一\\n要点二\"}]}。",
+  "appType": "ppt",
+  "category": "幻灯片操作",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "slides", "type": "array", "required": true, "description": "幻灯片数组，最多 50 项；每项对象支持 title、content、layout。" }
+  ]
+}

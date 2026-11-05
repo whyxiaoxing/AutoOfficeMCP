@@ -1,0 +1,76 @@
+{
+  "id": "word_set_page_setup",
+  "name": "word_set_page_setup",
+  "description": "设置页边距（磅或厘米，同一侧二选一）、纸张（A4/A3/A5/Letter/Legal/B4/B5/Executive）、横竖向和节索引。逐节应用并回读。示例：word_set_page_setup {\"topMarginCm\":2.54,\"bottomMarginCm\":2.54,\"paperSize\":\"A4\",\"orientation\":\"portrait\"}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "topMarginPt",
+      "type": "number",
+      "required": false,
+      "description": "上页边距，磅。"
+    },
+    {
+      "name": "bottomMarginPt",
+      "type": "number",
+      "required": false,
+      "description": "下页边距，磅。"
+    },
+    {
+      "name": "leftMarginPt",
+      "type": "number",
+      "required": false,
+      "description": "左页边距，磅。"
+    },
+    {
+      "name": "rightMarginPt",
+      "type": "number",
+      "required": false,
+      "description": "右页边距，磅。"
+    },
+    {
+      "name": "topMarginCm",
+      "type": "number",
+      "required": false,
+      "description": "上页边距，厘米。"
+    },
+    {
+      "name": "bottomMarginCm",
+      "type": "number",
+      "required": false,
+      "description": "下页边距，厘米。"
+    },
+    {
+      "name": "leftMarginCm",
+      "type": "number",
+      "required": false,
+      "description": "左页边距，厘米。"
+    },
+    {
+      "name": "rightMarginCm",
+      "type": "number",
+      "required": false,
+      "description": "右页边距，厘米。"
+    },
+    {
+      "name": "paperSize",
+      "type": "string",
+      "required": false,
+      "description": "A4/A3/A5/Letter/Legal/B4/B5/Executive。"
+    },
+    {
+      "name": "orientation",
+      "type": "string",
+      "required": false,
+      "description": "portrait 或 landscape。"
+    },
+    {
+      "name": "sectionIndex",
+      "type": "integer",
+      "required": false,
+      "description": "1 基节号；省略表示所有节。"
+    }
+  ]
+}

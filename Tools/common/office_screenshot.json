@@ -1,0 +1,11 @@
+{
+  "id": "office_screenshot",
+  "name": "office_screenshot",
+  "description": "【只读】截取 Office 窗口（Excel/Word/PowerPoint），返回文本元数据与 MCP image content（PNG，协议层自动转 base64）。省略 app 时要求当前前台窗口就是 Office；显式指定 app 且该窗口不在前台时，会用 PrintWindow 捕获该应用活动窗口且不切换焦点。不自动启动 Office，也不跨窗口猜测；没有可用窗口或窗口最小化时返回明确错误。示例：office_screenshot {\"app\":\"excel\"} 或省略 app 直接截取前台 Office 窗口。",
+  "appType": "common",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "app", "type": "string", "required": false, "description": "excel、word、ppt 或省略。省略时要求当前前台窗口本身是 Office；指定时优先截前台匹配窗口，否则截该应用活动窗口（PrintWindow，不切换焦点）。" }
+  ]
+}

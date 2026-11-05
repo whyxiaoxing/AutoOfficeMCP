@@ -1,0 +1,15 @@
+{
+  "id": "excel_sheet_toc",
+  "name": "excel_sheet_toc",
+  "description": "生成工作表目录页：A 列序号、B 列工作表名并添加内部超链接（点击跳转到各表 A1）、C 列跳转文字。默认目标表名「目录」，已存在时按 overwrite=true 覆盖重建；可控制是否收录隐藏/深度隐藏表与目录页位置。新建目录工作表属于结构变更，超链接/列宽/表头格式不在区域快照中，均如实记录撤销限制。示例：targetSheet=\"目录\", includeHidden=false, position=\"first\", overwrite=true。",
+  "appType": "excel",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    { "name": "targetSheet", "type": "string", "required": false, "description": "目录工作表名，默认「目录」；不存在则创建。" },
+    { "name": "includeHidden", "type": "boolean", "required": false, "description": "是否收录隐藏工作表，默认 false。" },
+    { "name": "includeVeryHidden", "type": "boolean", "required": false, "description": "includeHidden=true 时是否也收录 veryHidden 工作表，默认 true。" },
+    { "name": "overwrite", "type": "boolean", "required": false, "description": "目录表已存在时是否覆盖，默认 true；false 时返回参数错误。" },
+    { "name": "position", "type": "string", "required": false, "description": "新建目录页位置：first 或 last，默认 first。" }
+  ]
+}

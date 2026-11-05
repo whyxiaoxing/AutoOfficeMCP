@@ -1,0 +1,13 @@
+{
+  "id": "ppt_execute_vba",
+  "name": "ppt_execute_vba",
+  "description": "执行 PowerPoint VBA 作为回退能力。属于高危操作：必须同时传 confirm=true，且在 config.json 中设置 security.allowVba=true；PowerPoint 信任中心还需启用“信任对 VBA 工程对象模型的访问”。代码会自动包装为临时标准模块并运行，完成后删除模块；Function 的返回值写入 returnValue。timeoutSec 仅作调用前参数记录，不提供中断保证：PowerPoint COM 无法中断已进入同步执行的 VBA，死循环会一直挂住当前会话。禁止把本工具放入 office_batch_files（会占用池内 PowerPoint 实例且无法超时回收）。示例：ppt_execute_vba {\"code\":\"Sub Demo()\\n    ActivePresentation.Slides.Add 1, 2\\nEnd Sub\",\"confirm\":true}。",
+  "appType": "ppt",
+  "category": "高级功能",
+  "riskLevel": "high",
+  "parameters": [
+    { "name": "code", "type": "string", "required": true, "description": "完整的 VBA Sub/Function 代码；不含过程声明时自动包装为 Sub Auto_Run()。" },
+    { "name": "confirm", "type": "boolean", "required": false, "description": "必须为 true 才会执行 VBA。" },
+    { "name": "timeoutSec", "type": "number", "required": false, "description": "仅记录的期望超时秒数，默认 30，上限 300；不提供中断保证，PowerPoint COM 无法中断已同步执行的 VBA。" }
+  ]
+}

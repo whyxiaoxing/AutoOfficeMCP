@@ -1,0 +1,46 @@
+{
+  "id": "word_repeat_check",
+  "name": "word_repeat_check",
+  "description": "只读查重辅助：按中英文句末标点切分句子并统计重复句、重复段落，统计连续汉字 n-gram（默认 4 字）与英文单词重复频率，返回出现次数达到阈值的条目。纯本地确定性统计，不做语义判断。示例：word_repeat_check {}；只查选区：{\"range\":\"selection\"}；调整 n-gram：{\"ngramSize\":5,\"topN\":30}",
+  "appType": "word",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": [
+    {
+      "name": "range",
+      "type": "string",
+      "required": false,
+      "description": "统计范围：all（默认，全文）或 selection（当前选区相交段落）。"
+    },
+    {
+      "name": "paragraphIndexes",
+      "type": "array",
+      "required": false,
+      "description": "限定统计的 1 基段号数组。优先于 range。"
+    },
+    {
+      "name": "minSentenceLength",
+      "type": "integer",
+      "required": false,
+      "description": "参与统计的最短句/段字符数，2-500，默认 10。"
+    },
+    {
+      "name": "ngramSize",
+      "type": "integer",
+      "required": false,
+      "description": "连续汉字 n-gram 长度，2-10，默认 4。"
+    },
+    {
+      "name": "topN",
+      "type": "integer",
+      "required": false,
+      "description": "每类最多返回条数，1-100，默认 20。"
+    },
+    {
+      "name": "minRepeatCount",
+      "type": "integer",
+      "required": false,
+      "description": "视为重复的最低出现次数，2-100，默认 2。"
+    }
+  ]
+}

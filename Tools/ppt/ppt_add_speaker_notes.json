@@ -1,0 +1,12 @@
+{
+  "id": "ppt_add_speaker_notes",
+  "name": "ppt_add_speaker_notes",
+  "description": "为指定幻灯片写入演讲备注。按备注页正文占位符定位，写入后回读校验；少数模板没有标准占位符时会回退到备注页第 2 个文本框。示例：ppt_add_speaker_notes {\"slideIndex\":2,\"notes\":\"强调增长来自华东区\"}。",
+  "appType": "ppt",
+  "category": "高级功能",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "notes", "type": "string", "required": true, "description": "备注内容，换行用 \\n。" },
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "目标页：-1/省略=当前页，0=第一页，1..N=1 基索引。" }
+  ]
+}

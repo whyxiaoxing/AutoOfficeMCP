@@ -1,0 +1,14 @@
+{
+  "id": "ppt_delete_animation",
+  "name": "ppt_delete_animation",
+  "description": "【高危】删除指定页的动画。可用 animationIndex（1 基动画序号，来自 ppt_list_animations 的 order）删除单个动画，或用 shapeId 删除该形状的全部动画；至少提供其中一个，并必须显式 confirm=true。返回删除数量、删除前后动画总数。示例：ppt_delete_animation {\"slideIndex\":1,\"shapeId\":12,\"confirm\":true}。",
+  "appType": "ppt",
+  "category": "样式和动画",
+  "riskLevel": "high",
+  "parameters": [
+    { "name": "slideIndex", "type": "integer", "required": false, "description": "幻灯片索引：省略/-1=当前页，0=第一页，1..N=1 基索引。" },
+    { "name": "animationIndex", "type": "integer", "required": false, "description": "1 基动画序号（ppt_list_animations 的 order）；与 shapeId 至少提供一个。" },
+    { "name": "shapeId", "type": "integer", "required": false, "description": "目标形状 id；提供时删除该形状的全部动画。" },
+    { "name": "confirm", "type": "boolean", "required": false, "description": "必须为 true 才会删除动画。" }
+  ]
+}

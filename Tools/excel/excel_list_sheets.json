@@ -1,0 +1,9 @@
+{
+  "id": "excel_list_sheets",
+  "name": "excel_list_sheets",
+  "description": "列出当前工作簿全部工作表：名称、索引、可见性（visible/hidden/veryHidden）、保护状态、UsedRange 地址与行列数。无参数。",
+  "appType": "excel",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": []
+}

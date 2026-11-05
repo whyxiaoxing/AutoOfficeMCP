@@ -1,0 +1,34 @@
+{
+  "id": "word_doc_merge",
+  "name": "word_doc_merge",
+  "description": "把另一个 Word 文档的内容插入当前活动文档的指定位置（开头/末尾/光标/某段之前），支持两种样式模式：preserve 保留源文档样式与直接格式；match 插入后清除直接格式并按同名标题级别套用当前文档样式。源文件只读使用，不修改源文件。示例：word_doc_merge {\"sourcePath\":\"C:\\\\temp\\\\chapter.docx\",\"position\":\"end\",\"mode\":\"preserve\"}；插入到第 5 段之前：{\"sourcePath\":\"C:\\\\temp\\\\a.docx\",\"position\":\"paragraph\",\"paragraphIndex\":5,\"mode\":\"match\"}",
+  "appType": "word",
+  "category": "write",
+  "riskLevel": "medium",
+  "parameters": [
+    {
+      "name": "sourcePath",
+      "type": "string",
+      "required": true,
+      "description": "待插入的 Word 文档绝对路径，必须存在。"
+    },
+    {
+      "name": "position",
+      "type": "string",
+      "required": false,
+      "description": "插入位置：start/end/cursor/paragraph，默认 cursor；paragraph 时必须提供 paragraphIndex（1 基，插入到该段起点之前）。"
+    },
+    {
+      "name": "paragraphIndex",
+      "type": "integer",
+      "required": false,
+      "description": "position=paragraph 时的 1 基段号；越界消息会返回实际段数。"
+    },
+    {
+      "name": "mode",
+      "type": "string",
+      "required": false,
+      "description": "preserve（默认，保留源样式）/match（套用当前文档样式：清除直接格式并按同名标题级别套样式）。"
+    }
+  ]
+}

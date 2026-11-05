@@ -1,0 +1,11 @@
+{
+  "id": "ppt_apply_theme",
+  "name": "ppt_apply_theme",
+  "description": "应用 PowerPoint 主题文件（.thmx）。themeFile 必须是存在的工作目录文件名或本机绝对路径。PowerPoint COM 不支持按内置主题名直接应用，因此本工具不再接受 themeName；如需内置主题，请先在 PowerPoint 中另存为 .thmx 再传入。示例：ppt_apply_theme {\"themeFile\":\"brand.thmx\"}。",
+  "appType": "ppt",
+  "category": "母版和主题",
+  "riskLevel": "low",
+  "parameters": [
+    { "name": "themeFile", "type": "string", "required": true, "description": "主题文件路径（.thmx）；纯文件名从工作目录解析。" }
+  ]
+}

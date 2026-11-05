@@ -1,0 +1,9 @@
+{
+  "id": "excel_get_context",
+  "name": "excel_get_context",
+  "description": "读取当前 Excel 上下文：工作簿名/路径、工作表清单、活动表 UsedRange 规模、表头、公式单元格与错误值数量、空单元格与疑似重复行统计、当前选区、推荐输出单元格（UsedRange 右侧 +2 列）。这是 LLM 在执行写操作前的主要观察入口。无参数。",
+  "appType": "excel",
+  "category": "read",
+  "riskLevel": "low",
+  "parameters": []
+}
