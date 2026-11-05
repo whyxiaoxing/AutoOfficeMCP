@@ -18,9 +18,10 @@
 
 # 使用步骤
 
-1. 根据 `Config.json.md`修改 `config.json` 
-2. 运行 `AutoOfficeMCP.exe` 
-3. 修改 `SKILL.md`中的 `MCP_BASE_URL`
-4. 你是在你的AI终端 添加MCP 支持 sse和 http
-5. 让AI读取 `SKILL.md`
-6. 发送要求
+1. 根据 `Config.json.md`修改 `config.json`
+2. 运行 `register-urlacl.ps1`
+3. 运行 `AutoOfficeMCP.exe` 
+4. 修改 `SKILL.md`中的 `MCP_BASE_URL`
+5. 你是在你的AI终端 添加MCP 支持 sse和 http
+6. 让AI读取 `SKILL.md`
+7. 发送要求
